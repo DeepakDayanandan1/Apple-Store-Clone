@@ -1,11 +1,4 @@
--- ========================================================
--- Apple India Store Clone - Database Schema & Seed Data
--- Database Engine: MySQL / MariaDB (InnoDB)
--- Character Set: utf8mb4 / Collation: utf8mb4_unicode_ci
--- Reference: https://www.apple.com/in/store
--- ========================================================
-
-CREATE DATABASE IF NOT EXISTS `apple_store` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS `apple_store`;
 USE `apple_store`;
 
 -- --------------------------------------------------------
