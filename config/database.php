@@ -177,9 +177,9 @@ class Database {
                 [
                     'id' => 101,
                     'badge' => 'NEW',
-                    'eyebrow' => 'iPhone 18 Pro',
-                    'title' => 'Pro further.',
-                    'price_label' => 'From ₹164900.00‡',
+                    'eyebrow' => 'Pro Further.',
+                    'title' => 'iPhone 18 Pro',
+                    'price_label' => 'From ₹164900.00',
                     'price_raw' => 164900.00,
                     'theme' => 'dark',
                     'image' => 'assets/images/products/store-card-40-iphone-18-pro-202609 1.png',
@@ -189,9 +189,9 @@ class Database {
                 [
                     'id' => 102,
                     'badge' => 'NEW',
-                    'eyebrow' => 'iPhone Duo',
-                    'title' => 'Hello, hello.',
-                    'price_label' => 'From ₹299900.00‡',
+                    'eyebrow' => 'Hello, hello',
+                    'title' => 'iPhone Duo',
+                    'price_label' => 'From ₹299900.00',
                     'price_raw' => 299900.00,
                     'theme' => 'light',
                     'image' => 'assets/images/products/store-card-40-iphone-duo-202609 1.png',
@@ -201,33 +201,33 @@ class Database {
                 [
                     'id' => 103,
                     'badge' => 'NEW',
-                    'eyebrow' => 'MacBook Pro PROLED XDR Display',
-                    'title' => 'A screen come true.',
-                    'price_label' => 'From ₹349900.00‡',
+                    'eyebrow' => 'A screen come true.',
+                    'title' => 'MacBook Pro PROLED XDR Display',
+                    'price_label' => 'From ₹349900.00',
                     'price_raw' => 349900.00,
                     'theme' => 'dark',
                     'image' => 'assets/images/products/store-card-40-macbook-pro-proled-202610 1.png',
                     'alt_text' => 'MacBook Pro PROLED XDR Display',
                     'url' => '#buy-macbook-pro'
                 ],
-                [
+                /* [
                     'id' => 104,
                     'badge' => 'NEW 14" WITH M6',
-                    'eyebrow' => 'MacBook Pro',
-                    'title' => 'With M6, M6 Pro and M6 Max.',
-                    'price_label' => 'From ₹239900.00‡',
+                    'eyebrow' => 'With M6, M6 Pro and M6 Max.',
+                    'title' => 'MacBook Pro',
+                    'price_label' => 'From ₹239900.00',
                     'price_raw' => 239900.00,
                     'theme' => 'dark',
                     'image' => 'assets/images/products/store-card-40-macbook-neo-202603 1.png',
                     'alt_text' => 'MacBook Pro 14-inch with M6 chip',
                     'url' => '#buy-macbook-pro-14'
-                ],
+                ], */
                 [
                     'id' => 105,
                     'badge' => '',
-                    'eyebrow' => 'APPLE WATCH SERIES 10',
-                    'title' => 'Thinscredible.',
-                    'price_label' => 'From ₹46900.00‡',
+                    'eyebrow' => '',
+                    'title' => 'APPLE WATCH SERIES 10',
+                    'price_label' => 'From ₹46900.00',
                     'price_raw' => 46900.00,
                     'theme' => 'dark',
                     'image' => 'assets/images/LatestImg/store-card-40-watch-series-12-202609_GEO_IN 1.png',
@@ -237,9 +237,9 @@ class Database {
                 [
                     'id' => 106,
                     'badge' => '',
-                    'eyebrow' => 'APPLE WATCH ULTRA 2',
-                    'title' => 'New finish. Never quit.',
-                    'price_label' => 'From ₹89900.00‡',
+                    'eyebrow' => '',
+                    'title' => 'APPLE WATCH ULTRA 2',
+                    'price_label' => 'From ₹89900.00',
                     'price_raw' => 89900.00,
                     'theme' => 'dark',
                     'image' => 'assets/images/LatestImg/store-card-40-watch-ultra-4-202609_GEO_IN 1.png',
@@ -248,9 +248,9 @@ class Database {
                 ],
                 [
                     'id' => 106,
-                    'eyebrow' => 'IPAD MINI',
-                    'title' => 'Built for Apple Intelligence.',
-                    'price_label' => 'From ₹49900.00‡',
+                    'eyebrow' => '',
+                    'title' => 'IPAD MINI',
+                    'price_label' => 'From ₹49900.00',
                     'price_raw' => 49900.00,
                     'theme' => 'light',
                     'image' => 'assets/images/LatestImg/store-card-40-ipad-mini-202610 1.png',
@@ -262,7 +262,7 @@ class Database {
                     'id' => 107,
                     'eyebrow' => 'MAC MINI',
                     'title' => 'Size down. Power up.',
-                    'price_label' => 'From ₹59900.00‡',
+                    'price_label' => 'From ₹59900.00',
                     'price_raw' => 59900.00,
                     'theme' => 'light',
                     'image' => 'assets/images/LatestImg/store-card-40-mac-mini-202609 1.png',
@@ -274,7 +274,7 @@ class Database {
                     'id' => 108,
                     'eyebrow' => 'IMAC',
                     'title' => 'Brilliant from edge to edge.',
-                    'price_label' => 'From ₹134900.00‡',
+                    'price_label' => 'From ₹134900.00',
                     'price_raw' => 134900.00,
                     'theme' => 'light',
                     'image' => 'assets/images/LatestImg/store-card-40-imac-202610 1.png',
@@ -282,23 +282,23 @@ class Database {
                     'badge' => '',
                     'url' => '#buy-imac'
                 ],
-                [
+                /* [
                     'id' => 109,
                     'eyebrow' => 'MACBOOK AIR',
                     'title' => 'Lean. Mean. M3 machine.',
-                    'price_label' => 'From ₹99900.00‡',
+                    'price_label' => 'From ₹99900.00',
                     'price_raw' => 99900.00,
                     'theme' => 'light',
                     'image' => 'assets/images/LatestImg/store-card-40-macbook-air-202603 1.png',
                     'alt_text' => 'MacBook Air 13-inch and 15-inch with M3',
                     'badge' => '',
                     'url' => '#buy-macbook-air'
-                ],
+                ], */
                 [
                     'id' => 110,
                     'eyebrow' => 'AIRPODS 4',
                     'title' => 'Iconic. Now sonic.',
-                    'price_label' => 'From ₹12900.00‡',
+                    'price_label' => 'From ₹12900.00',
                     'price_raw' => 12900.00,
                     'theme' => 'light',
                     'image' => 'assets/images/LatestImg/store-card-40-airpods-5-202609 1.png',
@@ -310,7 +310,7 @@ class Database {
                     'id' => 111,
                     'eyebrow' => 'HOMEPOD',
                     'title' => 'Pro sound at home.',
-                    'price_label' => '₹32900.00‡',
+                    'price_label' => '₹32900.00',
                     'price_raw' => 32900.00,
                     'theme' => 'light',
                     'image' => 'assets/images/LatestImg/store-card-40-home-view-202610_GEO_IN 1.png',
@@ -575,7 +575,7 @@ class Database {
                     'link_text' => 'Book a session',
                     'url' => '#specialist'
                 ],
-                [
+                /* [
                     'id' => 303,
                     'eyebrow' => 'BUSINESS',
                     'title' => 'Get help buying. Have a question? Call a Specialist or chat online.',
@@ -584,7 +584,7 @@ class Database {
                     'theme' => 'light',
                     'link_text' => 'Chat now',
                     'url' => '#business'
-                ]
+                ] */
             ],
             // Section 5: Loud and Clear Audio Products
             'audio_cards' => [
@@ -714,18 +714,18 @@ class Database {
             'experience_cards' => [
                 [
                     'id' => 601,
-                    'eyebrow' => 'APPLE INTELLIGENCE',
-                    'title' => 'AI for the rest of us.',
-                    'subtitle' => 'Personal, private, powerful intelligence integrated deeply into iOS, iPadOS and macOS.',
+                    'eyebrow' => '',
+                    'title' => 'Apple Intelligence and Siri AI.More personal. More powerful.',
+                    'subtitle' => '',
                     'image' => 'assets/images/ExperienceImg/store-card-50-apple-intelligence-202609 1.png',
                     'theme' => 'light',
                     'url' => '#apple-intelligence'
                 ],
                 [
                     'id' => 602,
-                    'eyebrow' => 'APPLE ECOSYSTEM',
-                    'title' => 'All your devices. One seamless experience.',
-                    'subtitle' => 'Copy on iPhone, paste on Mac. Hand off calls. Everything works together effortlessly.',
+                    'eyebrow' => 'CONTINUITY',
+                    'title' => 'Powerful alone. Superpowered together.',
+                    'subtitle' => '',
                     'image' => 'assets/images/ExperienceImg/store-card-50-continuity-202609_GEO_IN 1.png',
                     'theme' => 'light',
                     'url' => '#continuity'
@@ -757,7 +757,7 @@ class Database {
                     'theme' => 'light',
                     'url' => '#home-ecosystem'
                 ],
-                [
+                /* [
                     'id' => 606,
                     'eyebrow' => 'APPLE TV 4K',
                     'title' => 'The Apple experience. Cinematic in every sense.',
@@ -765,7 +765,7 @@ class Database {
                     'image' => 'assets/images/ExperienceImg/store-card-50-homekit-202610_GEO_IN 1.png',
                     'theme' => 'dark',
                     'url' => '#apple-tv'
-                ],
+                ], */
                 [
                     'id' => 607,
                     'eyebrow' => 'FREE ENGRAVING',
@@ -781,7 +781,7 @@ class Database {
                 [
                     'id' => 701,
                     'eyebrow' => 'EDUCATION',
-                    'title' => 'Save on a new Mac, iPad and Apple Watch with education pricing.‡',
+                    'title' => 'Save on a new Mac, iPad and Apple Watch with education pricing.',
                     'subtitle' => '',
                     'image' => 'assets/images/banners/store-card-40-education-202609 1.png',
                     'theme' => 'light',
