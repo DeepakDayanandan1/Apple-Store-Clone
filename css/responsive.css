@@ -5,9 +5,9 @@
  */
 
 /* ==========================================================================
-   1. Laptop / Small Desktop (<= 1068px)
+   1. Laptop / Small Desktop (<= 1024px)
    ========================================================================== */
-@media screen and (max-width: 1068px) {
+@media screen and (max-width: 1024px) {
     :root {
         --container-width: 100%;
         --container-padding: 22px;
@@ -26,27 +26,19 @@
         right: 20px;
     }
 
-    /* Section containers go full-width */
-    .section-container {
+    .section-container,
+    .store-hero-container,
+    .quick-links-shelf {
         padding: 0 22px;
     }
 
-    .store-hero-container {
-        padding: 0 22px;
-    }
-
-    /* Carousel track padding matches container */
     .carousel-track {
         padding-left: 22px;
         padding-right: 22px;
     }
 
     .carousel-footer-row {
-        padding: 0 22px;
-    }
-
-    .quick-links-shelf {
-        padding: 0 22px;
+        padding: 0;
     }
 }
 
@@ -63,7 +55,6 @@
         display: none !important;
     }
 
-    /* Hide flyout – handled via mobile drawer instead */
     .store-flyout {
         display: none !important;
     }
@@ -91,15 +82,16 @@
 
     /* ---- Hero ---- */
     .store-hero-section {
-        padding-top: 40px;
-        padding-bottom: 24px;
+        padding-top: 36px;
+        padding-bottom: 20px;
     }
 
     .store-headline-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
-        margin-bottom: 36px;
+        gap: 16px;
+        min-height: auto;
+        margin-bottom: 28px;
     }
 
     .store-hero-title {
@@ -113,16 +105,22 @@
 
     .store-hero-subtext {
         font-size: 19px;
+        margin-bottom: 8px;
     }
 
     .store-hero-actions {
         align-items: flex-start;
+        gap: 6px;
+    }
+
+    .store-hero-action-link {
+        font-size: 14px;
     }
 
     /* ---- Category Shelf ---- */
     .category-shelf-list {
-        justify-content: flex-start;
         gap: 20px;
+        padding: 4px 0 20px;
     }
 
     .category-shelf-item {
@@ -140,7 +138,17 @@
         max-height: 68px;
     }
 
-    /* ---- Section Titles ---- */
+    /* ---- Section Containers & Titles ---- */
+    .store-section {
+        padding: 32px 0 16px;
+    }
+
+    .section-container,
+    .store-hero-container,
+    .quick-links-shelf {
+        padding: 0 20px;
+    }
+
     .section-display-title {
         font-size: 24px;
     }
@@ -158,7 +166,7 @@
     }
 
     .carousel-footer-row {
-        padding: 0 20px;
+        padding: 0;
     }
 
     /* ---- Cards ---- */
@@ -215,11 +223,6 @@
         max-height: 180px;
     }
 
-    /* ---- Quick Links ---- */
-    .quick-links-shelf {
-        padding: 0 20px;
-    }
-
     /* ---- Footer Accordion ---- */
     .footer-directory {
         grid-template-columns: 1fr;
@@ -256,11 +259,6 @@
     .directory-section.open .directory-list {
         display: block;
     }
-
-    /* ---- Store Section Spacing ---- */
-    .store-section {
-        padding: 36px 0 20px;
-    }
 }
 
 /* ==========================================================================
@@ -273,10 +271,7 @@
     }
 
     /* ---- Navigation ---- */
-    .globalnav-container {
-        padding: 0 16px;
-    }
-
+    .globalnav-container,
     .mobile-nav-bar {
         padding: 0 16px;
     }
@@ -293,12 +288,13 @@
 
     /* ---- Hero ---- */
     .store-hero-section {
-        padding-top: 28px;
+        padding-top: 24px;
         padding-bottom: 12px;
     }
 
-    .store-hero-container {
-        padding: 0 16px;
+    .store-headline-row {
+        margin-bottom: 20px;
+        gap: 12px;
     }
 
     .store-hero-title {
@@ -310,17 +306,13 @@
     }
 
     .store-hero-action-link {
-        font-size: 15px;
-    }
-
-    .store-headline-row {
-        margin-bottom: 28px;
-        gap: 16px;
+        font-size: 13px;
     }
 
     /* ---- Category Shelf ---- */
     .category-shelf-list {
         gap: 14px;
+        padding: 4px 0 16px;
     }
 
     .category-shelf-item {
@@ -344,10 +336,12 @@
 
     /* ---- Section Headings ---- */
     .store-section {
-        padding: 28px 0 20px;
+        padding: 24px 0 16px;
     }
 
-    .section-container {
+    .section-container,
+    .store-hero-container,
+    .quick-links-shelf {
         padding: 0 16px;
     }
 
@@ -363,7 +357,7 @@
     }
 
     .section-header-row {
-        margin-bottom: 16px;
+        margin-bottom: 14px;
     }
 
     /* ---- Carousel ---- */
@@ -371,12 +365,12 @@
         gap: 14px;
         padding-left: 16px;
         padding-right: 16px;
-        padding-top: 8px;
-        padding-bottom: 20px;
+        padding-top: 6px;
+        padding-bottom: 18px;
     }
 
     .carousel-footer-row {
-        padding: 0 16px;
+        padding: 0;
     }
 
     .carousel-arrow {
@@ -466,11 +460,7 @@
 
     /* ---- Quick Links ---- */
     .quick-links-section {
-        padding: 24px 0 32px;
-    }
-
-    .quick-links-shelf {
-        padding: 0 16px;
+        padding: 20px 0 28px;
     }
 
     .quick-links-headline {
@@ -509,7 +499,6 @@
         font-size: 16px;
     }
 
-    /* ---- Store Flyout (already hidden via tablet rule) ---- */
     .store-flyout {
         display: none !important;
     }

@@ -8,8 +8,8 @@
    ========================================================================== */
 :root {
     --apple-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --container-width: 1024px;
-    --container-padding: 24px;
+    --container-width: 980px;
+    --container-padding: 22px;
     --color-bg-page: #f5f5f7;
     --color-bg-white: #ffffff;
     --color-bg-dark: #000000;
@@ -711,8 +711,9 @@ img {
 .store-headline-row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 44px;
+    align-items: center;
+    min-height: 160px;
+    margin-bottom: 32px;
 }
 
 .headline-primary-col {
@@ -735,7 +736,7 @@ img {
 }
 
 .store-hero-subtext {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.25;
     color: var(--color-text-primary);
@@ -751,7 +752,7 @@ img {
 }
 
 .store-hero-action-link {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--color-blue);
     display: inline-flex;
@@ -776,7 +777,7 @@ img {
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 0;
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
 .category-shelf-nav::-webkit-scrollbar {
@@ -788,7 +789,7 @@ img {
     justify-content: flex-start;
     gap: 24px;
     min-width: min-content;
-    padding: 8px 0 20px;
+    padding: 8px 0 24px;
     margin: 0;
     list-style: none;
 }
@@ -803,8 +804,10 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     text-decoration: none;
+    width: 100%;
 }
 
 .category-thumb-wrapper {
@@ -817,12 +820,13 @@ img {
 }
 
 .category-thumb-img {
-    width: 120px;
-    height: 78px;
     max-width: 120px;
     max-height: 78px;
+    width: auto;
+    height: auto;
     object-fit: contain;
     display: block;
+    margin: 0 auto;
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -848,20 +852,18 @@ img {
    5. Store Sections & Card Carousels
    ========================================================================== */
 .store-section {
-    padding: 44px 0 24px;
-    /* Do NOT set overflow:hidden here — it clips the full-width carousel bleed */
+    padding: 40px 0 20px;
+    width: 100%;
 }
 
 .section-container {
+    width: 100%;
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
 }
 
 .section-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     margin-bottom: 20px;
 }
 
@@ -888,10 +890,9 @@ img {
 
 /* Carousel Container and Track */
 .carousel-container {
+    width: 100%;
+    overflow: hidden;
     position: relative;
-    /* Bleed full viewport width */
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
 }
 
 .carousel-track {
@@ -902,12 +903,14 @@ img {
     scrollbar-width: none;
     -ms-overflow-style: none;
     /*
-     * First card left edge = page left edge up to 1024px container, then centered.
-     * This matches how .section-container sets padding: 0 24px within max-width 1024px.
-     * Formula: max(24px, (100vw - 1024px) / 2 + 24px)
+     * When screen is wider than container:
+     * Left padding = (100% - container-width) / 2 + container-padding
+     * When screen is narrower than container:
+     * Left padding = container-padding
+     * Exactly aligns the first card with .section-container on all viewports!
      */
-    padding-left: max(var(--container-padding), calc((100vw - var(--container-width)) / 2 + var(--container-padding)));
-    padding-right: max(var(--container-padding), calc((100vw - var(--container-width)) / 2 + var(--container-padding)));
+    padding-left: max(var(--container-padding), calc((100% - var(--container-width)) / 2 + var(--container-padding)));
+    padding-right: max(var(--container-padding), calc((100% - var(--container-width)) / 2 + var(--container-padding)));
     padding-top: 10px;
     padding-bottom: 24px;
     -webkit-overflow-scrolling: touch;
@@ -919,9 +922,8 @@ img {
 
 /* Carousel Footer Row & Controls (at bottom right of track) */
 .carousel-footer-row {
-    max-width: var(--container-width);
+    width: 100%;
     margin: 8px auto 0;
-    padding: 0 var(--container-padding);
     display: flex;
     justify-content: flex-end;
 }
@@ -1138,13 +1140,18 @@ img {
     align-items: flex-end;
     justify-content: center;
     overflow: hidden;
+    text-align: center;
 }
 
 .card-showcase-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     object-position: bottom center;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Blank Media Container for Future Images */

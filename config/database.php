@@ -176,30 +176,55 @@ class Database {
             'latest_products' => [
                 [
                     'id' => 101,
-                    'eyebrow' => 'IPHONE 16 PRO',
-                    'title' => 'Hello, Apple Intelligence.',
-                    'price_label' => 'From ₹119900.00‡',
+                    'badge' => 'NEW',
+                    'eyebrow' => 'iPhone 18 Pro',
+                    'title' => 'Pro further.',
+                    'price_label' => '',
                     'price_raw' => 119900.00,
                     'theme' => 'dark',
                     'image' => 'assets/images/LatestImg/store-card-40-iphone-18-pro-202609 1.png',
-                    'alt_text' => 'iPhone 16 Pro in Desert Titanium',
-                    'badge' => '',
-                    'url' => '#buy-iphone-16-pro'
+                    'alt_text' => 'iPhone 18 Pro in Titanium finish',
+                    'url' => '#buy-iphone-18-pro'
                 ],
                 [
                     'id' => 102,
-                    'eyebrow' => 'IPHONE 16',
-                    'title' => 'Hello, Apple Intelligence.',
-                    'price_label' => 'From ₹79900.00‡',
-                    'price_raw' => 79900.00,
+                    'badge' => 'NEW',
+                    'eyebrow' => 'iPhone Duo',
+                    'title' => 'Hello, hello.',
+                    'price_label' => 'From ₹299900.00‡',
+                    'price_raw' => 299900.00,
                     'theme' => 'light',
-                    'image' => 'assets/images/LatestImg/store-card-40-iphone-17-202509 1.png',
-                    'alt_text' => 'iPhone 16 in vibrant Ultramarine and Teal',
-                    'badge' => '',
-                    'url' => '#buy-iphone-16'
+                    'image' => 'assets/images/LatestImg/store-card-40-iphone-duo-202609 1.png',
+                    'alt_text' => 'iPhone Duo foldable dual-screen display',
+                    'url' => '#buy-iphone-duo'
                 ],
                 [
                     'id' => 103,
+                    'badge' => 'NEW',
+                    'eyebrow' => 'MacBook Pro',
+                    'title' => 'PROLED XDR Display',
+                    'price_label' => '',
+                    'price_raw' => 169900.00,
+                    'theme' => 'dark',
+                    'image' => 'assets/images/LatestImg/store-card-40-macbook-pro-proled-202610 1.png',
+                    'alt_text' => 'MacBook Pro PROLED XDR Display',
+                    'url' => '#buy-macbook-pro'
+                ],
+                [
+                    'id' => 104,
+                    'badge' => 'NEW 14" WITH M6',
+                    'eyebrow' => 'MacBook Pro',
+                    'title' => 'With M6, M6 Pro and M6 Max.',
+                    'price_label' => '',
+                    'price_raw' => 169900.00,
+                    'theme' => 'dark',
+                    'image' => 'assets/images/LatestImg/store-card-40-macbook-neo-202603 1.png',
+                    'alt_text' => 'MacBook Pro 14-inch with M6 chip',
+                    'url' => '#buy-macbook-pro-14'
+                ],
+                [
+                    'id' => 105,
+                    'badge' => '',
                     'eyebrow' => 'APPLE WATCH SERIES 10',
                     'title' => 'Thinscredible.',
                     'price_label' => 'From ₹46900.00‡',
@@ -207,11 +232,11 @@ class Database {
                     'theme' => 'dark',
                     'image' => 'assets/images/LatestImg/store-card-40-watch-series-12-202609_GEO_IN 1.png',
                     'alt_text' => 'Apple Watch Series 10 in Jet Black aluminum',
-                    'badge' => '',
                     'url' => '#buy-watch-series-10'
                 ],
                 [
-                    'id' => 104,
+                    'id' => 106,
+                    'badge' => '',
                     'eyebrow' => 'APPLE WATCH ULTRA 2',
                     'title' => 'New finish. Never quit.',
                     'price_label' => 'From ₹89900.00‡',
@@ -219,20 +244,7 @@ class Database {
                     'theme' => 'dark',
                     'image' => 'assets/images/LatestImg/store-card-40-watch-ultra-4-202609_GEO_IN 1.png',
                     'alt_text' => 'Apple Watch Ultra 2 in Black Titanium',
-                    'badge' => '',
                     'url' => '#buy-watch-ultra-2'
-                ],
-                [
-                    'id' => 105,
-                    'eyebrow' => 'MACBOOK PRO',
-                    'title' => 'A work of smart.',
-                    'price_label' => 'From ₹169900.00‡',
-                    'price_raw' => 169900.00,
-                    'theme' => 'dark',
-                    'image' => 'assets/images/LatestImg/store-card-40-macbook-pro-202610 1.png',
-                    'alt_text' => 'MacBook Pro with M4 family chip',
-                    'badge' => '',
-                    'url' => '#buy-macbook-pro'
                 ],
                 [
                     'id' => 106,
