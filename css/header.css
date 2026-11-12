@@ -508,9 +508,67 @@
     pointer-events: auto;
 }
 
-/* Mobile Nav Bar & Drawer */
+/* Mobile Nav Bar & Actions */
 .mobile-nav-bar {
     display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.mobile-logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.mobile-logo-link:hover {
+    opacity: 1;
+}
+
+.mobile-logo-link .nav-svg-icon {
+    width: 14px;
+    height: 44px;
+    color: #1d1d1f;
+}
+
+.mobile-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+}
+
+.mobile-action-btn {
+    background: none;
+    border: none;
+    padding: 0 4px;
+    margin: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    color: var(--color-text-primary);
+    opacity: 0.8;
+    position: relative;
+    transition: opacity 0.2s ease;
+}
+
+.mobile-action-btn:hover {
+    opacity: 1;
+}
+
+.mobile-action-btn .nav-svg-icon {
+    height: 44px;
+    color: #1d1d1f;
 }
 
 .globalnav-menu-btn {
@@ -518,27 +576,37 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 4px;
+    padding: 0 4px;
+    margin: 0;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     width: 24px;
-    height: 20px;
+    height: 44px;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.globalnav-menu-btn:hover {
+    opacity: 1;
 }
 
 .menu-line {
-    width: 100%;
-    height: 1.5px;
+    display: block;
+    width: 18px;
+    height: 1px;
     background-color: var(--color-text-primary);
-    border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .globalnav-menu-btn.open .menu-line:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+    transform: translateY(3px) rotate(45deg);
 }
 
 .globalnav-menu-btn.open .menu-line:nth-child(2) {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-3px) rotate(-45deg);
 }
 
 .mobile-menu-drawer {
