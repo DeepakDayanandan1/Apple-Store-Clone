@@ -65,10 +65,18 @@
 
     /* Cards */
     .product-showcase-card,
-    .banner-info-card {
+    .banner-info-card,
+    .lead-audio-card {
         width: 340px;
         height: 460px;
         flex: 0 0 340px;
+    }
+
+    .experience-card,
+    .special-store-card {
+        width: 380px;
+        height: 460px;
+        flex: 0 0 380px;
     }
 
     .card-headline-text {
@@ -223,10 +231,18 @@
     }
 
     .product-showcase-card,
-    .banner-info-card {
+    .banner-info-card,
+    .lead-audio-card {
         width: 300px;
         height: 430px;
         flex: 0 0 300px;
+    }
+
+    .experience-card,
+    .special-store-card {
+        width: 320px;
+        height: 440px;
+        flex: 0 0 320px;
     }
 
     .card-text-header {
@@ -300,3 +316,4 @@
         font-size: 16px;
     }
 }
+

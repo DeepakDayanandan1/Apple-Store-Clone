@@ -77,3 +77,4 @@ $categories = $db->getCategories();
 
     </div>
 </section>
+

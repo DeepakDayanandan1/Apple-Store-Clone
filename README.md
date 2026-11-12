@@ -57,9 +57,12 @@ apple-store-clone/
 │   ├── images/
 │   │   ├── NavImg/           # Category navigation shelf images
 │   │   ├── LatestImg/        # The Latest section product card images
-│   │   └── AccessoriesImg/   # Accessories images (cases, bands, chargers, audio)
+│   │   ├── AccessoriesImg/   # Accessories images (cases, bands, chargers, cables)
+│   │   ├── LoudImg/          # Audio products (AirPods Pro, AirPods Max, HomePod, Beats)
+│   │   ├── ExperienceImg/    # Apple Experience cards (Apple Intelligence, Ecosystem, Apple One)
+│   │   └── OffersImg/        # Education & special store offers
 │   ├── icons/                # Inline SVG icons (Apple logo, Search, Bag, Chevrons, Store)
-│   └── fonts/                # Native Apple SF Pro system typography
+│   └── fonts/                # Native Apple SF Pro system typography stack
 │
 ├── css/
 │   ├── style.css             # Apple design system, typography, cards, and animations
@@ -192,3 +195,4 @@ For sections where images will be provided later (such as Help, Difference, Audi
 - **PHP Coding Standards**: Clean, secure, and modern object-oriented PHP code with proper separation of configuration, includes, sections, and views.
 - **Performance**: Zero external render-blocking scripts, lightweight SVGs, and responsive images with native lazy loading.
 - **Cross-Browser Compatibility**: Tested across modern desktop and mobile browsers (Chrome, Safari, Firefox, Edge).
+

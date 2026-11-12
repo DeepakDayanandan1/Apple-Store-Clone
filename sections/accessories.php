@@ -149,3 +149,4 @@ $endCard = $accessoriesData['end_card'] ?? null;
 
     </div>
 </section>
+

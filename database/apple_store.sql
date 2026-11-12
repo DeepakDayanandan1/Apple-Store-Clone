@@ -187,8 +187,7 @@ INSERT INTO `accessory_swatches` (`product_id`, `color_name`, `color_hex`, `sort
 (211, 'White', '#f2f2f2', 1);
 
 -- --------------------------------------------------------
--- Seed Data: products (Help, Difference, Audio, Experience, Special Stores)
--- Blank image_url allows user to drop images later as requested
+-- Seed Data: products (Help & The Apple Difference)
 -- --------------------------------------------------------
 INSERT INTO `products` (`id`, `section_key`, `part_number`, `eyebrow`, `title`, `description`, `price_label`, `price_raw`, `image_url`, `alt_text`, `theme`, `badge`, `link_url`, `sort_order`, `is_active`) VALUES
 (301, 'help', NULL, 'APPLE SPECIALIST', 'Shop one on one with a Specialist. Online or in a store.', NULL, 'Shop with a Specialist', 0.00, '', 'Specialist banner', 'light', NULL, '#specialist', 1, 1),
@@ -200,18 +199,39 @@ INSERT INTO `products` (`id`, `section_key`, `part_number`, `eyebrow`, `title`, 
 (402, 'difference', NULL, 'FLEXIBLE PAYMENT', 'Save with instant cashback and No Cost EMI.‡', 'Get up to ₹10000 instant cashback with eligible card payment.', 'Explore EMI', 0.00, '', 'EMI and Cashback', 'light', NULL, '#financing', 2, 1),
 (403, 'difference', NULL, 'CUSTOMISE YOUR MAC', 'Build the Mac that is perfect for you.', 'Choose your memory, storage, graphics and even keyboard language.', 'Customise', 0.00, '', 'Customise Mac', 'light', NULL, '#customise-mac', 3, 1),
 (404, 'difference', NULL, 'FREE ENGRAVING', 'Make them yours. Engrave a mix of emoji, names and numbers for free.', 'Personalise your AirPods, AirTag, Apple Pencil Pro or iPad.', 'Engrave free', 0.00, '', 'Free engraving', 'light', NULL, '#engraving', 4, 1),
-(405, 'difference', NULL, 'DELIVERY AND PICKUP', 'Enjoy free delivery, or easy pickup from an Apple Store.', 'Contactless free delivery directly to your home.', 'Learn more', 0.00, '', 'Free delivery', 'light', NULL, '#delivery', 5, 1),
+(405, 'difference', NULL, 'DELIVERY AND PICKUP', 'Enjoy free delivery, or easy pickup from an Apple Store.', 'Contactless free delivery directly to your home.', 'Learn more', 0.00, '', 'Free delivery', 'light', NULL, '#delivery', 5, 1);
 
-(501, 'audio', NULL, 'AIRPODS PRO 2', 'Pro sound. Pro hearing health.', NULL, 'MRP ₹24900.00‡', 24900.00, '', 'AirPods Pro 2', 'light', NULL, '#airpods-pro-2', 1, 1),
-(502, 'audio', NULL, 'AIRPODS MAX', 'Five fresh finishes. Bold sound.', NULL, 'MRP ₹59900.00‡', 59900.00, '', 'AirPods Max', 'light', NULL, '#airpods-max', 2, 1),
-(503, 'audio', NULL, 'HOMEPOD MINI', 'Surprising sound for its size.', NULL, 'MRP ₹10900.00‡', 10900.00, '', 'HomePod mini', 'light', NULL, '#homepod-mini', 3, 1),
+-- --------------------------------------------------------
+-- Seed Data: products (Loud and Clear Section)
+-- --------------------------------------------------------
+INSERT INTO `products` (`id`, `section_key`, `part_number`, `eyebrow`, `title`, `description`, `price_label`, `price_raw`, `image_url`, `alt_text`, `theme`, `badge`, `link_url`, `sort_order`, `is_active`) VALUES
+(500, 'audio', NULL, 'APPLE MUSIC', 'Get 3 months of Apple Music free.', 'Included with the purchase of select Apple audio devices.⁺', 'Try it free', 0.00, 'assets/images/LoudImg/store-card-40-applemusic-202609 1.png', 'Apple Music Banner', 'light', NULL, '#apple-music', 1, 1),
+(501, 'audio', NULL, 'AIRPODS PRO 2', 'AirPods Pro 2', 'Pro sound. Pro hearing health.', 'MRP ₹24900.00 (Incl. of all taxes)', 24900.00, 'assets/images/LoudImg/airpods-pro-3-hero-select-202509 1.png', 'AirPods Pro 2', 'light', 'Hearing Health', '#airpods-pro-2', 2, 1),
+(502, 'audio', NULL, 'AIRPODS MAX', 'AirPods Max - USB-C', 'Five fresh finishes. Bold sound.', 'MRP ₹59900.00 (Incl. of all taxes)', 59900.00, 'assets/images/LoudImg/airpods-max-select-202409-orange 1.png', 'AirPods Max in Orange', 'light', 'New Colours', '#airpods-max', 3, 1),
+(503, 'audio', NULL, 'HOMEPOD MINI', 'HomePod mini', 'Surprising sound for its size.', 'MRP ₹10900.00 (Incl. of all taxes)', 10900.00, 'assets/images/LoudImg/homepod-mini-select-pink-202610 1.png', 'HomePod mini in Pink', 'light', 'Colourful Sound', '#homepod-mini', 4, 1),
+(504, 'audio', NULL, 'HOMEPOD', 'HomePod', 'Pro sound at home.', 'MRP ₹32900.00 (Incl. of all taxes)', 32900.00, 'assets/images/LoudImg/homepod-select-white-202610 1.png', 'HomePod in White', 'light', 'Spatial Audio', '#homepod', 5, 1),
+(505, 'audio', NULL, 'BEATS PILL', 'Beats Pill', 'Sound bigger than ever.', 'MRP ₹16900.00 (Incl. of all taxes)', 16900.00, 'assets/images/LoudImg/beats-360-hero-select-202609-pink 1.png', 'Beats Pill in Statement Pink', 'light', 'New', '#beats-pill', 6, 1),
+(506, 'audio', 'MW463', 'BEATS PILL', 'Beats Pill - Champagne Gold', 'Up to 24 hours of battery life.', 'MRP ₹16900.00 (Incl. of all taxes)', 16900.00, 'assets/images/LoudImg/MW463 1.png', 'Beats Pill in Champagne Gold', 'light', 'New', '#beats-pill-gold', 7, 1),
+(507, 'audio', 'MX743', 'POWERBEATS PRO', 'Powerbeats Pro', 'High-performance workout earphones.', 'MRP ₹19900.00 (Incl. of all taxes)', 19900.00, 'assets/images/LoudImg/MX743 1.png', 'Powerbeats Pro Wireless Earphones', 'light', 'Sweat Resistant', '#powerbeats-pro', 8, 1);
 
-(601, 'experience', NULL, 'APPLE SERVICES', 'Six Apple services. One easy subscription.', 'Apple One bundles Apple Music, Apple TV+, Apple Arcade, and iCloud+.', 'Try Apple One free', 0.00, '', 'Apple One', 'light', NULL, '#apple-one', 1, 1),
-(602, 'experience', NULL, 'APPLE MUSIC', 'Over 100 million songs. Spatial Audio with Dolby Atmos.', 'Get 3 months free when you buy an eligible Apple device.⁺', 'Try it free', 0.00, '', 'Apple Music', 'light', NULL, '#apple-music', 2, 1),
-(603, 'experience', NULL, 'APPLE TV+', 'Watch award-winning Apple Originals every month.', 'Get 3 months free when you purchase an Apple device.⁺', 'Watch now', 0.00, '', 'Apple TV+', 'dark', NULL, '#apple-tv', 3, 1),
+-- --------------------------------------------------------
+-- Seed Data: products (The Apple Experience Section)
+-- --------------------------------------------------------
+INSERT INTO `products` (`id`, `section_key`, `part_number`, `eyebrow`, `title`, `description`, `price_label`, `price_raw`, `image_url`, `alt_text`, `theme`, `badge`, `link_url`, `sort_order`, `is_active`) VALUES
+(601, 'experience', NULL, 'APPLE INTELLIGENCE', 'AI for the rest of us.', 'Personal, private, powerful intelligence integrated deeply into iOS, iPadOS and macOS.', 'Learn more', 0.00, 'assets/images/ExperienceImg/store-card-50-apple-intelligence-202609 1.png', 'Apple Intelligence Experience', 'light', NULL, '#apple-intelligence', 1, 1),
+(602, 'experience', NULL, 'APPLE ECOSYSTEM', 'All your devices. One seamless experience.', 'Copy on iPhone, paste on Mac. Hand off calls. Everything works together effortlessly.', 'Explore continuity', 0.00, 'assets/images/ExperienceImg/store-card-50-continuity-202609_GEO_IN 1.png', 'Continuity & Apple Ecosystem', 'light', NULL, '#continuity', 2, 1),
+(603, 'experience', NULL, 'APPLE ONE', 'Six Apple services. One easy subscription.', 'Bundle Apple Music, Apple TV+, Apple Arcade, iCloud+ and more into one simple monthly plan.', 'Try Apple One free', 0.00, 'assets/images/ExperienceImg/store-card-50-app-bundle-202609 1.png', 'Apple One subscription bundle', 'light', NULL, '#apple-one', 3, 1),
+(604, 'experience', NULL, 'APPLECARE+', 'Coverage for accidental drops, spills and more.', 'Get peace of mind with 24/7 priority access to Apple experts and certified repairs.', 'Learn more', 0.00, 'assets/images/ExperienceImg/store-card-50-applecare-202609 1.png', 'AppleCare+ coverage', 'light', NULL, '#applecare', 4, 1),
+(605, 'experience', NULL, 'HOME', 'See how one little app can manage your whole smart home.', 'Control lights, locks, cameras and thermostats securely from your Apple devices.', 'Discover Apple Home', 0.00, 'assets/images/ExperienceImg/store-card-50-home-ecosystem-202610_GEO_IN 1.png', 'Apple Home smart ecosystem', 'light', NULL, '#home-ecosystem', 5, 1),
+(606, 'experience', NULL, 'APPLE TV 4K', 'The Apple experience. Cinematic in every sense.', 'Stream stunning 4K Dolby Vision, HDR10+, and immersive Spatial Audio.', 'Buy Apple TV 4K', 0.00, 'assets/images/ExperienceImg/store-card-50-homekit-202610_GEO_IN 1.png', 'Apple TV 4K home entertainment', 'dark', NULL, '#apple-tv', 6, 1),
+(607, 'experience', NULL, 'FREE ENGRAVING', 'Make them yours with a mix of emoji, text and numbers.', 'Free personalisation exclusively at the Apple Store.', 'Engrave free', 0.00, 'assets/images/ExperienceImg/store-card-40-holiday-gifting-202512 1.png', 'Free engraving and gifting', 'light', NULL, '#free-engraving', 7, 1);
 
-(701, 'special_stores', NULL, 'EDUCATION', 'Save on Mac or iPad with education pricing.', 'Available to current and newly accepted university students, parents buying for them, and teachers and staff at all levels.', 'Shop Education', 0.00, '', 'Education', 'light', NULL, '#education', 1, 1),
-(702, 'special_stores', NULL, 'BUSINESS', 'From enterprise to small business, we’ll work with you.', 'Specialized pricing, flexible financing options, and expert deployment support.', 'Shop Business', 0.00, '', 'Business Store', 'light', NULL, '#business-store', 2, 1);
+-- --------------------------------------------------------
+-- Seed Data: products (Special Stores Section)
+-- --------------------------------------------------------
+INSERT INTO `products` (`id`, `section_key`, `part_number`, `eyebrow`, `title`, `description`, `price_label`, `price_raw`, `image_url`, `alt_text`, `theme`, `badge`, `link_url`, `sort_order`, `is_active`) VALUES
+(701, 'special_stores', NULL, 'EDUCATION', 'Save on Mac or iPad with education pricing.', 'Available to current and newly accepted university students, parents buying for them, and teachers and staff at all levels.', 'Shop Education', 0.00, 'assets/images/OffersImg/store-card-40-education-202609 1.png', 'Apple Education Pricing', 'light', NULL, '#education', 1, 1),
+(702, 'special_stores', NULL, 'BUSINESS', 'From enterprise to small business, we’ll work with you.', 'Specialized pricing, flexible financing options, and expert deployment support.', 'Shop Business', 0.00, '', 'Apple for Business', 'light', NULL, '#business-store', 2, 1);
 
 -- --------------------------------------------------------
 -- Seed Data: quick_links

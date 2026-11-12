@@ -66,3 +66,4 @@ $latestProducts = $db->getLatestProducts();
 
     </div>
 </section>
+

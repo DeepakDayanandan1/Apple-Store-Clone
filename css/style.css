@@ -813,6 +813,21 @@ img {
     justify-content: space-between;
 }
 
+.experience-card,
+.special-store-card {
+    width: 480px;
+    height: 500px;
+    flex: 0 0 480px;
+    justify-content: space-between;
+}
+
+.lead-audio-card {
+    width: 400px;
+    height: 500px;
+    flex: 0 0 400px;
+    justify-content: space-between;
+}
+
 /* Themes */
 .card-theme-light {
     background-color: var(--color-bg-white);
@@ -1269,3 +1284,4 @@ img {
         transform: translateY(0);
     }
 }
+

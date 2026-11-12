@@ -597,19 +597,218 @@ class Database {
                     'url' => 'tel:0008000401966'
                 ]
             ],
+            // Section 5: Loud and Clear Audio Products
             'audio_cards' => [
-                ['id' => 501, 'eyebrow' => 'AIRPODS PRO 2', 'title' => 'Pro sound. Pro hearing health.', 'price_label' => 'MRP ₹24900.00‡', 'image' => '', 'theme' => 'light', 'url' => '#airpods-pro-2'],
-                ['id' => 502, 'eyebrow' => 'AIRPODS MAX', 'title' => 'Five fresh finishes. Bold sound.', 'price_label' => 'MRP ₹59900.00‡', 'image' => '', 'theme' => 'light', 'url' => '#airpods-max'],
-                ['id' => 503, 'eyebrow' => 'HOMEPOD MINI', 'title' => 'Surprising sound for its size.', 'price_label' => 'MRP ₹10900.00‡', 'image' => '', 'theme' => 'light', 'url' => '#homepod-mini']
+                [
+                    'id' => 500,
+                    'eyebrow' => 'APPLE MUSIC',
+                    'title' => 'Get 3 months of Apple Music free.',
+                    'description' => 'Included with the purchase of select Apple audio devices.⁺',
+                    'price_label' => 'Try it free',
+                    'image' => 'assets/images/LoudImg/store-card-40-applemusic-202609 1.png',
+                    'theme' => 'light',
+                    'is_lead' => true,
+                    'url' => '#apple-music'
+                ],
+                [
+                    'id' => 501,
+                    'eyebrow' => 'AIRPODS PRO 2',
+                    'title' => 'AirPods Pro 2',
+                    'description' => 'Pro sound. Pro hearing health.',
+                    'price_label' => 'MRP ₹24900.00 (Incl. of all taxes)',
+                    'price_raw' => 24900.00,
+                    'image' => 'assets/images/LoudImg/airpods-pro-3-hero-select-202509 1.png',
+                    'badge' => 'Hearing Health',
+                    'theme' => 'light',
+                    'swatches' => [
+                        ['color' => 'White', 'hex' => '#f2f2f2']
+                    ],
+                    'url' => '#airpods-pro-2'
+                ],
+                [
+                    'id' => 502,
+                    'eyebrow' => 'AIRPODS MAX',
+                    'title' => 'AirPods Max - USB-C',
+                    'description' => 'Five fresh finishes. Bold sound.',
+                    'price_label' => 'MRP ₹59900.00 (Incl. of all taxes)',
+                    'price_raw' => 59900.00,
+                    'image' => 'assets/images/LoudImg/airpods-max-select-202409-orange 1.png',
+                    'badge' => 'New Colours',
+                    'theme' => 'light',
+                    'swatches' => [
+                        ['color' => 'Midnight', 'hex' => '#1f242c'],
+                        ['color' => 'Starlight', 'hex' => '#e5ded1'],
+                        ['color' => 'Blue', 'hex' => '#9ab3c9'],
+                        ['color' => 'Purple', 'hex' => '#b8b2cb'],
+                        ['color' => 'Orange', 'hex' => '#dc6c4a']
+                    ],
+                    'url' => '#airpods-max'
+                ],
+                [
+                    'id' => 503,
+                    'eyebrow' => 'HOMEPOD MINI',
+                    'title' => 'HomePod mini',
+                    'description' => 'Surprising sound for its size.',
+                    'price_label' => 'MRP ₹10900.00 (Incl. of all taxes)',
+                    'price_raw' => 10900.00,
+                    'image' => 'assets/images/LoudImg/homepod-mini-select-pink-202610 1.png',
+                    'badge' => 'Colourful Sound',
+                    'theme' => 'light',
+                    'swatches' => [
+                        ['color' => 'Yellow', 'hex' => '#ffdc4b'],
+                        ['color' => 'Orange', 'hex' => '#ea5a35'],
+                        ['color' => 'Blue', 'hex' => '#2e516f'],
+                        ['color' => 'White', 'hex' => '#e5e5e7'],
+                        ['color' => 'Space Gray', 'hex' => '#3a3a3c']
+                    ],
+                    'url' => '#homepod-mini'
+                ],
+                [
+                    'id' => 504,
+                    'eyebrow' => 'HOMEPOD',
+                    'title' => 'HomePod',
+                    'description' => 'Pro sound at home.',
+                    'price_label' => 'MRP ₹32900.00 (Incl. of all taxes)',
+                    'price_raw' => 32900.00,
+                    'image' => 'assets/images/LoudImg/homepod-select-white-202610 1.png',
+                    'badge' => 'Spatial Audio',
+                    'theme' => 'light',
+                    'swatches' => [
+                        ['color' => 'Midnight', 'hex' => '#1f242c'],
+                        ['color' => 'White', 'hex' => '#e5e5e7']
+                    ],
+                    'url' => '#homepod'
+                ],
+                [
+                    'id' => 505,
+                    'eyebrow' => 'BEATS PILL',
+                    'title' => 'Beats Pill',
+                    'description' => 'Sound bigger than ever.',
+                    'price_label' => 'MRP ₹16900.00 (Incl. of all taxes)',
+                    'price_raw' => 16900.00,
+                    'image' => 'assets/images/LoudImg/beats-360-hero-select-202609-pink 1.png',
+                    'badge' => 'New',
+                    'theme' => 'light',
+                    'swatches' => [
+                        ['color' => 'Matte Black', 'hex' => '#1c1c1e'],
+                        ['color' => 'Statement Red', 'hex' => '#d71e28'],
+                        ['color' => 'Champagne Gold', 'hex' => '#cfba96']
+                    ],
+                    'url' => '#beats-pill'
+                ],
+                [
+                    'id' => 506,
+                    'eyebrow' => 'BEATS PILL',
+                    'title' => 'Beats Pill - Champagne Gold',
+                    'description' => 'Up to 24 hours of battery life.',
+                    'price_label' => 'MRP ₹16900.00 (Incl. of all taxes)',
+                    'price_raw' => 16900.00,
+                    'image' => 'assets/images/LoudImg/MW463 1.png',
+                    'badge' => 'New',
+                    'theme' => 'light',
+                    'url' => '#beats-pill-gold'
+                ],
+                [
+                    'id' => 507,
+                    'eyebrow' => 'POWERBEATS PRO',
+                    'title' => 'Powerbeats Pro',
+                    'description' => 'High-performance workout earphones.',
+                    'price_label' => 'MRP ₹19900.00 (Incl. of all taxes)',
+                    'price_raw' => 19900.00,
+                    'image' => 'assets/images/LoudImg/MX743 1.png',
+                    'badge' => 'Sweat Resistant',
+                    'theme' => 'light',
+                    'url' => '#powerbeats-pro'
+                ]
             ],
+            // Section 6: The Apple Experience
             'experience_cards' => [
-                ['id' => 601, 'eyebrow' => 'APPLE SERVICES', 'title' => 'Six Apple services. One easy subscription.', 'subtitle' => 'Apple One bundles Apple Music, Apple TV+, Apple Arcade, and iCloud+.', 'image' => '', 'theme' => 'light', 'url' => '#apple-one'],
-                ['id' => 602, 'eyebrow' => 'APPLE MUSIC', 'title' => 'Over 100 million songs. Spatial Audio with Dolby Atmos.', 'subtitle' => 'Get 3 months free when you buy an eligible Apple device.⁺', 'image' => '', 'theme' => 'light', 'url' => '#apple-music'],
-                ['id' => 603, 'eyebrow' => 'APPLE TV+', 'title' => 'Watch award-winning Apple Originals every month.', 'subtitle' => 'Get 3 months free when you purchase an Apple device.⁺', 'image' => '', 'theme' => 'dark', 'url' => '#apple-tv']
+                [
+                    'id' => 601,
+                    'eyebrow' => 'APPLE INTELLIGENCE',
+                    'title' => 'AI for the rest of us.',
+                    'subtitle' => 'Personal, private, powerful intelligence integrated deeply into iOS, iPadOS and macOS.',
+                    'image' => 'assets/images/ExperienceImg/store-card-50-apple-intelligence-202609 1.png',
+                    'theme' => 'light',
+                    'url' => '#apple-intelligence'
+                ],
+                [
+                    'id' => 602,
+                    'eyebrow' => 'APPLE ECOSYSTEM',
+                    'title' => 'All your devices. One seamless experience.',
+                    'subtitle' => 'Copy on iPhone, paste on Mac. Hand off calls. Everything works together effortlessly.',
+                    'image' => 'assets/images/ExperienceImg/store-card-50-continuity-202609_GEO_IN 1.png',
+                    'theme' => 'light',
+                    'url' => '#continuity'
+                ],
+                [
+                    'id' => 603,
+                    'eyebrow' => 'APPLE ONE',
+                    'title' => 'Six Apple services. One easy subscription.',
+                    'subtitle' => 'Bundle Apple Music, Apple TV+, Apple Arcade, iCloud+ and more into one simple monthly plan.',
+                    'image' => 'assets/images/ExperienceImg/store-card-50-app-bundle-202609 1.png',
+                    'theme' => 'light',
+                    'url' => '#apple-one'
+                ],
+                [
+                    'id' => 604,
+                    'eyebrow' => 'APPLECARE+',
+                    'title' => 'Coverage for accidental drops, spills and more.',
+                    'subtitle' => 'Get peace of mind with 24/7 priority access to Apple experts and certified repairs.',
+                    'image' => 'assets/images/ExperienceImg/store-card-50-applecare-202609 1.png',
+                    'theme' => 'light',
+                    'url' => '#applecare'
+                ],
+                [
+                    'id' => 605,
+                    'eyebrow' => 'HOME',
+                    'title' => 'See how one little app can manage your whole smart home.',
+                    'subtitle' => 'Control lights, locks, cameras and thermostats securely from your Apple devices.',
+                    'image' => 'assets/images/ExperienceImg/store-card-50-home-ecosystem-202610_GEO_IN 1.png',
+                    'theme' => 'light',
+                    'url' => '#home-ecosystem'
+                ],
+                [
+                    'id' => 606,
+                    'eyebrow' => 'APPLE TV 4K',
+                    'title' => 'The Apple experience. Cinematic in every sense.',
+                    'subtitle' => 'Stream stunning 4K Dolby Vision, HDR10+, and immersive Spatial Audio.',
+                    'image' => 'assets/images/ExperienceImg/store-card-50-homekit-202610_GEO_IN 1.png',
+                    'theme' => 'dark',
+                    'url' => '#apple-tv'
+                ],
+                [
+                    'id' => 607,
+                    'eyebrow' => 'FREE ENGRAVING',
+                    'title' => 'Make them yours with a mix of emoji, text and numbers.',
+                    'subtitle' => 'Free personalisation exclusively at the Apple Store.',
+                    'image' => 'assets/images/ExperienceImg/store-card-40-holiday-gifting-202512 1.png',
+                    'theme' => 'light',
+                    'url' => '#free-engraving'
+                ]
             ],
+            // Section 7: Special Stores
             'special_stores_cards' => [
-                ['id' => 701, 'eyebrow' => 'EDUCATION', 'title' => 'Save on Mac or iPad with education pricing.', 'subtitle' => 'Available to current and newly accepted university students, parents buying for them, and teachers and staff at all levels.', 'image' => '', 'theme' => 'light', 'url' => '#education'],
-                ['id' => 702, 'eyebrow' => 'BUSINESS', 'title' => 'From enterprise to small business, we’ll work with you.', 'subtitle' => 'Specialized pricing, flexible financing options, and expert deployment support.', 'image' => '', 'theme' => 'light', 'url' => '#business-store']
+                [
+                    'id' => 701,
+                    'eyebrow' => 'EDUCATION',
+                    'title' => 'Save on Mac or iPad with education pricing.',
+                    'subtitle' => 'Available to current and newly accepted university students, parents buying for them, and teachers and staff at all levels.',
+                    'image' => 'assets/images/OffersImg/store-card-40-education-202609 1.png',
+                    'theme' => 'light',
+                    'link_text' => 'Shop Education',
+                    'url' => '#education'
+                ],
+                [
+                    'id' => 702,
+                    'eyebrow' => 'BUSINESS',
+                    'title' => 'From enterprise to small business, we’ll work with you.',
+                    'subtitle' => 'Specialized pricing, flexible financing options, and expert deployment support.',
+                    'image' => '',
+                    'theme' => 'light',
+                    'link_text' => 'Shop Business',
+                    'url' => '#business-store'
+                ]
             ],
             'quick_links' => [
                 ['label' => 'Order Status', 'url' => '#order-status'],

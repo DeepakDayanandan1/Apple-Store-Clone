@@ -3,7 +3,7 @@
  * Promotions Section
  * Includes "Help is here", "The Apple difference", "Loud and clear", 
  * "The Apple Experience", and "Special stores"
- * With blank image containers prepared for images as requested.
+ * With newly added images dynamically populated from assets/images/
  */
 $helpCards = $db->getSectionItems('help');
 $diffCards = $db->getSectionItems('promotions');
@@ -48,7 +48,6 @@ $specialStores = $db->getSectionItems('special_stores');
                             <?php endif; ?>
                         </div>
 
-                        <!-- Blank container for user provided images -->
                         <div class="card-visual-media blank-media-container">
                             <?php if (!empty($card['image'])): ?>
                                 <img src="<?= htmlspecialchars($card['image']) ?>" alt="<?= htmlspecialchars($card['title']) ?>" class="card-showcase-img" loading="lazy">
@@ -146,21 +145,75 @@ $specialStores = $db->getSectionItems('special_stores');
         <div class="carousel-container">
             <div class="carousel-track" id="audio-carousel" tabindex="0" role="region" aria-label="Audio Products Carousel">
                 <?php foreach ($audioCards as $audio): ?>
-                    <article class="store-card product-showcase-card card-theme-light">
-                        <div class="card-text-header">
-                            <span class="card-eyebrow-text"><?= htmlspecialchars($audio['eyebrow']) ?></span>
-                            <h3 class="card-headline-text"><?= htmlspecialchars($audio['title']) ?></h3>
-                            <p class="card-price-text"><?= htmlspecialchars($audio['price_label']) ?></p>
-                        </div>
-                        <div class="card-visual-media blank-media-container">
-                            <?php if (!empty($audio['image'])): ?>
+                    <?php if (!empty($audio['is_lead'])): ?>
+                        <!-- Lead Banner Card (Apple Music) -->
+                        <article class="store-card banner-info-card card-theme-light lead-audio-card">
+                            <div class="card-text-header">
+                                <span class="card-eyebrow-text"><?= htmlspecialchars($audio['eyebrow']) ?></span>
+                                <h3 class="card-headline-text info-title"><?= htmlspecialchars($audio['title']) ?></h3>
+                                <p class="card-desc-text"><?= htmlspecialchars($audio['description']) ?></p>
+                                <span class="card-inline-action">
+                                    <?= htmlspecialchars($audio['price_label']) ?>
+                                    <span class="action-chevron">&rsaquo;</span>
+                                </span>
+                            </div>
+                            <div class="card-visual-media">
                                 <img src="<?= htmlspecialchars($audio['image']) ?>" alt="<?= htmlspecialchars($audio['title']) ?>" class="card-showcase-img" loading="lazy">
-                            <?php else: ?>
-                                <div class="blank-slot-placeholder" aria-hidden="true"></div>
-                            <?php endif; ?>
-                        </div>
-                        <a href="<?= htmlspecialchars($audio['url'] ?? '#') ?>" class="card-full-link" aria-label="<?= htmlspecialchars($audio['eyebrow']) ?>"></a>
-                    </article>
+                            </div>
+                            <a href="<?= htmlspecialchars($audio['url'] ?? '#') ?>" class="card-full-link" aria-label="<?= htmlspecialchars($audio['title']) ?>"></a>
+                        </article>
+                    <?php else: ?>
+                        <!-- Audio Product Card -->
+                        <?php 
+                            $swatches = $audio['swatches'] ?? [];
+                            $hasSwatches = !empty($swatches);
+                            $badge = $audio['badge'] ?? '';
+                        ?>
+                        <article class="store-card accessory-product-card audio-product-card card-theme-light"
+                                 data-product-id="<?= htmlspecialchars($audio['id']) ?>"
+                                 data-product-name="<?= htmlspecialchars($audio['title']) ?>"
+                                 data-product-price="<?= htmlspecialchars($audio['price_raw'] ?? 0) ?>"
+                                 data-product-image="<?= htmlspecialchars($audio['image']) ?>">
+                            
+                            <div class="accessory-card-image-wrap">
+                                <img src="<?= htmlspecialchars($audio['image']) ?>" 
+                                     alt="<?= htmlspecialchars($audio['title']) ?>" 
+                                     class="accessory-product-img"
+                                     width="220"
+                                     height="220"
+                                     loading="lazy">
+                            </div>
+
+                            <!-- Color Swatches Row -->
+                            <div class="accessory-swatches-row" aria-label="Color options">
+                                <?php if ($hasSwatches && count($swatches) > 1): ?>
+                                    <?php foreach ($swatches as $sIdx => $swatch): ?>
+                                        <button type="button" 
+                                                class="swatch-dot <?= $sIdx === 0 ? 'active' : '' ?>" 
+                                                style="background-color: <?= htmlspecialchars($swatch['hex']) ?>;"
+                                                title="<?= htmlspecialchars($swatch['color']) ?>"
+                                                aria-label="<?= htmlspecialchars($swatch['color']) ?>"
+                                                data-color-name="<?= htmlspecialchars($swatch['color']) ?>">
+                                        </button>
+                                    <?php endforeach; ?>
+                                <?php else: ?>
+                                    <span class="swatch-spacer" aria-hidden="true">&nbsp;</span>
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="accessory-card-content">
+                                <?php if (!empty($badge)): ?>
+                                    <span class="accessory-badge"><?= htmlspecialchars($badge) ?></span>
+                                <?php endif; ?>
+                                <h3 class="accessory-title"><?= htmlspecialchars($audio['title']) ?></h3>
+                                <p class="accessory-price"><?= htmlspecialchars($audio['price_label']) ?></p>
+                                
+                                <button type="button" class="accessory-add-btn" aria-label="Add <?= htmlspecialchars($audio['title']) ?> to bag">
+                                    Add to Bag
+                                </button>
+                            </div>
+                        </article>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -193,7 +246,7 @@ $specialStores = $db->getSectionItems('special_stores');
             <div class="carousel-track" id="exp-carousel" tabindex="0" role="region" aria-label="Apple Experience Carousel">
                 <?php foreach ($experienceCards as $exp): ?>
                     <?php $isDark = ($exp['theme'] ?? 'light') === 'dark'; ?>
-                    <article class="store-card banner-info-card <?= $isDark ? 'card-theme-dark' : 'card-theme-light' ?>">
+                    <article class="store-card experience-card <?= $isDark ? 'card-theme-dark' : 'card-theme-light' ?>">
                         <div class="card-text-header">
                             <span class="card-eyebrow-text"><?= htmlspecialchars($exp['eyebrow']) ?></span>
                             <h3 class="card-headline-text info-title"><?= htmlspecialchars($exp['title']) ?></h3>
@@ -201,14 +254,14 @@ $specialStores = $db->getSectionItems('special_stores');
                                 <p class="card-desc-text"><?= htmlspecialchars($exp['subtitle']) ?></p>
                             <?php endif; ?>
                         </div>
-                        <div class="card-visual-media blank-media-container">
+                        <div class="card-visual-media">
                             <?php if (!empty($exp['image'])): ?>
                                 <img src="<?= htmlspecialchars($exp['image']) ?>" alt="<?= htmlspecialchars($exp['title']) ?>" class="card-showcase-img" loading="lazy">
                             <?php else: ?>
                                 <div class="blank-slot-placeholder" aria-hidden="true"></div>
                             <?php endif; ?>
                         </div>
-                        <a href="<?= htmlspecialchars($exp['url'] ?? '#') ?>" class="card-full-link" aria-label="<?= htmlspecialchars($exp['eyebrow']) ?>"></a>
+                        <a href="<?= htmlspecialchars($exp['url'] ?? '#') ?>" class="card-full-link" aria-label="<?= htmlspecialchars($exp['eyebrow'] . ' - ' . $exp['title']) ?>"></a>
                     </article>
                 <?php endforeach; ?>
             </div>
@@ -241,20 +294,26 @@ $specialStores = $db->getSectionItems('special_stores');
         <div class="carousel-container">
             <div class="carousel-track" id="stores-carousel" tabindex="0" role="region" aria-label="Special Stores Carousel">
                 <?php foreach ($specialStores as $store): ?>
-                    <article class="store-card banner-info-card card-theme-light">
+                    <article class="store-card special-store-card card-theme-light">
                         <div class="card-text-header">
                             <span class="card-eyebrow-text"><?= htmlspecialchars($store['eyebrow']) ?></span>
                             <h3 class="card-headline-text info-title"><?= htmlspecialchars($store['title']) ?></h3>
                             <p class="card-desc-text"><?= htmlspecialchars($store['subtitle']) ?></p>
+                            <?php if (!empty($store['link_text'])): ?>
+                                <span class="card-inline-action">
+                                    <?= htmlspecialchars($store['link_text']) ?>
+                                    <span class="action-chevron">&rsaquo;</span>
+                                </span>
+                            <?php endif; ?>
                         </div>
-                        <div class="card-visual-media blank-media-container">
+                        <div class="card-visual-media">
                             <?php if (!empty($store['image'])): ?>
                                 <img src="<?= htmlspecialchars($store['image']) ?>" alt="<?= htmlspecialchars($store['title']) ?>" class="card-showcase-img" loading="lazy">
                             <?php else: ?>
                                 <div class="blank-slot-placeholder" aria-hidden="true"></div>
                             <?php endif; ?>
                         </div>
-                        <a href="<?= htmlspecialchars($store['url'] ?? '#') ?>" class="card-full-link" aria-label="<?= htmlspecialchars($store['eyebrow']) ?>"></a>
+                        <a href="<?= htmlspecialchars($store['url'] ?? '#') ?>" class="card-full-link" aria-label="<?= htmlspecialchars($store['eyebrow'] . ' - ' . $store['title']) ?>"></a>
                     </article>
                 <?php endforeach; ?>
             </div>

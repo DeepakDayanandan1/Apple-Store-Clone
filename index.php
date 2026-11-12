@@ -34,3 +34,4 @@ include __DIR__ . '/sections/accessories.php';
 
 // Include Global Footer (Footnotes, Directory Columns with Mobile Accordion, Legal Links)
 include __DIR__ . '/includes/footer.php';
+
