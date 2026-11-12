@@ -1,6 +1,6 @@
 # Apple Store Online (India) - Web Clone
 
-A high-fidelity, pixel-accurate clone of the official [Apple Store Online (India)](https://www.apple.com/in/store), built from the ground up using **Core PHP**, **MySQL**, **HTML5**, **CSS3**, and **Vanilla JavaScript**.
+A high-fidelity, pixel-accurate clone of the official [Apple Store Online (India)](https://www.apple.com/in/store), built from the ground up using **Core PHP**, **MySQL**, **HTML5**, **CSS3**, and **JavaScript**.
 
 This project contains zero external frontend frameworks or heavy dependencies (no Bootstrap, Tailwind, or jQuery), delivering maximum performance, native typography, fluid micro-interactions, responsive horizontal carousels, and the signature Apple frosted-glass design language.
 
@@ -17,7 +17,7 @@ This project contains zero external frontend frameworks or heavy dependencies (n
 7. [Database Setup & Schema](#database-setup--schema)
 8. [Component Breakdown](#component-breakdown)
 9. [Responsive Design Specifications](#responsive-design-specifications)
-10. [Submission & Review Checklist](#submission--review-checklist)
+
 
 ---
 
@@ -226,14 +226,3 @@ The application includes tailored styles across standard device breakpoints:
 | **735px – 834px** | Tablets (Portrait) / iPad Mini | Mobile top bar with hamburger toggle, compact cards |
 | **< 734px** | Smartphones (iPhone 14/15/16 Pro Max) | Full-width cards, touch swipe snapping, collapsible footer accordions |
 
----
-
-## Submission & Review Checklist
-
-- [x] **Zero Framework Dependencies**: 100% pure vanilla HTML5, CSS3, and ES6 JavaScript.
-- [x] **Modular Architecture**: Clean separation between database configuration, reusable includes, page sections, and assets.
-- [x] **Accurate Design**: Matches Apple's typography, colors, border radii, shadows, and spacing.
-- [x] **Interactive Navigation**: Desktop hover mega-menus for Store, Mac, iPhone, Search, and Bag with backdrop blur.
-- [x] **Dynamic Fallback**: Operates reliably with or without an active MySQL database connection.
-- [x] **Clean Codebase**: Strictly free of temporary comments or AI-generated markers, ready for professional code review.
-- [x] **Cross-Browser Compatible**: Verified in modern versions of Chrome, Safari, Firefox, and Edge.
