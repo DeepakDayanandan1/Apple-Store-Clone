@@ -209,6 +209,7 @@
 .carousel-container {
     width: 100%;
     padding: 0;
+    padding-left: 100px;
     margin: 0;
     overflow: hidden;
     position: relative;
@@ -221,7 +222,7 @@
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding-left: var(--container-padding);
+    padding-left:0;
     padding-right: var(--container-padding);
     padding-top: 10px;
     padding-bottom: 24px;

@@ -164,14 +164,14 @@ class Database {
                 'link_url' => '#latest'
             ],
             'categories' => [
-                ['id' => 1, 'name' => 'Mac', 'slug' => 'mac', 'image' => 'assets/images/hero/store-card-13-mac-nav-202610 1.png', 'url' => '#mac'],
-                ['id' => 2, 'name' => 'iPhone', 'slug' => 'iphone', 'image' => 'assets/images/hero/store-card-13-iphone-nav-202609 1.png', 'url' => '#iphone'],
-                ['id' => 3, 'name' => 'iPad', 'slug' => 'ipad', 'image' => 'assets/images/hero/store-card-13-ipad-nav-202405 1.png', 'url' => '#ipad'],
-                ['id' => 4, 'name' => 'Apple Watch', 'slug' => 'watch', 'image' => 'assets/images/hero/store-card-13-watch-nav-202609_GEO_IN 1.png', 'url' => '#watch'],
-                ['id' => 5, 'name' => 'Home', 'slug' => 'home', 'image' => 'assets/images/hero/store-card-13-home-nav-202610 1.png', 'url' => '#home'],
-                ['id' => 6, 'name' => 'AirPods', 'slug' => 'airpods', 'image' => 'assets/images/hero/store-card-13-airpods-nav-202509 1.png', 'url' => '#airpods'],
-                ['id' => 7, 'name' => 'AirTag', 'slug' => 'airtag', 'image' => 'assets/images/hero/store-card-13-airtags-nav-202601_GEO_IN 1.png', 'url' => '#airtag'],
-                ['id' => 8, 'name' => 'Accessories', 'slug' => 'accessories', 'image' => 'assets/images/hero/store-card-13-accessories-nav-202609 1.png', 'url' => '#accessories'],
+                ['id' => 1, 'name' => 'Mac', 'slug' => 'mac', 'image' => 'assets/images/hero/mac.png', 'url' => '#mac'],
+                ['id' => 2, 'name' => 'iPhone', 'slug' => 'iphone', 'image' => 'assets/images/hero/iphone.png', 'url' => '#iphone'],
+                ['id' => 3, 'name' => 'iPad', 'slug' => 'ipad', 'image' => 'assets/images/hero/ipad.png', 'url' => '#ipad'],
+                ['id' => 4, 'name' => 'Apple Watch', 'slug' => 'watch', 'image' => 'assets/images/hero/watch.png', 'url' => '#watch'],
+                ['id' => 5, 'name' => 'Home', 'slug' => 'home', 'image' => 'assets/images/hero/home.png', 'url' => '#home'],
+                ['id' => 6, 'name' => 'AirPods', 'slug' => 'airpods', 'image' => 'assets/images/hero/airpods.png', 'url' => '#airpods'],
+                ['id' => 7, 'name' => 'AirTag', 'slug' => 'airtag', 'image' => 'assets/images/hero/airtag.png', 'url' => '#airtag'],
+                ['id' => 8, 'name' => 'Accessories', 'slug' => 'accessories', 'image' => 'assets/images/hero/accessories.png', 'url' => '#accessories'],
             ],
             'latest_products' => [
                 [
