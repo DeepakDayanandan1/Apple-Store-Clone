@@ -1,11 +1,5 @@
 <?php
-/**
- * Promotions & Specialty Sections
- * Includes:
- * 1. The Apple experience
- * 2. Special stores (Education, Business)
- * 3. Quick Links
- */
+
 $experienceCards = $db->getSectionItems('experience');
 $specialStores = $db->getSectionItems('special_stores');
 $quickLinks = $db->getQuickLinks();

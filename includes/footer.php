@@ -1,8 +1,5 @@
 <?php
-/**
- * Global Footer Component
- * Apple India Store Footnotes, Location Notice, Breadcrumbs, Directory Columns, and Legal Notices
- */
+
 ?>
     </main>
 

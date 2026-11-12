@@ -68,6 +68,9 @@
     color: var(--color-text-primary);
     text-decoration: none;
     opacity: 0.8;
+    background: none;
+    border: none;
+    cursor: pointer;
     transition: opacity 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
@@ -149,39 +152,49 @@
 }
 
 /* ==========================================================================
-   2. Store Dropdown Mega-Menu Flyout
+   2. Mega-Menu Flyout Panels (Store, Mac, iPad, iPhone, etc.)
    ========================================================================== */
-.store-flyout {
+.globalnav-flyout-container {
     position: absolute;
     top: var(--nav-height);
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.96);
+    pointer-events: none;
+    z-index: 9990;
+}
+
+.globalnav-flyout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(25px) saturate(190%);
     -webkit-backdrop-filter: blur(25px) saturate(190%);
     border-bottom: 1px solid var(--color-border-light);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    display: none;
     opacity: 0;
+    visibility: hidden;
     transform: translateY(-8px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    z-index: 9990;
+    transition: opacity 0.22s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.22s cubic-bezier(0.25, 0.1, 0.25, 1), visibility 0.22s;
+    pointer-events: none;
 }
 
-.store-flyout.is-open {
-    display: block;
+.globalnav-flyout.is-active {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
-.store-flyout-inner {
+.globalnav-flyout-inner {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 0;
     max-width: var(--nav-max-width);
     margin: 0 auto;
-    padding: 44px 22px 52px;
+    padding: 40px 22px 52px;
 }
 
 .flyout-col {
@@ -190,15 +203,15 @@
 }
 
 .flyout-col-primary {
-    flex: 0 0 380px;
+    flex: 0 0 260px;
 }
 
 .flyout-col-secondary {
-    flex: 0 0 260px;
+    flex: 0 0 160px;
 }
 
 .flyout-col-tertiary {
-    flex: 0 0 260px;
+    flex: 0 0 220px;
 }
 
 .flyout-heading {
@@ -254,180 +267,245 @@
     color: var(--color-blue);
 }
 
-.nav-backdrop {
-    position: fixed;
-    top: var(--nav-height);
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - var(--nav-height));
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: 9980;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-}
-
-.nav-backdrop.active {
-    opacity: 1;
-    pointer-events: auto;
+.flyout-sub-links {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 /* ==========================================================================
-   3. Search Overlay & Bag Flyout
+   3. Search Flyout Panel (Matches Reference Image 4)
    ========================================================================== */
-.search-overlay {
-    position: absolute;
-    top: var(--nav-height);
-    left: 0;
-    width: 100%;
+.flyout-search-panel {
     background-color: #ffffff;
-    border-bottom: 1px solid var(--color-border-light);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    padding: 30px 0 40px;
-    z-index: 9995;
-    display: none;
 }
 
-.search-overlay.active {
-    display: block;
-}
-
-.search-overlay-container {
-    max-width: 680px;
+.search-flyout-inner {
+    max-width: var(--nav-max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 40px 22px 52px;
 }
 
-.search-bar {
+.search-input-wrap {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 12px;
     gap: 12px;
+    max-width: 520px;
+    margin-bottom: 24px;
 }
 
-.search-bar-input {
+.search-input-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #86868b;
+}
+
+.search-flyout-input {
     flex: 1;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--color-text-primary);
     border: none;
     outline: none;
     background: transparent;
-    color: var(--color-text-primary);
+}
+
+.search-flyout-input::placeholder {
+    color: #86868b;
+    font-weight: 400;
 }
 
 .search-bar-close {
+    background: none;
+    border: none;
+    cursor: pointer;
     opacity: 0.6;
-    transition: opacity 0.2s;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
 }
 
 .search-bar-close:hover {
     opacity: 1;
 }
 
-.search-quick-links {
-    margin-top: 24px;
-}
-
-.quick-links-title {
+.search-quick-links-title {
     font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    color: var(--color-text-secondary);
+    font-weight: 400;
+    color: #86868b;
     margin-bottom: 12px;
 }
 
-.quick-links-list li {
-    margin-bottom: 10px;
+.search-quick-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.quick-links-list a {
-    font-size: 14px;
+.search-quick-link-item a {
+    font-size: 13px;
+    font-weight: 600;
     color: var(--color-text-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.15s ease;
 }
 
-.quick-links-list a:hover {
+.search-quick-link-item a:hover {
     color: var(--color-blue);
 }
 
+.link-arrow {
+    font-size: 13px;
+    color: #86868b;
+    line-height: 1;
+}
+
 .search-results-panel {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 520px;
 }
 
 .search-result-row {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--color-border-light);
+    gap: 14px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    cursor: pointer;
+}
+
+.search-result-row:hover {
+    background-color: rgba(0, 0, 0, 0.04);
 }
 
 .search-result-thumb {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     object-fit: contain;
+    border-radius: 6px;
+    background-color: #f5f5f7;
+    padding: 4px;
 }
 
 .search-result-info h4 {
     font-size: 14px;
     font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 2px;
 }
 
 .search-result-info p {
     font-size: 12px;
     color: var(--color-text-secondary);
+    margin: 0;
 }
 
-/* Shopping Bag Flyout */
-.bag-flyout {
-    position: absolute;
-    top: calc(var(--nav-height) + 8px);
-    right: 22px;
-    width: 300px;
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    border: 1px solid var(--color-border-light);
-    padding: 24px;
-    z-index: 10000;
-    display: none;
-    animation: fadeInDown 0.2s ease forwards;
+/* ==========================================================================
+   4. Bag Flyout Panel (Matches Reference Image 5)
+   ========================================================================== */
+.flyout-bag-panel {
+    background-color: #ffffff;
 }
 
-.bag-flyout.active {
-    display: block;
+.bag-flyout-inner {
+    max-width: var(--nav-max-width);
+    margin: 0 auto;
+    padding: 40px 22px 52px;
 }
 
-.bag-title {
-    font-size: 20px;
+.bag-flyout-title {
+    font-size: 24px;
     font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+}
+
+.bag-flyout-subtitle {
+    font-size: 13px;
+    color: #86868b;
+    margin-bottom: 24px;
+}
+
+.bag-signin-link {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.bag-profile-heading {
+    font-size: 12px;
+    font-weight: 400;
+    color: #86868b;
     margin-bottom: 12px;
 }
 
-.bag-empty-text {
-    font-size: 14px;
-    color: var(--color-text-secondary);
-    margin-bottom: 18px;
+.bag-profile-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.bag-btn-primary {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    background-color: var(--color-blue);
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 980px;
+.bag-profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     font-size: 13px;
     font-weight: 500;
-    transition: background-color 0.2s ease;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color 0.15s ease;
 }
 
-.bag-btn-primary:hover {
-    background-color: var(--color-blue-hover);
+.bag-profile-link:hover {
+    color: var(--color-blue);
+}
+
+.profile-icon {
+    flex-shrink: 0;
+    color: #86868b;
+}
+
+/* ==========================================================================
+   5. Backdrop Overlay
+   ========================================================================== */
+.globalnav-backdrop,
+.nav-backdrop {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - var(--nav-height));
+    background-color: rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 9980;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.globalnav-backdrop.active,
+.nav-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* Mobile Nav Bar & Drawer */

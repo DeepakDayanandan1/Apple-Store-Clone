@@ -5,15 +5,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
-    initStoreHover();
-    initNavHoverDim();
-    initSearch();
-    initBag();
+    initMegaMenuHover();
+    initSearchLogic();
     initFooterAccordions();
 });
 
 /**
- * Mobile Navigation Drawer
+ * Mobile Navigation Drawer (<= 834px)
  */
 function initNavigation() {
     const menuToggle = document.getElementById('mobile-menu-toggle');
@@ -39,9 +37,6 @@ function initNavigation() {
             drawer.setAttribute('aria-hidden', 'false');
             if (backdrop) backdrop.classList.add('active');
             document.body.style.overflow = 'hidden';
-
-            closeSearch();
-            closeBag();
         }
     }
 
@@ -50,244 +45,201 @@ function initNavigation() {
     if (backdrop) {
         backdrop.addEventListener('click', () => {
             toggleMenu(true);
-            closeSearch();
-            closeBag();
-            closeStoreFlyout();
         });
     }
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             toggleMenu(true);
-            closeSearch();
-            closeBag();
-            closeStoreFlyout();
         }
     });
 }
 
 /**
- * Store Mega-Menu Flyout Hover Controller
+ * Unified Desktop Mega-Menu Hover & Flyout Controller
+ * Supports: Store, Mac, iPad, iPhone, Watch, AirPods, Home, Entertainment, Accessories, Support, Search, and Bag
  */
-let storeHoverTimer = null;
-
-function initStoreHover() {
-    const storeItem = document.getElementById('nav-item-store');
-    const storeFlyout = document.getElementById('store-flyout');
+function initMegaMenuHover() {
+    const nav = document.getElementById('globalnav-nav') || document.querySelector('.globalnav-nav');
+    const navItems = document.querySelectorAll('.globalnav-item[data-nav]');
+    const flyouts = document.querySelectorAll('.globalnav-flyout[data-flyout]');
     const backdrop = document.getElementById('nav-backdrop');
 
-    if (!storeItem || !storeFlyout) return;
+    if (!navItems.length || !flyouts.length) return;
 
-    function openFlyout() {
-        clearTimeout(storeHoverTimer);
+    let hoverTimer = null;
+    let activeNavKey = null;
+
+    function openFlyout(key) {
         if (window.innerWidth <= 834) return;
+        clearTimeout(hoverTimer);
 
-        storeFlyout.classList.add('is-open');
-        if (backdrop) backdrop.classList.add('active');
-        closeSearch();
-        closeBag();
+        activeNavKey = key;
+        if (nav) nav.classList.add('has-hover');
+
+        // Highlight active nav item and dim siblings
+        navItems.forEach(item => {
+            if (item.getAttribute('data-nav') === key) {
+                item.classList.add('is-hovered');
+            } else {
+                item.classList.remove('is-hovered');
+            }
+        });
+
+        // Activate corresponding flyout
+        let hasActiveFlyout = false;
+        flyouts.forEach(flyout => {
+            if (flyout.getAttribute('data-flyout') === key) {
+                flyout.classList.add('is-active');
+                hasActiveFlyout = true;
+            } else {
+                flyout.classList.remove('is-active');
+            }
+        });
+
+        // Activate frosted backdrop
+        if (backdrop && hasActiveFlyout) {
+            backdrop.classList.add('active');
+        }
+
+        // Auto-focus search input if search panel opened
+        if (key === 'search') {
+            const searchInput = document.getElementById('store-search-input');
+            if (searchInput) {
+                setTimeout(() => searchInput.focus(), 60);
+            }
+        }
     }
 
-    function closeFlyoutWithDelay() {
-        clearTimeout(storeHoverTimer);
-        storeHoverTimer = setTimeout(() => {
-            storeFlyout.classList.remove('is-open');
-            if (backdrop && !isSearchOpen() && !isBagOpen()) {
-                backdrop.classList.remove('active');
-            }
+    function scheduleClose() {
+        clearTimeout(hoverTimer);
+        hoverTimer = setTimeout(() => {
+            closeAllFlyouts();
         }, 180);
     }
 
-    storeItem.addEventListener('mouseenter', openFlyout);
-    storeItem.addEventListener('mouseleave', closeFlyoutWithDelay);
+    function closeAllFlyouts() {
+        clearTimeout(hoverTimer);
+        activeNavKey = null;
 
-    storeFlyout.addEventListener('mouseenter', () => clearTimeout(storeHoverTimer));
-    storeFlyout.addEventListener('mouseleave', closeFlyoutWithDelay);
-}
+        if (nav) nav.classList.remove('has-hover');
+        navItems.forEach(item => item.classList.remove('is-hovered'));
+        flyouts.forEach(flyout => flyout.classList.remove('is-active'));
 
-function closeStoreFlyout() {
-    const storeFlyout = document.getElementById('store-flyout');
-    if (storeFlyout) storeFlyout.classList.remove('is-open');
-}
+        if (backdrop) backdrop.classList.remove('active');
+    }
 
-/**
- * Desktop Nav Sibling Dimming
- */
-function initNavHoverDim() {
-    const nav = document.getElementById('globalnav-nav') || document.querySelector('.globalnav-nav');
-    const navItems = document.querySelectorAll('.globalnav-item, .globalnav-actions');
-
-    if (!nav || navItems.length === 0) return;
-
+    // Attach mouseenter & mouseleave to each nav item
     navItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            if (window.innerWidth <= 834) return;
-            nav.classList.add('has-hover');
-            item.classList.add('is-hovered');
-        });
+        const key = item.getAttribute('data-nav');
+        if (!key) return;
 
-        item.addEventListener('mouseleave', () => {
-            nav.classList.remove('has-hover');
-            item.classList.remove('is-hovered');
-        });
-    });
-}
+        item.addEventListener('mouseenter', () => openFlyout(key));
+        item.addEventListener('mouseleave', scheduleClose);
 
-/**
- * Search Modal Controller
- */
-function initSearch() {
-    const searchTriggers = document.querySelectorAll('.search-trigger');
-    const searchOverlay = document.getElementById('search-overlay');
-    const searchClose = document.getElementById('search-close-btn') || document.getElementById('search-close');
-    const searchInput = document.getElementById('store-search-input') || document.getElementById('search-input');
-    const backdrop = document.getElementById('nav-backdrop');
-    const quickLinks = document.getElementById('search-quick-links');
-    const resultsPanel = document.getElementById('search-results-panel') || document.getElementById('search-results');
-
-    if (!searchOverlay) return;
-
-    searchTriggers.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isOpen = searchOverlay.classList.contains('active');
-            if (isOpen) {
-                closeSearch();
-            } else {
-                closeBag();
-                closeStoreFlyout();
-                searchOverlay.classList.add('active');
-                if (backdrop) backdrop.classList.add('active');
-                if (searchInput) {
-                    setTimeout(() => searchInput.focus(), 100);
-                }
-            }
-        });
-    });
-
-    if (searchClose) {
-        searchClose.addEventListener('click', closeSearch);
-    }
-
-    if (searchInput && resultsPanel && quickLinks) {
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.trim().toLowerCase();
-            if (query.length > 0) {
-                quickLinks.style.display = 'none';
-                resultsPanel.style.display = 'block';
-
-                const rows = resultsPanel.querySelectorAll('.search-result-row');
-                let hasResults = false;
-                rows.forEach(row => {
-                    const text = row.textContent.toLowerCase();
-                    if (text.includes(query)) {
-                        row.style.display = 'flex';
-                        hasResults = true;
+        // Click / toggle behavior
+        item.addEventListener('click', (e) => {
+            if (window.innerWidth > 834) {
+                if (key === 'search' || key === 'bag') {
+                    e.preventDefault();
+                    if (activeNavKey === key) {
+                        closeAllFlyouts();
                     } else {
-                        row.style.display = 'none';
+                        openFlyout(key);
                     }
-                });
-
-                let noResultsMsg = document.getElementById('no-search-results');
-                if (!hasResults && rows.length > 0) {
-                    if (!noResultsMsg) {
-                        noResultsMsg = document.createElement('p');
-                        noResultsMsg.id = 'no-search-results';
-                        noResultsMsg.style.padding = '12px 0';
-                        noResultsMsg.style.color = '#86868b';
-                        noResultsMsg.textContent = 'No matching products found.';
-                        resultsPanel.appendChild(noResultsMsg);
-                    }
-                } else if (noResultsMsg) {
-                    noResultsMsg.remove();
                 }
-            } else {
-                quickLinks.style.display = 'block';
-                resultsPanel.style.display = 'none';
-            }
-        });
-    }
-}
-
-function closeSearch() {
-    const searchOverlay = document.getElementById('search-overlay');
-    const backdrop = document.getElementById('nav-backdrop');
-    const searchInput = document.getElementById('store-search-input') || document.getElementById('search-input');
-
-    if (searchOverlay) {
-        searchOverlay.classList.remove('active');
-    }
-    if (searchInput) {
-        searchInput.value = '';
-    }
-    if (backdrop && !isBagOpen() && !isStoreFlyoutOpen()) {
-        backdrop.classList.remove('active');
-    }
-}
-
-function isSearchOpen() {
-    const el = document.getElementById('search-overlay');
-    return el && el.classList.contains('active');
-}
-
-/**
- * Shopping Bag Flyout Controller
- */
-function initBag() {
-    const bagTriggers = document.querySelectorAll('.bag-trigger');
-    const bagFlyout = document.getElementById('bag-flyout');
-    const backdrop = document.getElementById('nav-backdrop');
-
-    if (!bagFlyout) return;
-
-    bagTriggers.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isOpen = bagFlyout.classList.contains('active');
-            if (isOpen) {
-                closeBag();
-            } else {
-                closeSearch();
-                closeStoreFlyout();
-                bagFlyout.classList.add('active');
-                if (backdrop) backdrop.classList.add('active');
             }
         });
     });
 
-    document.addEventListener('click', (e) => {
-        let isClickInsideTrigger = false;
-        bagTriggers.forEach(t => {
-            if (t.contains(e.target)) isClickInsideTrigger = true;
-        });
+    // Keep active when cursor hovers over the flyout panel itself
+    flyouts.forEach(flyout => {
+        flyout.addEventListener('mouseenter', () => clearTimeout(hoverTimer));
+        flyout.addEventListener('mouseleave', scheduleClose);
+    });
 
-        if (!bagFlyout.contains(e.target) && !isClickInsideTrigger) {
-            closeBag();
+    // Backdrop click closes all flyouts
+    if (backdrop) {
+        backdrop.addEventListener('click', () => closeAllFlyouts());
+    }
+
+    // Escape key closes all flyouts
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeAllFlyouts();
+    });
+
+    // Close button inside search panel
+    const searchCloseBtn = document.getElementById('search-close-btn');
+    if (searchCloseBtn) {
+        searchCloseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeAllFlyouts();
+        });
+    }
+
+    // Close flyouts on window resize to mobile
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 834) {
+            closeAllFlyouts();
         }
     });
 }
 
-function closeBag() {
-    const bagFlyout = document.getElementById('bag-flyout');
-    const backdrop = document.getElementById('nav-backdrop');
-    if (bagFlyout) bagFlyout.classList.remove('active');
-    if (backdrop && !isSearchOpen() && !isStoreFlyoutOpen()) {
-        backdrop.classList.remove('active');
-    }
-}
+/**
+ * Search Panel Live Search Logic
+ */
+function initSearchLogic() {
+    const searchInput = document.getElementById('store-search-input');
+    const quickLinks = document.querySelector('.search-quick-links');
+    const resultsPanel = document.getElementById('search-results-panel');
 
-function isBagOpen() {
-    const el = document.getElementById('bag-flyout');
-    return el && el.classList.contains('active');
-}
+    if (!searchInput || !resultsPanel) return;
 
-function isStoreFlyoutOpen() {
-    const el = document.getElementById('store-flyout');
-    return el && el.classList.contains('is-open');
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim().toLowerCase();
+        if (query.length > 0) {
+            if (quickLinks) quickLinks.style.display = 'none';
+            resultsPanel.style.display = 'block';
+
+            // Filter any spotlight or catalog products
+            const allProducts = document.querySelectorAll('.product-showcase-card, .accessory-product-card');
+            let resultsHTML = '';
+            let matchCount = 0;
+
+            allProducts.forEach(card => {
+                const name = card.getAttribute('data-product-name') || card.querySelector('.card-headline-text, .accessory-title')?.textContent || '';
+                const price = card.querySelector('.card-price-text, .accessory-price')?.textContent || '';
+                const img = card.querySelector('img')?.getAttribute('src') || '';
+
+                if (name.toLowerCase().includes(query) && matchCount < 6) {
+                    matchCount++;
+                    resultsHTML += `
+                        <div class="search-result-row">
+                            <img src="${img}" alt="${name}" class="search-result-thumb">
+                            <div class="search-result-info">
+                                <h4>${name}</h4>
+                                <p>${price}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            if (matchCount > 0) {
+                resultsPanel.innerHTML = resultsHTML;
+            } else {
+                resultsPanel.innerHTML = `<p style="padding: 12px 0; color: #86868b; font-size: 14px;">No matching products found for "${query}".</p>`;
+            }
+        } else {
+            if (quickLinks) quickLinks.style.display = 'block';
+            resultsPanel.style.display = 'none';
+            resultsPanel.innerHTML = '';
+        }
+    });
 }
 
 /**
- * Footer Directory Accordion
+ * Footer Directory Accordion (Tablet & Mobile <= 834px)
  */
 function initFooterAccordions() {
     const sections = document.querySelectorAll('.directory-section');
