@@ -21,8 +21,8 @@
     --color-border: #d2d2d7;
     --color-border-light: rgba(0, 0, 0, 0.08);
     --nav-height: 44px;
-    --nav-bg: rgba(255, 255, 255, 0.8);
-    --ribbon-bg: #f5f5f7;
+    --nav-bg: rgba(245, 245, 247, 0.8);
+    --ribbon-bg: #ffffff;
     --card-radius: 18px;
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     --card-shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.08);
@@ -93,98 +93,134 @@ img {
 }
 
 .globalnav-container {
-    max-width: 1024px;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
-    padding: 0 22px;
+    padding: 0 16px;
 }
 
 .globalnav-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.globalnav-logo {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
+    height: 100%;
+    position: relative;
 }
 
-.globalnav-logo:hover {
-    opacity: 1;
-}
-
-.nav-svg-icon {
-    display: block;
-}
-
-.globalnav-links {
+/* Complete 13-Item Desktop Global Navigation List */
+.globalnav-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex: 1;
-    max-width: 800px;
-    margin: 0 20px;
+    width: 100%;
+    max-width: 660px; /* Exact centered width matching Apple reference */
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    list-style: none;
 }
 
 .globalnav-item {
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
 }
 
 .globalnav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     font-size: 12px;
     font-weight: 400;
+    letter-spacing: -0.01em;
     color: rgba(0, 0, 0, 0.8);
     opacity: 0.8;
-    padding: 0 8px;
+    padding: 0 4px;
     white-space: nowrap;
-    transition: opacity 0.2s ease;
+    text-decoration: none;
+    transition: opacity 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.2s ease;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
 }
 
 .globalnav-link:hover,
 .globalnav-link.current {
     opacity: 1;
-    color: #000;
+    color: #000000;
 }
 
-.globalnav-actions {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.globalnav-action-btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
-}
-
-.globalnav-action-btn:hover {
-    opacity: 1;
+.nav-svg-icon {
+    display: block;
+    height: 44px;
+    width: auto;
+    pointer-events: none;
+    fill: currentColor;
 }
 
 .nav-bag-count {
     position: absolute;
     bottom: 8px;
-    right: -6px;
+    right: -4px;
     background-color: var(--color-text-primary);
     color: #fff;
     font-size: 9px;
     font-weight: 700;
-    min-width: 15px;
-    height: 15px;
+    min-width: 14px;
+    height: 14px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     line-height: 1;
+}
+
+/* Mobile Bar for Tablets / Smartphones */
+.mobile-nav-bar {
+    display: none;
+}
+
+.mobile-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.mobile-logo-link:hover {
+    opacity: 1;
+}
+
+.mobile-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mobile-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    background: none;
+    border: none;
+    padding: 0 6px;
+    color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    cursor: pointer;
+    position: relative;
+    transition: opacity 0.2s ease;
+}
+
+.mobile-action-btn:hover {
+    opacity: 1;
 }
 
 /* Mobile Menu Toggle Button (Hamburger to X) */

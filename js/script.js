@@ -125,7 +125,7 @@ function initSearch() {
     const resultsPanel = document.getElementById('search-results-panel');
     const backdrop = document.getElementById('nav-backdrop');
 
-    if (!searchToggle || !searchOverlay || !searchInput) return;
+    if (!searchOverlay || !searchInput) return;
 
     // Collect searchable items from page DOM
     const cardElements = document.querySelectorAll('.store-card');
@@ -147,17 +147,20 @@ function initSearch() {
         }
     });
 
-    searchToggle.addEventListener('click', () => {
-        const isActive = searchOverlay.classList.contains('active');
-        if (isActive) {
-            closeSearch();
-        } else {
-            closeBag();
-            searchOverlay.classList.add('active');
-            searchOverlay.setAttribute('aria-hidden', 'false');
-            if (backdrop) backdrop.classList.add('active');
-            searchInput.focus();
-        }
+    document.querySelectorAll('.search-trigger').forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isActive = searchOverlay.classList.contains('active');
+            if (isActive) {
+                closeSearch();
+            } else {
+                closeBag();
+                searchOverlay.classList.add('active');
+                searchOverlay.setAttribute('aria-hidden', 'false');
+                if (backdrop) backdrop.classList.add('active');
+                searchInput.focus();
+            }
+        });
     });
 
     if (searchClose) {
@@ -228,7 +231,7 @@ function initBag() {
     const bagFlyout = document.getElementById('bag-flyout');
     const backdrop = document.getElementById('nav-backdrop');
 
-    if (!bagToggle || !bagFlyout) return;
+    if (!bagFlyout) return;
 
     // Load cart from localStorage
     try {
@@ -241,17 +244,20 @@ function initBag() {
     }
     renderBagUI();
 
-    bagToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isActive = bagFlyout.classList.contains('active');
-        if (isActive) {
-            closeBag();
-        } else {
-            closeSearch();
-            bagFlyout.classList.add('active');
-            bagFlyout.setAttribute('aria-hidden', 'false');
-            if (backdrop) backdrop.classList.add('active');
-        }
+    document.querySelectorAll('.bag-trigger').forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const isActive = bagFlyout.classList.contains('active');
+            if (isActive) {
+                closeBag();
+            } else {
+                closeSearch();
+                bagFlyout.classList.add('active');
+                bagFlyout.setAttribute('aria-hidden', 'false');
+                if (backdrop) backdrop.classList.add('active');
+            }
+        });
     });
 
     // Handle "Add to Bag" button clicks on accessory cards
@@ -308,14 +314,15 @@ function renderBagUI() {
 
     const totalCount = cartItems.length;
 
-    if (countBadge) {
+    const countBadges = document.querySelectorAll('.nav-bag-count');
+    countBadges.forEach(badge => {
         if (totalCount > 0) {
-            countBadge.textContent = totalCount;
-            countBadge.style.display = 'flex';
+            badge.textContent = totalCount;
+            badge.style.display = 'flex';
         } else {
-            countBadge.style.display = 'none';
+            badge.style.display = 'none';
         }
-    }
+    });
 
     if (!container || !titleText || !emptyNotice) return;
 

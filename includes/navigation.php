@@ -8,19 +8,18 @@
     <div class="globalnav-container">
         <nav class="globalnav-nav" aria-label="Global Navigation">
             
-            <!-- Mobile Menu Toggle Button -->
-            <button class="globalnav-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu-drawer">
-                <span class="menu-line line-1"></span>
-                <span class="menu-line line-2"></span>
-            </button>
+            <!-- Desktop Navigation: All 13 items unified, max-width 660px, centered -->
+            <ul class="globalnav-list" id="desktop-links">
+                <!-- 1. Apple Logo -->
+                <li class="globalnav-item globalnav-item-apple">
+                    <a href="#" class="globalnav-link globalnav-link-apple" aria-label="Apple">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="44" viewBox="0 0 14 44" class="nav-svg-icon" aria-hidden="true">
+                            <path fill="currentColor" d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7846 9.7846 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8676 2.1583 1.1309 1.1309 0 0 0 .0413.2582 2.9463 2.9463 0 0 0 2.3549-1.0849z"/>
+                        </svg>
+                    </a>
+                </li>
 
-            <!-- Apple Home Icon -->
-            <a href="#" class="globalnav-logo" aria-label="Apple India Home">
-                <img src="assets/icons/apple.svg" alt="Apple" class="nav-svg-icon logo-icon" width="16" height="44">
-            </a>
-
-            <!-- Desktop Links -->
-            <ul class="globalnav-links" id="desktop-links">
+                <!-- 2-11. Category Text Links -->
                 <li class="globalnav-item"><a href="#store" class="globalnav-link current">Store</a></li>
                 <li class="globalnav-item"><a href="#mac" class="globalnav-link">Mac</a></li>
                 <li class="globalnav-item"><a href="#ipad" class="globalnav-link">iPad</a></li>
@@ -31,17 +30,51 @@
                 <li class="globalnav-item"><a href="#entertainment" class="globalnav-link">Entertainment</a></li>
                 <li class="globalnav-item"><a href="#accessories" class="globalnav-link">Accessories</a></li>
                 <li class="globalnav-item"><a href="#support" class="globalnav-link">Support</a></li>
+
+                <!-- 12. Search Trigger -->
+                <li class="globalnav-item globalnav-item-search">
+                    <button class="globalnav-link globalnav-link-search search-trigger" id="search-toggle" aria-label="Search apple.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="44" viewBox="0 0 16 44" class="nav-svg-icon" aria-hidden="true">
+                            <path fill="currentColor" d="m15.7 24.3-3.6-3.6a5.45 5.45 0 0 0 .9-3 5.7 5.7 0 1 0 -5.7 5.7 5.45 5.45 0 0 0 3-.9l3.6 3.6a.6.6 0 0 0 .9 0 .7.7 0 0 0 -.1-.8zm-8.4-2.1a4.5 4.5 0 1 1 4.5-4.5 4.5 4.5 0 0 1 -4.5 4.5z"/>
+                        </svg>
+                    </button>
+                </li>
+
+                <!-- 13. Shopping Bag Trigger -->
+                <li class="globalnav-item globalnav-item-bag">
+                    <button class="globalnav-link globalnav-link-bag bag-trigger" id="bag-toggle" aria-label="Shopping Bag">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="44" viewBox="0 0 14 44" class="nav-svg-icon" aria-hidden="true">
+                            <path fill="currentColor" d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -6.666 0h-1.0205a2.6464 2.6464 0 0 0 -2.6465 2.6455v8.5284a2.6464 2.6464 0 0 0 2.6465 2.6455h8.707a2.6464 2.6464 0 0 0 2.6465-2.6455v-8.5284a2.6464 2.6464 0 0 0 -2.6465-2.6455zm-4.3535-2.3281a2.33 2.33 0 0 1 2.3223 2.3281h-4.6446a2.33 2.33 0 0 1 2.3223-2.3281zm5.9 13.502a1.5478 1.5478 0 0 1 -1.5465 1.5455h-8.707a1.5478 1.5478 0 0 1 -1.5465-1.5455v-8.5284a1.5478 1.5478 0 0 1 1.5465-1.5455h8.707a1.5478 1.5478 0 0 1 1.5465 1.5455z"/>
+                        </svg>
+                        <span class="nav-bag-count" id="bag-count" style="display: none;">0</span>
+                    </button>
+                </li>
             </ul>
 
-            <!-- Navigation Actions: Search & Bag -->
-            <div class="globalnav-actions">
-                <button class="globalnav-action-btn search-trigger" id="search-toggle" aria-label="Search apple.com">
-                    <img src="assets/icons/search.svg" alt="Search" class="nav-svg-icon" width="16" height="44">
-                </button>
-                <button class="globalnav-action-btn bag-trigger" id="bag-toggle" aria-label="Shopping Bag">
-                    <img src="assets/icons/bag.svg" alt="Bag" class="nav-svg-icon" width="16" height="44">
-                    <span class="nav-bag-count" id="bag-count" style="display: none;">0</span>
-                </button>
+            <!-- Mobile Bar for Tablet/Phone (<= 834px) -->
+            <div class="mobile-nav-bar" id="mobile-nav-bar">
+                <a href="#" class="mobile-logo-link" aria-label="Apple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="44" viewBox="0 0 14 44" class="nav-svg-icon" aria-hidden="true">
+                        <path fill="currentColor" d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7846 9.7846 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8676 2.1583 1.1309 1.1309 0 0 0 .0413.2582 2.9463 2.9463 0 0 0 2.3549-1.0849z"/>
+                    </svg>
+                </a>
+                <div class="mobile-nav-actions">
+                    <button class="mobile-action-btn search-trigger" aria-label="Search apple.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="44" viewBox="0 0 16 44" class="nav-svg-icon" aria-hidden="true">
+                            <path fill="currentColor" d="m15.7 24.3-3.6-3.6a5.45 5.45 0 0 0 .9-3 5.7 5.7 0 1 0 -5.7 5.7 5.45 5.45 0 0 0 3-.9l3.6 3.6a.6.6 0 0 0 .9 0 .7.7 0 0 0 -.1-.8zm-8.4-2.1a4.5 4.5 0 1 1 4.5-4.5 4.5 4.5 0 0 1 -4.5 4.5z"/>
+                        </svg>
+                    </button>
+                    <button class="mobile-action-btn bag-trigger" aria-label="Shopping Bag">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="44" viewBox="0 0 14 44" class="nav-svg-icon" aria-hidden="true">
+                            <path fill="currentColor" d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -6.666 0h-1.0205a2.6464 2.6464 0 0 0 -2.6465 2.6455v8.5284a2.6464 2.6464 0 0 0 2.6465 2.6455h8.707a2.6464 2.6464 0 0 0 2.6465-2.6455v-8.5284a2.6464 2.6464 0 0 0 -2.6465-2.6455zm-4.3535-2.3281a2.33 2.33 0 0 1 2.3223 2.3281h-4.6446a2.33 2.33 0 0 1 2.3223-2.3281zm5.9 13.502a1.5478 1.5478 0 0 1 -1.5465 1.5455h-8.707a1.5478 1.5478 0 0 1 -1.5465-1.5455v-8.5284a1.5478 1.5478 0 0 1 1.5465-1.5455h8.707a1.5478 1.5478 0 0 1 1.5465 1.5455z"/>
+                        </svg>
+                        <span class="nav-bag-count mobile-bag-count" style="display: none;">0</span>
+                    </button>
+                    <button class="globalnav-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu-drawer">
+                        <span class="menu-line line-1"></span>
+                        <span class="menu-line line-2"></span>
+                    </button>
+                </div>
             </div>
 
         </nav>
