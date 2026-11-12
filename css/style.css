@@ -662,7 +662,7 @@ img {
 }
 
 .ribbon-content {
-    font-size: 14px;
+    font-size: 12px;
     color: var(--color-text-primary);
     line-height: 1.5;
     letter-spacing: -0.016em;
@@ -699,6 +699,7 @@ img {
 .store-hero-section {
     padding-top: 48px;
     padding-bottom: 32px;
+    background-color: var(--color-bg-page);
 }
 
 .store-hero-container {
@@ -719,7 +720,7 @@ img {
 }
 
 .store-hero-title {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 700;
     letter-spacing: -0.025em;
     color: var(--color-text-primary);
@@ -734,7 +735,7 @@ img {
 }
 
 .store-hero-subtext {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 600;
     line-height: 1.25;
     color: var(--color-text-primary);
@@ -750,7 +751,7 @@ img {
 }
 
 .store-hero-action-link {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 400;
     color: var(--color-blue);
     display: inline-flex;
@@ -774,7 +775,8 @@ img {
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding: 12px 0 24px;
+    padding: 0;
+    margin-top: 12px;
 }
 
 .category-shelf-nav::-webkit-scrollbar {
@@ -784,9 +786,9 @@ img {
 .category-shelf-list {
     display: flex;
     justify-content: flex-start;
-    gap: 28px;
+    gap: 24px;
     min-width: min-content;
-    padding: 0;
+    padding: 8px 0 20px;
     margin: 0;
     list-style: none;
 }
@@ -847,7 +849,7 @@ img {
    ========================================================================== */
 .store-section {
     padding: 44px 0 24px;
-    overflow: hidden;
+    /* Do NOT set overflow:hidden here — it clips the full-width carousel bleed */
 }
 
 .section-container {
@@ -881,11 +883,13 @@ img {
 .title-secondary {
     color: var(--color-text-secondary);
     margin-left: 6px;
+    font-weight: 400;
 }
 
 /* Carousel Container and Track */
 .carousel-container {
     position: relative;
+    /* Bleed full viewport width */
     width: 100vw;
     margin-left: calc(-50vw + 50%);
 }
@@ -897,7 +901,15 @@ img {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding: 10px calc(max(var(--container-padding), (100vw - var(--container-width)) / 2 + var(--container-padding))) 24px;
+    /*
+     * First card left edge = page left edge up to 1024px container, then centered.
+     * This matches how .section-container sets padding: 0 24px within max-width 1024px.
+     * Formula: max(24px, (100vw - 1024px) / 2 + 24px)
+     */
+    padding-left: max(var(--container-padding), calc((100vw - var(--container-width)) / 2 + var(--container-padding)));
+    padding-right: max(var(--container-padding), calc((100vw - var(--container-width)) / 2 + var(--container-padding)));
+    padding-top: 10px;
+    padding-bottom: 24px;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -909,7 +921,7 @@ img {
 .carousel-footer-row {
     max-width: var(--container-width);
     margin: 8px auto 0;
-    padding: 0 24px;
+    padding: 0 var(--container-padding);
     display: flex;
     justify-content: flex-end;
 }
@@ -1334,6 +1346,7 @@ img {
 .quick-links-shelf {
     max-width: var(--container-width);
     margin: 0 auto;
+    padding: 0 var(--container-padding);
 }
 
 .quick-links-headline {

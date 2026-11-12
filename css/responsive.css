@@ -1,27 +1,52 @@
 /**
  * Apple Store India Clone - Responsive Stylesheet
- * Responsive behavior across Desktop, Laptop, Tablet, and Mobile devices
+ * Responsive behavior: Desktop > Laptop > Tablet > Mobile
+ * Reference: https://www.apple.com/in/store
  */
 
 /* ==========================================================================
-   1. Laptop / Small Desktop (<= 1024px)
+   1. Laptop / Small Desktop (<= 1068px)
    ========================================================================== */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1068px) {
+    :root {
+        --container-width: 100%;
+        --container-padding: 22px;
+    }
+
     .globalnav-container {
         padding: 0 16px;
     }
 
     .globalnav-link {
-        padding: 0 6px;
-        font-size: 12px;
-    }
-
-    .store-hero-headline {
-        font-size: 38px;
+        padding: 0 5px;
+        font-size: 11.5px;
     }
 
     .bag-flyout {
         right: 20px;
+    }
+
+    /* Section containers go full-width */
+    .section-container {
+        padding: 0 22px;
+    }
+
+    .store-hero-container {
+        padding: 0 22px;
+    }
+
+    /* Carousel track padding matches container */
+    .carousel-track {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .carousel-footer-row {
+        padding: 0 22px;
+    }
+
+    .quick-links-shelf {
+        padding: 0 22px;
     }
 }
 
@@ -29,12 +54,16 @@
    2. Tablet View (<= 834px)
    ========================================================================== */
 @media screen and (max-width: 834px) {
-    /* Navigation */
+    :root {
+        --container-padding: 20px;
+    }
+
+    /* ---- Navigation ---- */
     .globalnav-list {
         display: none !important;
     }
 
-    /* Hide flyout on mobile - it's integrated into mobile drawer instead */
+    /* Hide flyout – handled via mobile drawer instead */
     .store-flyout {
         display: none !important;
     }
@@ -45,6 +74,7 @@
         justify-content: space-between;
         width: 100%;
         height: 100%;
+        padding: 0 16px;
     }
 
     .globalnav-menu-btn {
@@ -59,7 +89,12 @@
         justify-content: space-between;
     }
 
-    /* Hero */
+    /* ---- Hero ---- */
+    .store-hero-section {
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+
     .store-headline-row {
         flex-direction: column;
         align-items: flex-start;
@@ -68,7 +103,7 @@
     }
 
     .store-hero-title {
-        font-size: 38px;
+        font-size: 40px;
     }
 
     .headline-support-col {
@@ -77,14 +112,56 @@
     }
 
     .store-hero-subtext {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .store-hero-actions {
         align-items: flex-start;
     }
 
-    /* Cards */
+    /* ---- Category Shelf ---- */
+    .category-shelf-list {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .category-shelf-item {
+        flex: 0 0 100px;
+        width: 100px;
+    }
+
+    .category-thumb-wrapper {
+        width: 100px;
+        height: 68px;
+    }
+
+    .category-thumb-img {
+        max-width: 100px;
+        max-height: 68px;
+    }
+
+    /* ---- Section Titles ---- */
+    .section-display-title {
+        font-size: 24px;
+    }
+
+    .title-secondary {
+        display: inline;
+        margin-left: 4px;
+    }
+
+    /* ---- Carousels ---- */
+    .carousel-track {
+        gap: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .carousel-footer-row {
+        padding: 0 20px;
+    }
+
+    /* ---- Cards ---- */
     .product-showcase-card,
     .banner-info-card,
     .lead-audio-card {
@@ -104,12 +181,15 @@
         font-size: 22px;
     }
 
-    .category-shelf-list {
-        justify-content: flex-start;
-        padding-left: 20px;
-        padding-right: 20px;
+    .info-title {
+        font-size: 20px;
     }
 
+    .card-text-header {
+        padding: 24px 24px 0;
+    }
+
+    /* ---- Difference Cards ---- */
     .difference-feature-card {
         width: 280px;
         height: 240px;
@@ -117,6 +197,7 @@
         padding: 20px;
     }
 
+    /* ---- Accessory Cards ---- */
     .accessory-product-card {
         width: 280px;
         height: 460px;
@@ -134,7 +215,12 @@
         max-height: 180px;
     }
 
-    /* Footer Accordion Transition */
+    /* ---- Quick Links ---- */
+    .quick-links-shelf {
+        padding: 0 20px;
+    }
+
+    /* ---- Footer Accordion ---- */
     .footer-directory {
         grid-template-columns: 1fr;
         gap: 0;
@@ -170,6 +256,11 @@
     .directory-section.open .directory-list {
         display: block;
     }
+
+    /* ---- Store Section Spacing ---- */
+    .store-section {
+        padding: 36px 0 20px;
+    }
 }
 
 /* ==========================================================================
@@ -178,13 +269,19 @@
 @media screen and (max-width: 540px) {
     :root {
         --nav-height: 48px;
+        --container-padding: 16px;
     }
 
+    /* ---- Navigation ---- */
     .globalnav-container {
         padding: 0 16px;
     }
 
-    /* Ribbon Banner */
+    .mobile-nav-bar {
+        padding: 0 16px;
+    }
+
+    /* ---- Ribbon Banner ---- */
     .ribbon-banner {
         padding: 10px 16px;
     }
@@ -194,15 +291,14 @@
         line-height: 1.35;
     }
 
-    .ribbon-highlight {
-        display: inline;
-        margin-left: 2px;
+    /* ---- Hero ---- */
+    .store-hero-section {
+        padding-top: 28px;
+        padding-bottom: 12px;
     }
 
-    /* Store Hero */
-    .store-hero-section {
-        padding-top: 32px;
-        padding-bottom: 16px;
+    .store-hero-container {
+        padding: 0 16px;
     }
 
     .store-hero-title {
@@ -210,42 +306,54 @@
     }
 
     .store-hero-subtext {
-        font-size: 18px;
+        font-size: 17px;
     }
 
-    .headline-support-col {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+    .store-hero-action-link {
+        font-size: 15px;
     }
 
-    .store-hero-actions {
-        align-items: flex-start;
-        gap: 8px;
+    .store-headline-row {
+        margin-bottom: 28px;
+        gap: 16px;
     }
 
-    /* Category Navigation */
+    /* ---- Category Shelf ---- */
+    .category-shelf-list {
+        gap: 14px;
+    }
+
+    .category-shelf-item {
+        flex: 0 0 80px;
+        width: 80px;
+    }
+
     .category-thumb-wrapper {
-        width: 90px;
-        height: 60px;
+        width: 80px;
+        height: 56px;
     }
 
     .category-thumb-img {
-        max-width: 90px;
-        max-height: 60px;
+        max-width: 80px;
+        max-height: 56px;
     }
 
     .category-thumb-title {
-        font-size: 12px;
+        font-size: 11px;
     }
 
-    /* Section Headings */
+    /* ---- Section Headings ---- */
     .store-section {
-        padding: 32px 0 24px;
+        padding: 28px 0 20px;
+    }
+
+    .section-container {
+        padding: 0 16px;
     }
 
     .section-display-title {
-        font-size: 22px;
+        font-size: 21px;
+        line-height: 1.2;
     }
 
     .title-secondary {
@@ -254,83 +362,131 @@
         margin-top: 2px;
     }
 
+    .section-header-row {
+        margin-bottom: 16px;
+    }
+
+    /* ---- Carousel ---- */
+    .carousel-track {
+        gap: 14px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 8px;
+        padding-bottom: 20px;
+    }
+
+    .carousel-footer-row {
+        padding: 0 16px;
+    }
+
     .carousel-arrow {
         width: 32px;
         height: 32px;
     }
 
-    /* Cards Size on Mobile */
-    .carousel-track {
-        gap: 16px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
+    /* ---- Product Cards ---- */
     .product-showcase-card,
     .banner-info-card,
     .lead-audio-card {
         width: 300px;
-        height: 430px;
+        height: 420px;
         flex: 0 0 300px;
     }
 
     .experience-card,
     .special-store-card {
-        width: 320px;
-        height: 440px;
-        flex: 0 0 320px;
+        width: 300px;
+        height: 420px;
+        flex: 0 0 300px;
     }
 
     .card-text-header {
-        padding: 24px 24px 0;
+        padding: 20px 20px 0;
     }
 
     .card-headline-text {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .info-title {
-        font-size: 18px;
+        font-size: 17px;
     }
 
+    .card-price-text {
+        font-size: 13px;
+    }
+
+    .card-action-circle {
+        width: 32px;
+        height: 32px;
+        bottom: 18px;
+        right: 18px;
+    }
+
+    /* ---- Difference Cards ---- */
     .difference-feature-card {
-        width: 260px;
-        height: 230px;
-        flex: 0 0 260px;
+        width: 250px;
+        height: 220px;
+        flex: 0 0 250px;
         padding: 18px;
     }
 
+    .diff-card-headline {
+        font-size: 16px;
+    }
+
+    /* ---- Accessory Cards ---- */
     .accessory-product-card {
-        width: 260px;
-        height: 440px;
-        flex: 0 0 260px;
+        width: 240px;
+        height: 420px;
+        flex: 0 0 240px;
         padding: 16px;
     }
 
     .accessory-card-image-wrap {
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
     }
 
     .accessory-product-img {
-        max-width: 160px;
-        max-height: 160px;
+        max-width: 150px;
+        max-height: 150px;
     }
 
     .accessory-title {
         font-size: 14px;
     }
 
+    .accessory-add-btn {
+        bottom: 14px;
+        right: 14px;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* ---- Quick Links ---- */
+    .quick-links-section {
+        padding: 24px 0 32px;
+    }
+
+    .quick-links-shelf {
+        padding: 0 16px;
+    }
+
     .quick-links-headline {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .quick-link-pill {
-        padding: 8px 16px;
+        padding: 8px 14px;
         font-size: 13px;
     }
 
-    /* Footer Legal */
+    /* ---- Footer ---- */
+    .globalfooter-container {
+        padding: 0 16px;
+    }
+
     .footer-legal {
         flex-direction: column;
         align-items: flex-start;
@@ -341,15 +497,20 @@
         gap: 10px;
     }
 
-    /* Search and Bag on Mobile */
+    /* ---- Bag Flyout ---- */
     .bag-flyout {
         width: calc(100% - 32px);
         right: 16px;
         top: 56px;
     }
 
+    /* ---- Search ---- */
     .search-bar-input {
         font-size: 16px;
     }
-}
 
+    /* ---- Store Flyout (already hidden via tablet rule) ---- */
+    .store-flyout {
+        display: none !important;
+    }
+}
