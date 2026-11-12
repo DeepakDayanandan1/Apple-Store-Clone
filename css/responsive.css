@@ -28,7 +28,6 @@
 
     .section-container,
     .store-hero-container,
-    .quick-links-shelf,
     .globalfooter-container {
         padding: 0 var(--container-padding);
     }
@@ -162,7 +161,6 @@
 
     .section-container,
     .store-hero-container,
-    .quick-links-shelf,
     .globalfooter-container {
         padding: 0 var(--container-padding);
     }
@@ -376,7 +374,6 @@
 
     .section-container,
     .store-hero-container,
-    .quick-links-shelf,
     .globalfooter-container {
         padding: 0 16px;
     }
