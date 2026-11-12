@@ -97,10 +97,10 @@ $endCard = $accessoriesData['end_card'] ?? null;
                             <p class="accessory-price"><?= htmlspecialchars($item['price_label']) ?></p>
                         </div>
 
-                        <!-- Bottom-right Plus Action Circle -->
+                        <!-- Bottom-right Action Circle (Next > Chevron Button) -->
                         <button type="button" class="card-action-circle accessory-add-btn" aria-label="Add <?= htmlspecialchars($item['name']) ?> to bag">
-                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                                <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </article>

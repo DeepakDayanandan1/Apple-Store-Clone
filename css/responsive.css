@@ -7,13 +7,12 @@
    1. Laptop / Small Desktop (<= 1024px)
    ========================================================================== */
 @media screen and (max-width: 1024px) {
-    .globalnav-list {
-        max-width: 660px;
-        margin: 0 auto;
+    .globalnav-container {
+        padding: 0 16px;
     }
 
     .globalnav-link {
-        padding: 0 4px;
+        padding: 0 6px;
         font-size: 12px;
     }
 
