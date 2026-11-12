@@ -1,11 +1,9 @@
 <?php
 /**
  * Accessories Section
- * Carousel with Lead Promo Card, Interactive Swatched Accessories, and End Card,
- * followed by Quick Links pills.
+ * Carousel with Lead Promo Card, Interactive Swatched Accessories, and End Card.
  */
 $accessoriesData = $db->getAccessories();
-$quickLinks = $db->getQuickLinks();
 $leadCard = $accessoriesData['lead_card'] ?? null;
 $items = $accessoriesData['items'] ?? [];
 $endCard = $accessoriesData['end_card'] ?? null;
@@ -13,21 +11,13 @@ $endCard = $accessoriesData['end_card'] ?? null;
 <section class="store-section accessories-showcase-section" id="accessories" aria-labelledby="accessories-headline">
     <div class="section-container">
         
-        <!-- Section Header -->
+        <!-- Section Header (Headline only, matching Apple Store design) -->
         <div class="section-header-row">
             <div class="section-title-wrap">
                 <h2 id="accessories-headline" class="section-display-title">
                     <span class="title-primary">Accessories.</span>
                     <span class="title-secondary">Essentials that pair perfectly with your favourite devices.</span>
                 </h2>
-            </div>
-            <div class="carousel-nav-controls" aria-label="Accessories navigation">
-                <button class="carousel-arrow prev" data-carousel-id="accessories-carousel" aria-label="Previous items" disabled>
-                    <img src="assets/icons/chevron-left.svg" alt="" width="18" height="18">
-                </button>
-                <button class="carousel-arrow next" data-carousel-id="accessories-carousel" aria-label="Next items">
-                    <img src="assets/icons/chevron-right.svg" alt="" width="18" height="18">
-                </button>
             </div>
         </div>
 
@@ -41,6 +31,10 @@ $endCard = $accessoriesData['end_card'] ?? null;
                         <div class="card-text-header">
                             <h3 class="card-headline-text info-title"><?= htmlspecialchars($leadCard['title']) ?></h3>
                             <p class="card-desc-text"><?= htmlspecialchars($leadCard['subtitle']) ?></p>
+                            <span class="card-inline-action">
+                                Explore all accessories
+                                <span class="action-chevron">&rsaquo;</span>
+                            </span>
                         </div>
                         <div class="card-visual-media">
                             <img src="<?= htmlspecialchars($leadCard['image']) ?>" 
@@ -50,6 +44,7 @@ $endCard = $accessoriesData['end_card'] ?? null;
                                  height="500"
                                  loading="lazy">
                         </div>
+                        <a href="#all-accessories" class="card-full-link" aria-label="<?= htmlspecialchars($leadCard['title']) ?>"></a>
                     </article>
                 <?php endif; ?>
 
@@ -95,15 +90,19 @@ $endCard = $accessoriesData['end_card'] ?? null;
                         <div class="accessory-card-content">
                             <?php if (!empty($badge)): ?>
                                 <span class="accessory-badge"><?= htmlspecialchars($badge) ?></span>
+                            <?php else: ?>
+                                <span class="accessory-badge-spacer" aria-hidden="true">&nbsp;</span>
                             <?php endif; ?>
                             <h3 class="accessory-title"><?= htmlspecialchars($item['name']) ?></h3>
                             <p class="accessory-price"><?= htmlspecialchars($item['price_label']) ?></p>
-                            
-                            <!-- Interactive Add to Bag Button -->
-                            <button type="button" class="accessory-add-btn" aria-label="Add <?= htmlspecialchars($item['name']) ?> to bag">
-                                Add to Bag
-                            </button>
                         </div>
+
+                        <!-- Bottom-right Plus Action Circle -->
+                        <button type="button" class="card-action-circle accessory-add-btn" aria-label="Add <?= htmlspecialchars($item['name']) ?> to bag">
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
                     </article>
                 <?php endforeach; ?>
 
@@ -133,19 +132,17 @@ $endCard = $accessoriesData['end_card'] ?? null;
             </div>
         </div>
 
-        <!-- Quick Links Pill Buttons -->
-        <?php if (!empty($quickLinks)): ?>
-        <div class="quick-links-shelf">
-            <h3 class="quick-links-headline">Quick Links</h3>
-            <div class="quick-links-pills">
-                <?php foreach ($quickLinks as $ql): ?>
-                    <a href="<?= htmlspecialchars($ql['url']) ?>" class="quick-link-pill">
-                        <?= htmlspecialchars($ql['label']) ?>
-                    </a>
-                <?php endforeach; ?>
+        <!-- Bottom-Right Carousel Navigation Controls -->
+        <div class="carousel-footer-row">
+            <div class="carousel-nav-controls" aria-label="Accessories navigation">
+                <button class="carousel-arrow prev" data-carousel-id="accessories-carousel" aria-label="Previous items" disabled>
+                    <img src="assets/icons/chevron-left.svg" alt="" width="18" height="18">
+                </button>
+                <button class="carousel-arrow next" data-carousel-id="accessories-carousel" aria-label="Next items">
+                    <img src="assets/icons/chevron-right.svg" alt="" width="18" height="18">
+                </button>
             </div>
         </div>
-        <?php endif; ?>
 
     </div>
 </section>

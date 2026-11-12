@@ -123,20 +123,18 @@ INSERT INTO `categories` (`id`, `name`, `slug`, `image_url`, `link_url`, `sort_o
 -- Seed Data: products (The Latest Section)
 -- --------------------------------------------------------
 INSERT INTO `products` (`id`, `section_key`, `part_number`, `eyebrow`, `title`, `description`, `price_label`, `price_raw`, `image_url`, `alt_text`, `theme`, `badge`, `link_url`, `sort_order`, `is_active`) VALUES
-(101, 'latest', NULL, 'IPHONE 16 PRO', 'Built for Apple Intelligence.', NULL, 'From ₹119900.00‡', 119900.00, 'assets/images/LatestImg/store-card-40-iphone-18-pro-202609 1.png', 'iPhone 16 Pro in Desert Titanium', 'dark', 'NEW', '#buy-iphone-16-pro', 1, 1),
-(102, 'latest', NULL, 'IPHONE 16', 'Hello, Apple Intelligence.', NULL, 'From ₹79900.00‡', 79900.00, 'assets/images/LatestImg/store-card-40-iphone-duo-202609 1.png', 'iPhone 16 in vibrant Ultramarine and Teal', 'light', 'NEW', '#buy-iphone-16', 2, 1),
-(103, 'latest', NULL, 'APPLE WATCH SERIES 10', 'Thinscredible.', NULL, 'From ₹46900.00‡', 46900.00, 'assets/images/LatestImg/store-card-40-watch-series-12-202609_GEO_IN 1.png', 'Apple Watch Series 10 in Jet Black aluminum', 'light', 'NEW', '#buy-watch-series-10', 3, 1),
-(104, 'latest', NULL, 'MACBOOK PRO', 'A work of smart.', NULL, 'From ₹169900.00‡', 169900.00, 'assets/images/LatestImg/store-card-40-macbook-pro-202610 1.png', 'MacBook Pro with M4 family chip', 'dark', 'NEW', '#buy-macbook-pro', 4, 1),
-(105, 'latest', NULL, 'IPAD AIR', 'Fresh Air.', NULL, 'From ₹59900.00‡', 59900.00, 'assets/images/LatestImg/store-card-40-ipad-air-202603 1.png', 'iPad Air with powerful M2 chip', 'light', NULL, '#buy-ipad-air', 5, 1),
-(106, 'latest', NULL, 'IPAD MINI', 'Built for Apple Intelligence.', NULL, 'From ₹49900.00‡', 49900.00, 'assets/images/LatestImg/store-card-40-ipad-mini-202610 1.png', 'iPad mini featuring A17 Pro chip', 'light', 'NEW', '#buy-ipad-mini', 6, 1),
-(107, 'latest', NULL, 'APPLE WATCH ULTRA 2', 'New finish. Never quit.', NULL, 'From ₹89900.00‡', 89900.00, 'assets/images/LatestImg/store-card-40-watch-ultra-4-202609_GEO_IN 1.png', 'Apple Watch Ultra 2 in Black Titanium', 'dark', 'NEW FINISH', '#buy-watch-ultra-2', 7, 1),
-(108, 'latest', NULL, 'AIRPODS 4', 'Iconic. Now sonic.', NULL, 'From ₹12900.00‡', 12900.00, 'assets/images/LatestImg/store-card-40-airpods-5-202609 1.png', 'AirPods 4 with Active Noise Cancellation option', 'light', 'NEW', '#buy-airpods-4', 8, 1),
-(109, 'latest', NULL, 'MAC MINI', 'Size down. Power up.', NULL, 'From ₹59900.00‡', 59900.00, 'assets/images/LatestImg/store-card-40-mac-mini-202609 1.png', 'All-new smaller Mac mini with M4', 'light', 'NEW', '#buy-mac-mini', 9, 1),
-(110, 'latest', NULL, 'IMAC', 'Brilliant from edge to edge.', NULL, 'From ₹134900.00‡', 134900.00, 'assets/images/LatestImg/store-card-40-imac-202610 1.png', '24-inch iMac with M4 chip in striking colours', 'light', 'NEW', '#buy-imac', 10, 1),
-(111, 'latest', NULL, 'MACBOOK AIR', 'Lean. Mean. M3 machine.', NULL, 'From ₹99900.00‡', 99900.00, 'assets/images/LatestImg/store-card-40-macbook-air-202603 1.png', 'MacBook Air 13-inch and 15-inch with M3', 'light', NULL, '#buy-macbook-air', 11, 1),
-(112, 'latest', NULL, 'BEATS PILL', 'Sound bigger than ever.', NULL, 'MRP ₹16900.00‡', 16900.00, 'assets/images/LatestImg/store-card-40-beats-360-202610 1.png', 'Beats Pill portable speaker', 'dark', 'NEW', '#buy-beats-pill', 12, 1),
-(113, 'latest', NULL, 'HOMEPOD', 'Pro sound at home.', NULL, '₹32900.00‡', 32900.00, 'assets/images/LatestImg/store-card-40-home-view-202610_GEO_IN 1.png', 'Apple HomePod smart speaker', 'light', NULL, '#buy-homepod', 13, 1),
-(114, 'latest', NULL, 'ACCESSORIES', 'Explore new cases, bands and more.', NULL, 'Shop now', 0.00, 'assets/images/LatestImg/store-card-40-latest-accessories-202609 1.png', 'Apple accessories lineup', 'light', 'NEW', '#accessories', 14, 1);
+(101, 'latest', NULL, 'IPHONE 16 PRO', 'Hello, Apple Intelligence.', NULL, 'From ₹119900.00‡', 119900.00, 'assets/images/LatestImg/store-card-40-iphone-18-pro-202609 1.png', 'iPhone 16 Pro in Desert Titanium', 'dark', '', '#buy-iphone-16-pro', 1, 1),
+(102, 'latest', NULL, 'IPHONE 16', 'Hello, Apple Intelligence.', NULL, 'From ₹79900.00‡', 79900.00, 'assets/images/LatestImg/store-card-40-iphone-17-202509 1.png', 'iPhone 16 in vibrant Ultramarine and Teal', 'light', '', '#buy-iphone-16', 2, 1),
+(103, 'latest', NULL, 'APPLE WATCH SERIES 10', 'Thinscredible.', NULL, 'From ₹46900.00‡', 46900.00, 'assets/images/LatestImg/store-card-40-watch-series-12-202609_GEO_IN 1.png', 'Apple Watch Series 10 in Jet Black aluminum', 'dark', '', '#buy-watch-series-10', 3, 1),
+(104, 'latest', NULL, 'APPLE WATCH ULTRA 2', 'New finish. Never quit.', NULL, 'From ₹89900.00‡', 89900.00, 'assets/images/LatestImg/store-card-40-watch-ultra-4-202609_GEO_IN 1.png', 'Apple Watch Ultra 2 in Black Titanium', 'dark', '', '#buy-watch-ultra-2', 4, 1),
+(105, 'latest', NULL, 'MACBOOK PRO', 'A work of smart.', NULL, 'From ₹169900.00‡', 169900.00, 'assets/images/LatestImg/store-card-40-macbook-pro-202610 1.png', 'MacBook Pro with M4 family chip', 'dark', '', '#buy-macbook-pro', 5, 1),
+(106, 'latest', NULL, 'IPAD MINI', 'Built for Apple Intelligence.', NULL, 'From ₹49900.00‡', 49900.00, 'assets/images/LatestImg/store-card-40-ipad-mini-202610 1.png', 'iPad mini featuring A17 Pro chip', 'light', '', '#buy-ipad-mini', 6, 1),
+(107, 'latest', NULL, 'MAC MINI', 'Size down. Power up.', NULL, 'From ₹59900.00‡', 59900.00, 'assets/images/LatestImg/store-card-40-mac-mini-202609 1.png', 'All-new smaller Mac mini with M4', 'light', '', '#buy-mac-mini', 7, 1),
+(108, 'latest', NULL, 'IMAC', 'Brilliant from edge to edge.', NULL, 'From ₹134900.00‡', 134900.00, 'assets/images/LatestImg/store-card-40-imac-202610 1.png', '24-inch iMac with M4 chip in striking colours', 'light', '', '#buy-imac', 8, 1),
+(109, 'latest', NULL, 'MACBOOK AIR', 'Lean. Mean. M3 machine.', NULL, 'From ₹99900.00‡', 99900.00, 'assets/images/LatestImg/store-card-40-macbook-air-202603 1.png', 'MacBook Air 13-inch and 15-inch with M3', 'light', '', '#buy-macbook-air', 9, 1),
+(110, 'latest', NULL, 'AIRPODS 4', 'Iconic. Now sonic.', NULL, 'From ₹12900.00‡', 12900.00, 'assets/images/LatestImg/store-card-40-airpods-5-202609 1.png', 'AirPods 4 with Active Noise Cancellation option', 'light', '', '#buy-airpods-4', 10, 1),
+(111, 'latest', NULL, 'HOMEPOD', 'Pro sound at home.', NULL, '₹32900.00‡', 32900.00, 'assets/images/LatestImg/store-card-40-home-view-202610_GEO_IN 1.png', 'Apple HomePod smart speaker', 'light', '', '#buy-homepod', 11, 1),
+(112, 'latest', NULL, 'ACCESSORIES', 'Explore new cases, bands and more.', NULL, 'Shop now', 0.00, 'assets/images/LatestImg/store-card-40-latest-accessories-202609 1.png', 'Apple accessories lineup', 'light', '', '#accessories', 12, 1);
 
 -- --------------------------------------------------------
 -- Seed Data: products (Accessories Section)
@@ -190,16 +188,15 @@ INSERT INTO `accessory_swatches` (`product_id`, `color_name`, `color_hex`, `sort
 -- Seed Data: products (Help & The Apple Difference)
 -- --------------------------------------------------------
 INSERT INTO `products` (`id`, `section_key`, `part_number`, `eyebrow`, `title`, `description`, `price_label`, `price_raw`, `image_url`, `alt_text`, `theme`, `badge`, `link_url`, `sort_order`, `is_active`) VALUES
-(301, 'help', NULL, 'APPLE SPECIALIST', 'Shop one on one with a Specialist. Online or in a store.', NULL, 'Shop with a Specialist', 0.00, '', 'Specialist banner', 'light', NULL, '#specialist', 1, 1),
-(302, 'help', NULL, 'BUSINESS', 'From enterprise to small business, we’ll work with you.', NULL, 'Learn more', 0.00, '', 'Business banner', 'light', NULL, '#business', 2, 1),
-(303, 'help', NULL, 'TODAY AT APPLE', 'Watch and learn. Join free sessions to do more with your Apple devices.', NULL, 'Explore sessions', 0.00, '', 'Today at Apple banner', 'light', NULL, '#today-at-apple', 3, 1),
-(304, 'help', NULL, 'GET HELP BUYING', 'Have a question? Call a Specialist or chat online.', NULL, 'Call 000800 040 1966', 0.00, '', 'Get help buying banner', 'light', NULL, 'tel:0008000401966', 4, 1),
+(301, 'help', NULL, 'APPLE SPECIALIST', 'Shop with a Specialist over video.', 'Guidance from an Apple Specialist right on your screen.', 'Shop over video', 0.00, 'assets/images/HelpImg/store-card-50-specialist-video.jpg', 'Shop with a Specialist over video', 'light', NULL, '#specialist-video', 1, 1),
+(302, 'help', NULL, 'TODAY AT APPLE', 'Get to know your new device with a Personal Session.', 'Learn the basics or go deeper with a free one-to-one session.', 'Book a session', 0.00, 'assets/images/HelpImg/store-card-50-specialist-help.jpg', 'Today at Apple Personal Session', 'light', NULL, '#specialist', 2, 1),
+(303, 'help', NULL, 'BUSINESS', 'Get help buying. Have a question? Call a Specialist or chat online.', 'Call 000800 040 1966 or chat with us.', 'Chat now', 0.00, 'assets/images/HelpImg/store-card-50-taa.jpg', 'Get help buying banner', 'light', NULL, '#business', 3, 1),
 
-(401, 'difference', NULL, 'APPLE TRADE IN', 'Exchange your smartphone. Get ₹4000.00 – ₹67500.00 in credit.*', 'Upgrade and save with Apple Trade In.', 'Trade In', 0.00, '', 'Trade in', 'light', NULL, '#trade-in', 1, 1),
-(402, 'difference', NULL, 'FLEXIBLE PAYMENT', 'Save with instant cashback and No Cost EMI.‡', 'Get up to ₹10000 instant cashback with eligible card payment.', 'Explore EMI', 0.00, '', 'EMI and Cashback', 'light', NULL, '#financing', 2, 1),
-(403, 'difference', NULL, 'CUSTOMISE YOUR MAC', 'Build the Mac that is perfect for you.', 'Choose your memory, storage, graphics and even keyboard language.', 'Customise', 0.00, '', 'Customise Mac', 'light', NULL, '#customise-mac', 3, 1),
+(401, 'difference', NULL, 'APPLE TRADE IN', 'Exchange your smartphone, get ₹4000.00–₹67500.00 in credit.*', 'Upgrade and save with Apple Trade In.', 'Trade In', 0.00, '', 'Trade in', 'light', NULL, '#trade-in', 1, 1),
+(402, 'difference', NULL, 'FLEXIBLE PAYMENT', 'Monthly payment options available. Interest-free EMI with instant cashback‡', 'Get up to ₹10000 instant cashback with eligible card payment.', 'Explore EMI', 0.00, '', 'EMI and Cashback', 'light', NULL, '#financing', 2, 1),
+(403, 'difference', NULL, 'CUSTOMISE YOUR MAC', 'Customise your Mac.', 'Choose your memory, storage, graphics and even keyboard language.', 'Customise', 0.00, '', 'Customise Mac', 'light', NULL, '#customise-mac', 3, 1),
 (404, 'difference', NULL, 'FREE ENGRAVING', 'Make them yours. Engrave a mix of emoji, names and numbers for free.', 'Personalise your AirPods, AirTag, Apple Pencil Pro or iPad.', 'Engrave free', 0.00, '', 'Free engraving', 'light', NULL, '#engraving', 4, 1),
-(405, 'difference', NULL, 'DELIVERY AND PICKUP', 'Enjoy free delivery, or easy pickup from an Apple Store.', 'Contactless free delivery directly to your home.', 'Learn more', 0.00, '', 'Free delivery', 'light', NULL, '#delivery', 5, 1);
+(405, 'difference', NULL, 'DELIVERY AND PICKUP', 'Free delivery and free returns on all orders.', 'Contactless free delivery directly to your home.', 'Learn more', 0.00, '', 'Free delivery', 'light', NULL, '#delivery', 5, 1);
 
 -- --------------------------------------------------------
 -- Seed Data: products (Loud and Clear Section)

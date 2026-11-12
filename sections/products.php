@@ -8,21 +8,13 @@ $latestProducts = $db->getLatestProducts();
 <section class="store-section latest-products-section" id="latest" aria-labelledby="latest-headline">
     <div class="section-container">
         
-        <!-- Section Header with Title and Carousel Arrows -->
+        <!-- Section Header (Headline only, matching Apple Store design) -->
         <div class="section-header-row">
             <div class="section-title-wrap">
                 <h2 id="latest-headline" class="section-display-title">
                     <span class="title-primary">The latest.</span>
                     <span class="title-secondary">Take a look at what’s new right now.</span>
                 </h2>
-            </div>
-            <div class="carousel-nav-controls" aria-label="Latest products navigation">
-                <button class="carousel-arrow prev" data-carousel-id="latest-carousel" aria-label="Previous items" disabled>
-                    <img src="assets/icons/chevron-left.svg" alt="" width="18" height="18">
-                </button>
-                <button class="carousel-arrow next" data-carousel-id="latest-carousel" aria-label="Next items">
-                    <img src="assets/icons/chevron-right.svg" alt="" width="18" height="18">
-                </button>
             </div>
         </div>
 
@@ -55,12 +47,31 @@ $latestProducts = $db->getLatestProducts();
                                  loading="<?= $index < 3 ? 'eager' : 'lazy' ?>">
                         </div>
 
-                        <!-- Card Click Overlay and Buy Button -->
+                        <!-- Plus Action Circle -->
+                        <button type="button" class="card-action-circle" aria-label="Explore <?= htmlspecialchars($product['eyebrow']) ?>">
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+
+                        <!-- Card Click Overlay and Link -->
                         <a href="<?= htmlspecialchars($product['url'] ?? '#') ?>" 
                            class="card-full-link" 
                            aria-label="<?= htmlspecialchars($product['eyebrow'] . ' - ' . $product['title']) ?>"></a>
                     </article>
                 <?php endforeach; ?>
+            </div>
+        </div>
+
+        <!-- Bottom-Right Carousel Navigation Controls -->
+        <div class="carousel-footer-row">
+            <div class="carousel-nav-controls" aria-label="Latest products navigation">
+                <button class="carousel-arrow prev" data-carousel-id="latest-carousel" aria-label="Previous items" disabled>
+                    <img src="assets/icons/chevron-left.svg" alt="" width="18" height="18">
+                </button>
+                <button class="carousel-arrow next" data-carousel-id="latest-carousel" aria-label="Next items">
+                    <img src="assets/icons/chevron-right.svg" alt="" width="18" height="18">
+                </button>
             </div>
         </div>
 

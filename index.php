@@ -20,18 +20,18 @@ $db = Database::getInstance();
 // Include Global Header (Includes DOCTYPE, CSS, Sticky Nav, Ribbon)
 include __DIR__ . '/includes/header.php';
 
-// Include Hero Section (Store Display Title & Category Shelf Nav)
+// 1. Hero Section (Store Display Title & Category Shelf Nav)
 include __DIR__ . '/sections/hero.php';
 
-// Include Products Section (The Latest Carousel)
+// 2. The Latest Section (Spotlight Product Carousel)
 include __DIR__ . '/sections/products.php';
 
-// Include Promotions Section (Help is here, Apple difference, Audio, Experience, Special stores)
-include __DIR__ . '/sections/promotions.php';
-
-// Include Accessories Section (Interactive Swatches, Lead Card, Quick Links)
+// 3. Accessories Section (Interactive Swatches, Lead Card, Add to Bag)
 include __DIR__ . '/sections/accessories.php';
 
-// Include Global Footer (Footnotes, Directory Columns with Mobile Accordion, Legal Links)
+// 4. Promotions & Specialty Section (Apple Difference, Help, Audio, Experience, Special Stores, Quick Links)
+include __DIR__ . '/sections/promotions.php';
+
+// 5. Global Footer (Footnotes, Directory Columns, Legal)
 include __DIR__ . '/includes/footer.php';
 

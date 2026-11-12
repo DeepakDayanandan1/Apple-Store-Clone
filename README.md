@@ -50,8 +50,8 @@ apple-store-clone/
 ├── sections/
 │   ├── hero.php              # Store display title and category navigation shelf
 │   ├── products.php          # The Latest carousel spotlight
-│   ├── promotions.php        # Help, Apple difference, audio, experience, and special stores
-│   └── accessories.php       # Accessories carousel with interactive color swatches & quick links
+│   ├── accessories.php       # Accessories carousel with interactive color swatches & add to bag
+│   └── promotions.php        # Apple difference, Help, Loud & clear, Experience, Special stores, Quick links
 │
 ├── assets/
 │   ├── images/
@@ -104,34 +104,70 @@ apple-store-clone/
 - Smooth scroll snapping and hover scaling.
 
 ### 6. "The Latest" Spotlight Carousel
-- Horizontal carousel featuring the spotlight products in exact order:
-  - iPhone 16 Pro (Desert Titanium / Apple Intelligence)
-  - iPhone 16 (Ultramarine & Teal)
-  - Apple Watch Series 10 (Jet Black)
-  - MacBook Pro (M4 Chip Family)
-  - iPad Air (M2)
-  - iPad mini (A17 Pro)
-  - Apple Watch Ultra 2 (Black Titanium)
-  - AirPods 4 (ANC option)
-  - Mac mini (M4 redesigned form factor)
-  - iMac (M4 vibrant colors)
-  - MacBook Air (M3)
-  - Beats Pill
-  - HomePod
-  - Accessories Spotlight
-- Dark and Light card themes matching Apple's store design.
-- Previous (`<`) and Next (`>`) circular navigation buttons that automatically enable/disable based on scroll position.
+- Horizontal carousel featuring spotlight cards in exact Apple Store sequence:
+  - iPhone 16 Pro (Black card, Desert Titanium / Apple Intelligence)
+  - iPhone 16 (White card, Ultramarine & Teal / Apple Intelligence)
+  - Apple Watch Series 10 (Black card, Jet Black / Thinscredible)
+  - Apple Watch Ultra 2 (Black card, Black Titanium / New finish. Never quit.)
+  - MacBook Pro (Black card, M4 Chip Family / A work of smart.)
+  - iPad mini (White card, A17 Pro / Built for Apple Intelligence)
+  - Mac mini (White card, M4 redesigned form factor / Size down. Power up.)
+  - iMac (White card, M4 vibrant colors / Brilliant from edge to edge)
+  - MacBook Air (White card, M3 / Lean. Mean. M3 machine.)
+  - AirPods 4 (White card, Iconic. Now sonic.)
+  - HomePod (White card, Pro sound at home.)
+  - Accessories Spotlight (White card, Explore new cases, bands and more.)
+- Bottom-right circular Previous (`<`) and Next (`>`) navigation controls.
 
 ### 7. Interactive Accessories Section
-- Features lead card ("In with the new"), accessory products with images from `assets/images/AccessoriesImg/`, and ending exploration card.
+- Lead card ("In with the new"), accessory products with images from `assets/images/AccessoriesImg/`, and ending exploration card.
 - **Interactive Color Swatches**: Real-time swatch selection with active focus rings (e.g. Star Fruit, Ultramarine, Lake Green, Fuchsia, Stone Gray, Black for iPhone 16 Silicone Case).
-- **Add to Bag**: Clicking "Add to Bag" updates the cart counter badge, stores items in `localStorage`, and opens the bag preview.
+- **Add to Bag**: Clicking "+" or "Add to Bag" updates the cart counter badge, stores items in `localStorage`, and opens the bag preview flyout.
+- Bottom-right circular Previous (`<`) and Next (`>`) navigation controls.
 
-### 8. Promotional Sections
-- "Help is here", "The Apple difference", "Loud and clear", "The Apple Experience", and "Special stores".
-- Prepared with clean placeholder containers ready to receive images.
+### 8. The Apple Store Difference
+- Compact horizontal cards (`312px` x `240px`) matching Apple's design:
+  - **Apple Trade In**: Green exchange icon + green bold headline (`Exchange your smartphone, get ₹4000.00–₹67500.00 in credit.*`)
+  - **Flexible Financing**: Blue card icon + blue bold headline (`Monthly payment options available. Interest-free EMI with instant cashback‡`)
+  - **Customise Your Mac**: Red Mac icon + red bold headline (`Customise your Mac.`)
+  - **Free Personalisation**: Purple emoji icon + purple bold headline (`Make them yours. Engrave a mix of emoji, names and numbers for free.`)
+  - **Delivery & Pickup**: Teal delivery truck icon + teal bold headline (`Free delivery and free returns on all orders.`)
+- Circular plus (`+`) button in the bottom right corner of each card.
+- Bottom-right circular navigation controls (`<` and `>`).
 
-### 9. Comprehensive Apple India Footer
+### 9. Help Is Here
+- Features cards with high-resolution imagery:
+  - **Shop with a Specialist over video** (`assets/images/HelpImg/store-card-50-specialist-video.jpg`)
+  - **Get to know your new device with a Personal Session** (`assets/images/HelpImg/store-card-50-specialist-help.jpg`)
+  - **Get help buying / Call or Chat** (`assets/images/HelpImg/store-card-50-taa.jpg`)
+- Bottom-right circular navigation controls (`<` and `>`).
+
+### 10. Loud and Clear
+- Audio products and services:
+  - Lead card: 3 months free Apple Music (`assets/images/LoudImg/store-card-40-applemusic-202609 1.png`)
+  - AirPods Pro 2, AirPods Max, HomePod mini, HomePod, Beats Pill, and Powerbeats Pro
+- Swatches and circular "+" buttons.
+- Bottom-right circular navigation controls (`<` and `>`).
+
+### 11. The Apple Experience
+- Immersive feature cards:
+  - Apple Intelligence (`assets/images/ExperienceImg/store-card-50-apple-intelligence-202609 1.png`)
+  - Apple Ecosystem / Continuity (`assets/images/ExperienceImg/store-card-50-continuity-202609_GEO_IN 1.png`)
+  - Apple One (`assets/images/ExperienceImg/store-card-50-app-bundle-202609 1.png`)
+  - AppleCare+ (`assets/images/ExperienceImg/store-card-50-applecare-202609 1.png`)
+  - Home Ecosystem (`assets/images/ExperienceImg/store-card-50-home-ecosystem-202610_GEO_IN 1.png`)
+  - Apple TV 4K (`assets/images/ExperienceImg/store-card-50-homekit-202610_GEO_IN 1.png`)
+  - Free Engraving / Gifting (`assets/images/ExperienceImg/store-card-40-holiday-gifting-202512 1.png`)
+- Bottom-right circular navigation controls (`<` and `>`).
+
+### 12. Special Stores (Education)
+- Dedicated card for Apple Education savings (`assets/images/OffersImg/store-card-40-education-202609 1.png`).
+- Bottom-right circular navigation controls (`<` and `>`).
+
+### 13. Quick Links
+- Quick navigation pills: "Order Status", "Shopping Help", "Returns", and "Your Saved Items".
+
+### 14. Comprehensive Apple India Footer
 - Footnotes detailing bank offers, EMI tenures, Apple Trade In values, and Apple Intelligence requirements.
 - 5-column directory grid on desktop that seamlessly transforms into an interactive collapsible accordion on tablet and mobile viewports.
 - Localized Indian customer support phone number and legal copyright links.

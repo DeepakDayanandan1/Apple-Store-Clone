@@ -83,11 +83,17 @@
         font-size: 22px;
     }
 
+    .category-shelf-list {
+        justify-content: flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .difference-feature-card {
         width: 280px;
-        height: 360px;
+        height: 240px;
         flex: 0 0 280px;
-        padding: 24px;
+        padding: 20px;
     }
 
     .accessory-product-card {
@@ -259,9 +265,9 @@
 
     .difference-feature-card {
         width: 260px;
-        height: 340px;
+        height: 230px;
         flex: 0 0 260px;
-        padding: 20px;
+        padding: 18px;
     }
 
     .accessory-product-card {

@@ -177,13 +177,13 @@ class Database {
                 [
                     'id' => 101,
                     'eyebrow' => 'IPHONE 16 PRO',
-                    'title' => 'Built for Apple Intelligence.',
+                    'title' => 'Hello, Apple Intelligence.',
                     'price_label' => 'From ₹119900.00‡',
                     'price_raw' => 119900.00,
                     'theme' => 'dark',
                     'image' => 'assets/images/LatestImg/store-card-40-iphone-18-pro-202609 1.png',
                     'alt_text' => 'iPhone 16 Pro in Desert Titanium',
-                    'badge' => 'NEW',
+                    'badge' => '',
                     'url' => '#buy-iphone-16-pro'
                 ],
                 [
@@ -193,9 +193,9 @@ class Database {
                     'price_label' => 'From ₹79900.00‡',
                     'price_raw' => 79900.00,
                     'theme' => 'light',
-                    'image' => 'assets/images/LatestImg/store-card-40-iphone-duo-202609 1.png',
+                    'image' => 'assets/images/LatestImg/store-card-40-iphone-17-202509 1.png',
                     'alt_text' => 'iPhone 16 in vibrant Ultramarine and Teal',
-                    'badge' => 'NEW',
+                    'badge' => '',
                     'url' => '#buy-iphone-16'
                 ],
                 [
@@ -204,14 +204,26 @@ class Database {
                     'title' => 'Thinscredible.',
                     'price_label' => 'From ₹46900.00‡',
                     'price_raw' => 46900.00,
-                    'theme' => 'light',
+                    'theme' => 'dark',
                     'image' => 'assets/images/LatestImg/store-card-40-watch-series-12-202609_GEO_IN 1.png',
                     'alt_text' => 'Apple Watch Series 10 in Jet Black aluminum',
-                    'badge' => 'NEW',
+                    'badge' => '',
                     'url' => '#buy-watch-series-10'
                 ],
                 [
                     'id' => 104,
+                    'eyebrow' => 'APPLE WATCH ULTRA 2',
+                    'title' => 'New finish. Never quit.',
+                    'price_label' => 'From ₹89900.00‡',
+                    'price_raw' => 89900.00,
+                    'theme' => 'dark',
+                    'image' => 'assets/images/LatestImg/store-card-40-watch-ultra-4-202609_GEO_IN 1.png',
+                    'alt_text' => 'Apple Watch Ultra 2 in Black Titanium',
+                    'badge' => '',
+                    'url' => '#buy-watch-ultra-2'
+                ],
+                [
+                    'id' => 105,
                     'eyebrow' => 'MACBOOK PRO',
                     'title' => 'A work of smart.',
                     'price_label' => 'From ₹169900.00‡',
@@ -219,20 +231,8 @@ class Database {
                     'theme' => 'dark',
                     'image' => 'assets/images/LatestImg/store-card-40-macbook-pro-202610 1.png',
                     'alt_text' => 'MacBook Pro with M4 family chip',
-                    'badge' => 'NEW',
-                    'url' => '#buy-macbook-pro'
-                ],
-                [
-                    'id' => 105,
-                    'eyebrow' => 'IPAD AIR',
-                    'title' => 'Fresh Air.',
-                    'price_label' => 'From ₹59900.00‡',
-                    'price_raw' => 59900.00,
-                    'theme' => 'light',
-                    'image' => 'assets/images/LatestImg/store-card-40-ipad-air-202603 1.png',
-                    'alt_text' => 'iPad Air with powerful M2 chip',
                     'badge' => '',
-                    'url' => '#buy-ipad-air'
+                    'url' => '#buy-macbook-pro'
                 ],
                 [
                     'id' => 106,
@@ -243,35 +243,11 @@ class Database {
                     'theme' => 'light',
                     'image' => 'assets/images/LatestImg/store-card-40-ipad-mini-202610 1.png',
                     'alt_text' => 'iPad mini featuring A17 Pro chip',
-                    'badge' => 'NEW',
+                    'badge' => '',
                     'url' => '#buy-ipad-mini'
                 ],
                 [
                     'id' => 107,
-                    'eyebrow' => 'APPLE WATCH ULTRA 2',
-                    'title' => 'New finish. Never quit.',
-                    'price_label' => 'From ₹89900.00‡',
-                    'price_raw' => 89900.00,
-                    'theme' => 'dark',
-                    'image' => 'assets/images/LatestImg/store-card-40-watch-ultra-4-202609_GEO_IN 1.png',
-                    'alt_text' => 'Apple Watch Ultra 2 in Black Titanium',
-                    'badge' => 'NEW FINISH',
-                    'url' => '#buy-watch-ultra-2'
-                ],
-                [
-                    'id' => 108,
-                    'eyebrow' => 'AIRPODS 4',
-                    'title' => 'Iconic. Now sonic.',
-                    'price_label' => 'From ₹12900.00‡',
-                    'price_raw' => 12900.00,
-                    'theme' => 'light',
-                    'image' => 'assets/images/LatestImg/store-card-40-airpods-5-202609 1.png',
-                    'alt_text' => 'AirPods 4 with Active Noise Cancellation option',
-                    'badge' => 'NEW',
-                    'url' => '#buy-airpods-4'
-                ],
-                [
-                    'id' => 109,
                     'eyebrow' => 'MAC MINI',
                     'title' => 'Size down. Power up.',
                     'price_label' => 'From ₹59900.00‡',
@@ -279,11 +255,11 @@ class Database {
                     'theme' => 'light',
                     'image' => 'assets/images/LatestImg/store-card-40-mac-mini-202609 1.png',
                     'alt_text' => 'All-new smaller Mac mini with M4',
-                    'badge' => 'NEW',
+                    'badge' => '',
                     'url' => '#buy-mac-mini'
                 ],
                 [
-                    'id' => 110,
+                    'id' => 108,
                     'eyebrow' => 'IMAC',
                     'title' => 'Brilliant from edge to edge.',
                     'price_label' => 'From ₹134900.00‡',
@@ -291,11 +267,11 @@ class Database {
                     'theme' => 'light',
                     'image' => 'assets/images/LatestImg/store-card-40-imac-202610 1.png',
                     'alt_text' => '24-inch iMac with M4 chip in striking colours',
-                    'badge' => 'NEW',
+                    'badge' => '',
                     'url' => '#buy-imac'
                 ],
                 [
-                    'id' => 111,
+                    'id' => 109,
                     'eyebrow' => 'MACBOOK AIR',
                     'title' => 'Lean. Mean. M3 machine.',
                     'price_label' => 'From ₹99900.00‡',
@@ -307,19 +283,19 @@ class Database {
                     'url' => '#buy-macbook-air'
                 ],
                 [
-                    'id' => 112,
-                    'eyebrow' => 'BEATS PILL',
-                    'title' => 'Sound bigger than ever.',
-                    'price_label' => 'MRP ₹16900.00‡',
-                    'price_raw' => 16900.00,
-                    'theme' => 'dark',
-                    'image' => 'assets/images/LatestImg/store-card-40-beats-360-202610 1.png',
-                    'alt_text' => 'Beats Pill portable speaker',
-                    'badge' => 'NEW',
-                    'url' => '#buy-beats-pill'
+                    'id' => 110,
+                    'eyebrow' => 'AIRPODS 4',
+                    'title' => 'Iconic. Now sonic.',
+                    'price_label' => 'From ₹12900.00‡',
+                    'price_raw' => 12900.00,
+                    'theme' => 'light',
+                    'image' => 'assets/images/LatestImg/store-card-40-airpods-5-202609 1.png',
+                    'alt_text' => 'AirPods 4 with Active Noise Cancellation option',
+                    'badge' => '',
+                    'url' => '#buy-airpods-4'
                 ],
                 [
-                    'id' => 113,
+                    'id' => 111,
                     'eyebrow' => 'HOMEPOD',
                     'title' => 'Pro sound at home.',
                     'price_label' => '₹32900.00‡',
@@ -331,7 +307,7 @@ class Database {
                     'url' => '#buy-homepod'
                 ],
                 [
-                    'id' => 114,
+                    'id' => 112,
                     'eyebrow' => 'ACCESSORIES',
                     'title' => 'Explore new cases, bands and more.',
                     'price_label' => 'Shop now',
@@ -339,7 +315,7 @@ class Database {
                     'theme' => 'light',
                     'image' => 'assets/images/LatestImg/store-card-40-latest-accessories-202609 1.png',
                     'alt_text' => 'Apple accessories lineup',
-                    'badge' => 'NEW',
+                    'badge' => '',
                     'url' => '#accessories'
                 ]
             ],
@@ -507,94 +483,95 @@ class Database {
                     'theme' => 'light'
                 ]
             ],
+            // Section 3: The Apple difference
             'promotions_cards' => [
                 [
                     'id' => 401,
                     'eyebrow' => 'APPLE TRADE IN',
-                    'title' => 'Exchange your smartphone. Get ₹4000.00 – ₹67500.00 in credit.*',
+                    'lead_text' => 'Exchange your smartphone,',
+                    'body_text' => ' get ₹4000.00–₹67500.00 in credit.*',
+                    'title' => 'Exchange your smartphone, get ₹4000.00–₹67500.00 in credit.*',
                     'subtitle' => 'Upgrade and save with Apple Trade In.',
-                    'image' => '',
-                    'theme' => 'light',
+                    'accent_color' => '#008000',
                     'icon' => 'trade-in',
                     'url' => '#trade-in'
                 ],
                 [
                     'id' => 402,
-                    'eyebrow' => 'FLEXIBLE PAYMENT',
-                    'title' => 'Save with instant cashback and No Cost EMI.‡',
-                    'subtitle' => 'Get up to ₹10000 instant cashback with eligible card payment.',
-                    'image' => '',
-                    'theme' => 'light',
+                    'eyebrow' => 'FLEXIBLE FINANCING',
+                    'lead_text' => 'Monthly payment options available.',
+                    'body_text' => ' Interest-free EMI with instant cashback‡',
+                    'title' => 'Monthly payment options available. Interest-free EMI with instant cashback‡',
+                    'subtitle' => 'Get up to ₹10000 instant cashback with eligible cards.',
+                    'accent_color' => '#0071e3',
                     'icon' => 'payment',
                     'url' => '#financing'
                 ],
                 [
                     'id' => 403,
                     'eyebrow' => 'CUSTOMISE YOUR MAC',
-                    'title' => 'Build the Mac that is perfect for you.',
+                    'lead_text' => 'Customise your Mac.',
+                    'body_text' => ' Choose your memory, storage, graphics and even keyboard language.',
+                    'title' => 'Customise your Mac.',
                     'subtitle' => 'Choose your memory, storage, graphics and even keyboard language.',
-                    'image' => '',
-                    'theme' => 'light',
+                    'accent_color' => '#e30000',
                     'icon' => 'mac',
                     'url' => '#customise-mac'
                 ],
                 [
                     'id' => 404,
-                    'eyebrow' => 'FREE ENGRAVING',
+                    'eyebrow' => 'FREE PERSONALISATION',
+                    'lead_text' => 'Make them yours.',
+                    'body_text' => ' Engrave a mix of emoji, names and numbers for free.',
                     'title' => 'Make them yours. Engrave a mix of emoji, names and numbers for free.',
-                    'subtitle' => 'Personalise your AirPods, AirTag, Apple Pencil Pro or iPad.',
-                    'image' => '',
-                    'theme' => 'light',
+                    'subtitle' => 'Personalise your AirPods, AirTag, Apple Pencil or iPad.',
+                    'accent_color' => '#b33bf6',
                     'icon' => 'engraving',
                     'url' => '#engraving'
                 ],
                 [
                     'id' => 405,
                     'eyebrow' => 'DELIVERY AND PICKUP',
-                    'title' => 'Enjoy free delivery, or easy pickup from an Apple Store.',
+                    'lead_text' => 'Free delivery',
+                    'body_text' => ' and free returns on all orders.',
+                    'title' => 'Free delivery and free returns on all orders.',
                     'subtitle' => 'Contactless free delivery directly to your home.',
-                    'image' => '',
-                    'theme' => 'light',
+                    'accent_color' => '#009688',
                     'icon' => 'delivery',
                     'url' => '#delivery'
                 ]
             ],
+            // Section 4: Help is here
             'help_cards' => [
                 [
                     'id' => 301,
                     'eyebrow' => 'APPLE SPECIALIST',
-                    'title' => 'Shop one on one with a Specialist. Online or in a store.',
-                    'image' => '',
+                    'title' => 'Shop with a Specialist over video.',
+                    'subtitle' => 'Guidance from an Apple Specialist right on your screen.',
+                    'image' => 'assets/images/HelpImg/store-card-50-specialist-video.jpg',
                     'theme' => 'light',
-                    'link_text' => 'Shop with a Specialist',
-                    'url' => '#specialist'
+                    'link_text' => 'Shop over video',
+                    'url' => '#specialist-video'
                 ],
                 [
                     'id' => 302,
-                    'eyebrow' => 'BUSINESS',
-                    'title' => 'From enterprise to small business, we’ll work with you.',
-                    'image' => '',
+                    'eyebrow' => 'TODAY AT APPLE',
+                    'title' => 'Get to know your new device with a Personal Session.',
+                    'subtitle' => 'Learn the basics or go deeper with a free one-to-one session.',
+                    'image' => 'assets/images/HelpImg/store-card-50-specialist-help.jpg',
                     'theme' => 'light',
-                    'link_text' => 'Learn more',
-                    'url' => '#business'
+                    'link_text' => 'Book a session',
+                    'url' => '#specialist'
                 ],
                 [
                     'id' => 303,
-                    'eyebrow' => 'TODAY AT APPLE',
-                    'title' => 'Watch and learn. Join free sessions to do more with your Apple devices.',
-                    'image' => '',
+                    'eyebrow' => 'BUSINESS',
+                    'title' => 'Get help buying. Have a question? Call a Specialist or chat online.',
+                    'subtitle' => 'Call 000800 040 1966 or chat with us.',
+                    'image' => 'assets/images/HelpImg/store-card-50-taa.jpg',
                     'theme' => 'light',
-                    'link_text' => 'Explore sessions',
-                    'url' => '#today-at-apple'
-                ],
-                [
-                    'id' => 304,
-                    'eyebrow' => 'GET HELP BUYING',
-                    'title' => 'Have a question? Call a Specialist or chat online.',
-                    'image' => '',
-                    'theme' => 'light',
-                    'link_text' => 'Call 000800 040 1966',
-                    'url' => 'tel:0008000401966'
+                    'link_text' => 'Chat now',
+                    'url' => '#business'
                 ]
             ],
             // Section 5: Loud and Clear Audio Products
