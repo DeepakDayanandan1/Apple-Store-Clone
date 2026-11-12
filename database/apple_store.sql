@@ -110,23 +110,23 @@ INSERT INTO `ribbons` (`id`, `title`, `highlight_text`, `link_text`, `link_url`,
 -- Seed Data: categories
 -- --------------------------------------------------------
 INSERT INTO `categories` (`id`, `name`, `slug`, `image_url`, `link_url`, `sort_order`, `is_active`) VALUES
-(1, 'Mac', 'mac', 'assets/images/NavImg/store-card-13-mac-nav-202610 1.png', '#mac', 1, 1),
-(2, 'iPhone', 'iphone', 'assets/images/NavImg/store-card-13-iphone-nav-202609 1.png', '#iphone', 2, 1),
-(3, 'iPad', 'ipad', 'assets/images/NavImg/store-card-13-ipad-nav-202405 1.png', '#ipad', 3, 1),
-(4, 'Apple Watch', 'watch', 'assets/images/NavImg/store-card-13-watch-nav-202609_GEO_IN 1.png', '#watch', 4, 1),
-(5, 'AirPods', 'airpods', 'assets/images/NavImg/store-card-13-airpods-nav-202509 1.png', '#airpods', 5, 1),
-(6, 'AirTag', 'airtag', 'assets/images/NavImg/store-card-13-airtags-nav-202601_GEO_IN 1.png', '#airtag', 6, 1),
-(7, 'HomePod', 'homepod', 'assets/images/NavImg/store-card-13-home-nav-202610 1.png', '#homepod', 7, 1),
-(8, 'Accessories', 'accessories', 'assets/images/NavImg/store-card-13-accessories-nav-202609 1.png', '#accessories', 8, 1);
+(1, 'Mac', 'mac', 'assets/images/hero/store-card-13-mac-nav-202610 1.png', '#mac', 1, 1),
+(2, 'iPhone', 'iphone', 'assets/images/hero/store-card-13-iphone-nav-202609 1.png', '#iphone', 2, 1),
+(3, 'iPad', 'ipad', 'assets/images/hero/store-card-13-ipad-nav-202405 1.png', '#ipad', 3, 1),
+(4, 'Apple Watch', 'watch', 'assets/images/hero/store-card-13-watch-nav-202609_GEO_IN 1.png', '#watch', 4, 1),
+(5, 'Home', 'home', 'assets/images/hero/store-card-13-home-nav-202610 1.png', '#home', 5, 1),
+(6, 'AirPods', 'airpods', 'assets/images/hero/store-card-13-airpods-nav-202509 1.png', '#airpods', 6, 1),
+(7, 'AirTag', 'airtag', 'assets/images/hero/store-card-13-airtags-nav-202601_GEO_IN 1.png', '#airtag', 7, 1),
+(8, 'Accessories', 'accessories', 'assets/images/hero/store-card-13-accessories-nav-202609 1.png', '#accessories', 8, 1);
 
 -- --------------------------------------------------------
 -- Seed Data: products (The Latest Section)
 -- --------------------------------------------------------
 INSERT INTO `products` (`id`, `section_key`, `part_number`, `eyebrow`, `title`, `description`, `price_label`, `price_raw`, `image_url`, `alt_text`, `theme`, `badge`, `link_url`, `sort_order`, `is_active`) VALUES
-(101, 'latest', NULL, 'iPhone 18 Pro', 'Pro further.', NULL, '', 119900.00, 'assets/images/LatestImg/store-card-40-iphone-18-pro-202609 1.png', 'iPhone 18 Pro in Titanium finish', 'dark', 'NEW', '#buy-iphone-18-pro', 1, 1),
-(102, 'latest', NULL, 'iPhone Duo', 'Hello, hello.', NULL, 'From ₹299900.00‡', 299900.00, 'assets/images/LatestImg/store-card-40-iphone-duo-202609 1.png', 'iPhone Duo foldable dual-screen display', 'light', 'NEW', '#buy-iphone-duo', 2, 1),
-(103, 'latest', NULL, 'MacBook Pro', 'PROLED XDR Display', NULL, '', 169900.00, 'assets/images/LatestImg/store-card-40-macbook-pro-proled-202610 1.png', 'MacBook Pro PROLED XDR Display', 'dark', 'NEW', '#buy-macbook-pro', 3, 1),
-(104, 'latest', NULL, 'MacBook Pro', 'With M6, M6 Pro and M6 Max.', NULL, '', 169900.00, 'assets/images/LatestImg/store-card-40-macbook-neo-202603 1.png', 'MacBook Pro 14-inch with M6 chip', 'dark', 'NEW 14\" WITH M6', '#buy-macbook-pro-14', 4, 1),
+(101, 'latest', NULL, 'iPhone 18 Pro', 'Pro further.', NULL, 'From ₹164900.00‡', 164900.00, 'assets/images/products/store-card-40-iphone-18-pro-202609 1.png', 'iPhone 18 Pro in Deep Red finish', 'dark', 'NEW', '#buy-iphone-18-pro', 1, 1),
+(102, 'latest', NULL, 'iPhone Duo', 'Hello, hello.', NULL, 'From ₹299900.00‡', 299900.00, 'assets/images/products/store-card-40-iphone-duo-202609 1.png', 'iPhone Duo foldable dual-screen display', 'light', 'NEW', '#buy-iphone-duo', 2, 1),
+(103, 'latest', NULL, 'MacBook Pro PROLED XDR Display', 'A screen come true.', NULL, 'From ₹349900.00‡', 349900.00, 'assets/images/products/store-card-40-macbook-pro-proled-202610 1.png', 'MacBook Pro PROLED XDR Display', 'dark', 'NEW', '#buy-macbook-pro', 3, 1),
+(104, 'latest', NULL, 'MacBook Pro', 'With M6, M6 Pro and M6 Max.', NULL, 'From ₹239900.00‡', 239900.00, 'assets/images/products/store-card-40-macbook-neo-202603 1.png', 'MacBook Pro 14-inch with M6 chip', 'dark', 'NEW 14\" WITH M6', '#buy-macbook-pro-14', 4, 1),
 (105, 'latest', NULL, 'APPLE WATCH SERIES 10', 'Thinscredible.', NULL, 'From ₹46900.00‡', 46900.00, 'assets/images/LatestImg/store-card-40-watch-series-12-202609_GEO_IN 1.png', 'Apple Watch Series 10 in Jet Black aluminum', 'dark', '', '#buy-watch-series-10', 5, 1),
 (106, 'latest', NULL, 'APPLE WATCH ULTRA 2', 'New finish. Never quit.', NULL, 'From ₹89900.00‡', 89900.00, 'assets/images/LatestImg/store-card-40-watch-ultra-4-202609_GEO_IN 1.png', 'Apple Watch Ultra 2 in Black Titanium', 'dark', '', '#buy-watch-ultra-2', 6, 1),
 (107, 'latest', NULL, 'MAC MINI', 'Size down. Power up.', NULL, 'From ₹59900.00‡', 59900.00, 'assets/images/LatestImg/store-card-40-mac-mini-202609 1.png', 'All-new smaller Mac mini with M4', 'light', '', '#buy-mac-mini', 7, 1),

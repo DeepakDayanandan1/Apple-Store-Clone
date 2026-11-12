@@ -37,44 +37,49 @@ This project was built from scratch without third-party frontend frameworks, ens
 ```
 apple-store-clone/
 │
-├── index.php                 # Main application entry point
+├── index.php
 │
 ├── config/
-│   └── database.php          # Database PDO connection handler with graceful fallback
+│   └── database.php
 │
 ├── includes/
-│   ├── header.php            # HTML head, stylesheets, favicon, and announcement ribbon
-│   ├── navigation.php        # Glassmorphic global navigation, search overlay, and bag flyout
-│   └── footer.php            # Directory columns, mobile accordion, footnotes, legal links
+│   ├── header.php
+│   ├── navigation.php
+│   ├── footer.php
+│   └── functions.php
 │
 ├── sections/
-│   ├── hero.php              # Store display title and category navigation shelf
-│   ├── products.php          # The Latest carousel spotlight
-│   ├── accessories.php       # Accessories carousel with interactive color swatches & add to bag
-│   └── promotions.php        # Apple difference, Help, Loud & clear, Experience, Special stores, Quick links
+│   ├── hero.php
+│   ├── product-highlights.php
+│   ├── products.php
+│   ├── promotions.php
+│   ├── accessories.php
+│   └── shopping-benefits.php
 │
 ├── assets/
 │   ├── images/
-│   │   ├── NavImg/           # Category navigation shelf images
-│   │   ├── LatestImg/        # The Latest section product card images
-│   │   ├── AccessoriesImg/   # Accessories images (cases, bands, chargers, cables)
-│   │   ├── LoudImg/          # Audio products (AirPods Pro, AirPods Max, HomePod, Beats)
-│   │   ├── ExperienceImg/    # Apple Experience cards (Apple Intelligence, Ecosystem, Apple One)
-│   │   └── OffersImg/        # Education & special store offers
-│   ├── icons/                # Inline SVG icons (Apple logo, Search, Bag, Chevrons, Store)
-│   └── fonts/                # Native Apple SF Pro system typography stack
+│   │   ├── hero/
+│   │   ├── products/
+│   │   └── banners/
+│   ├── icons/
+│   └── fonts/
 │
 ├── css/
-│   ├── style.css             # Apple design system, typography, cards, and animations
-│   └── responsive.css        # Adaptive breakpoints for desktop, laptop, tablet, and mobile
+│   ├── style.css
+│   ├── header.css
+│   ├── sections.css
+│   └── responsive.css
 │
 ├── js/
-│   └── script.js             # Carousels, mobile menu, search, bag modal, and swatches
+│   ├── script.js
+│   ├── carousel.js
+│   └── navigation.js
 │
 ├── database/
-│   └── apple_store.sql       # MySQL schema DDL, table indexes, and seed data
+│   └── apple_store.sql
 │
-└── README.md                 # Project documentation and submission details
+├── README.md
+└── .gitignore
 ```
 
 ---

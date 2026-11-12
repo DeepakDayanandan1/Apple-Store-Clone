@@ -208,6 +208,9 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

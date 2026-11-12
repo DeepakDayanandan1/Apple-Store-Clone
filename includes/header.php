@@ -19,6 +19,8 @@ $ribbon = $db->getRibbon();
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body class="apple-store-page">
