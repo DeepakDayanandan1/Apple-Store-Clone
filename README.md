@@ -141,7 +141,7 @@ apple-store-clone/
 - **Backend**: Core PHP 8.2+ (Modular object-oriented architecture, PDO MySQL driver)
 - **Database**: MySQL 5.7+ / MariaDB 10.4+
 - **Frontend**: Semantic HTML5, CSS3 (Modern Flexbox, CSS Grid, Custom Properties, Glassmorphism)
-- **Scripting**: Vanilla JavaScript (ES6+, zero third-party libraries or frameworks)
+- **Scripting**: JavaScript (ES6+, zero third-party libraries or frameworks)
 
 ---
 
