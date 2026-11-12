@@ -110,14 +110,14 @@ INSERT INTO `ribbons` (`id`, `title`, `highlight_text`, `link_text`, `link_url`,
 -- Seed Data: categories
 -- --------------------------------------------------------
 INSERT INTO `categories` (`id`, `name`, `slug`, `image_url`, `link_url`, `sort_order`, `is_active`) VALUES
-(1, 'Mac', 'mac', 'assets/images/hero/store-card-13-mac-nav-202610 1.png', '#mac', 1, 1),
-(2, 'iPhone', 'iphone', 'assets/images/hero/store-card-13-iphone-nav-202609 1.png', '#iphone', 2, 1),
-(3, 'iPad', 'ipad', 'assets/images/hero/store-card-13-ipad-nav-202405 1.png', '#ipad', 3, 1),
-(4, 'Apple Watch', 'watch', 'assets/images/hero/store-card-13-watch-nav-202609_GEO_IN 1.png', '#watch', 4, 1),
-(5, 'Home', 'home', 'assets/images/hero/store-card-13-home-nav-202610 1.png', '#home', 5, 1),
-(6, 'AirPods', 'airpods', 'assets/images/hero/store-card-13-airpods-nav-202509 1.png', '#airpods', 6, 1),
-(7, 'AirTag', 'airtag', 'assets/images/hero/store-card-13-airtags-nav-202601_GEO_IN 1.png', '#airtag', 7, 1),
-(8, 'Accessories', 'accessories', 'assets/images/hero/store-card-13-accessories-nav-202609 1.png', '#accessories', 8, 1);
+(1, 'Mac', 'mac', 'assets/images/hero/mac.png', '#mac', 1, 1),
+(2, 'iPhone', 'iphone', 'assets/images/hero/iphone.png', '#iphone', 2, 1),
+(3, 'iPad', 'ipad', 'assets/images/hero/ipad.png', '#ipad', 3, 1),
+(4, 'Apple Watch', 'watch', 'assets/images/hero/watch.png', '#watch', 4, 1),
+(5, 'Home', 'home', 'assets/images/hero/home.png', '#home', 5, 1),
+(6, 'AirPods', 'airpods', 'assets/images/hero/airpods.png', '#airpods', 6, 1),
+(7, 'AirTag', 'airtag', 'assets/images/hero/airtag.png', '#airtag', 7, 1),
+(8, 'Accessories', 'accessories', 'assets/images/hero/accessories.png', '#accessories', 8, 1);
 
 -- --------------------------------------------------------
 -- Seed Data: products (The Latest Section)
