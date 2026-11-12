@@ -1,0 +1,302 @@
+/**
+ * Apple Store India Clone - Responsive Stylesheet
+ * Responsive behavior across Desktop, Laptop, Tablet, and Mobile devices
+ */
+
+/* ==========================================================================
+   1. Laptop / Small Desktop (<= 1024px)
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
+    .globalnav-links {
+        margin: 0 10px;
+    }
+
+    .globalnav-link {
+        padding: 0 4px;
+        font-size: 11px;
+    }
+
+    .store-hero-headline {
+        font-size: 38px;
+    }
+
+    .bag-flyout {
+        right: 20px;
+    }
+}
+
+/* ==========================================================================
+   2. Tablet View (<= 834px)
+   ========================================================================== */
+@media screen and (max-width: 834px) {
+    /* Navigation */
+    .globalnav-links {
+        display: none;
+    }
+
+    .globalnav-menu-btn {
+        display: flex;
+    }
+
+    .mobile-menu-drawer {
+        display: block;
+    }
+
+    .globalnav-nav {
+        justify-content: space-between;
+    }
+
+    /* Hero */
+    .store-headline-row {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 36px;
+    }
+
+    .store-hero-headline {
+        font-size: 34px;
+    }
+
+    .headline-support-col {
+        flex-direction: row;
+        gap: 28px;
+        flex-wrap: wrap;
+    }
+
+    /* Cards */
+    .product-showcase-card,
+    .banner-info-card {
+        width: 340px;
+        height: 460px;
+        flex: 0 0 340px;
+    }
+
+    .card-headline-text {
+        font-size: 22px;
+    }
+
+    .difference-feature-card {
+        width: 280px;
+        height: 360px;
+        flex: 0 0 280px;
+        padding: 24px;
+    }
+
+    .accessory-product-card {
+        width: 280px;
+        height: 460px;
+        flex: 0 0 280px;
+        padding: 20px;
+    }
+
+    .accessory-card-image-wrap {
+        width: 180px;
+        height: 180px;
+    }
+
+    .accessory-product-img {
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+    /* Footer Accordion Transition */
+    .footer-directory {
+        grid-template-columns: 1fr;
+        gap: 0;
+        border-bottom: none;
+    }
+
+    .directory-section {
+        margin-bottom: 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .directory-title {
+        padding: 12px 0;
+        margin-bottom: 0;
+        font-size: 13px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .directory-accordion-icon {
+        display: block;
+    }
+
+    .directory-section.open .directory-accordion-icon {
+        transform: rotate(180deg);
+    }
+
+    .directory-list {
+        display: none;
+        padding-bottom: 14px;
+    }
+
+    .directory-section.open .directory-list {
+        display: block;
+    }
+}
+
+/* ==========================================================================
+   3. Mobile View (<= 540px)
+   ========================================================================== */
+@media screen and (max-width: 540px) {
+    :root {
+        --nav-height: 48px;
+    }
+
+    .globalnav-container {
+        padding: 0 16px;
+    }
+
+    /* Ribbon Banner */
+    .ribbon-banner {
+        padding: 10px 16px;
+    }
+
+    .ribbon-content {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+
+    .ribbon-highlight {
+        display: inline;
+        margin-left: 2px;
+    }
+
+    /* Store Hero */
+    .store-hero-section {
+        padding-top: 32px;
+        padding-bottom: 16px;
+    }
+
+    .store-hero-headline {
+        font-size: 28px;
+        line-height: 1.14;
+    }
+
+    .headline-support-col {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    /* Category Navigation */
+    .category-thumb-wrapper {
+        width: 90px;
+        height: 60px;
+    }
+
+    .category-thumb-img {
+        max-width: 90px;
+        max-height: 60px;
+    }
+
+    .category-thumb-title {
+        font-size: 12px;
+    }
+
+    /* Section Headings */
+    .store-section {
+        padding: 32px 0 24px;
+    }
+
+    .section-display-title {
+        font-size: 22px;
+    }
+
+    .title-secondary {
+        display: block;
+        margin-left: 0;
+        margin-top: 2px;
+    }
+
+    .carousel-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Cards Size on Mobile */
+    .carousel-track {
+        gap: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .product-showcase-card,
+    .banner-info-card {
+        width: 300px;
+        height: 430px;
+        flex: 0 0 300px;
+    }
+
+    .card-text-header {
+        padding: 24px 24px 0;
+    }
+
+    .card-headline-text {
+        font-size: 20px;
+    }
+
+    .info-title {
+        font-size: 18px;
+    }
+
+    .difference-feature-card {
+        width: 260px;
+        height: 340px;
+        flex: 0 0 260px;
+        padding: 20px;
+    }
+
+    .accessory-product-card {
+        width: 260px;
+        height: 440px;
+        flex: 0 0 260px;
+        padding: 16px;
+    }
+
+    .accessory-card-image-wrap {
+        width: 160px;
+        height: 160px;
+    }
+
+    .accessory-product-img {
+        max-width: 160px;
+        max-height: 160px;
+    }
+
+    .accessory-title {
+        font-size: 14px;
+    }
+
+    .quick-links-headline {
+        font-size: 18px;
+    }
+
+    .quick-link-pill {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    /* Footer Legal */
+    .footer-legal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .legal-links {
+        gap: 10px;
+    }
+
+    /* Search and Bag on Mobile */
+    .bag-flyout {
+        width: calc(100% - 32px);
+        right: 16px;
+        top: 56px;
+    }
+
+    .search-bar-input {
+        font-size: 16px;
+    }
+}
