@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initBag();
     initColorSwatches();
     initFooterAccordions();
+    initStoreHover();
+    initNavHoverDim();
 });
 
 /* ==========================================================================
@@ -407,6 +409,68 @@ function initFooterAccordions() {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 title.click();
+            }
+        });
+    });
+}
+
+/* ==========================================================================
+   7. Store Hover Mega-Menu Flyout
+   ========================================================================== */
+function initStoreHover() {
+    const storeItem  = document.getElementById('nav-item-store');
+    const storeFlyout = document.getElementById('store-flyout');
+    if (!storeItem || !storeFlyout) return;
+
+    let hideTimer = null;
+
+    function showFlyout() {
+        clearTimeout(hideTimer);
+        storeFlyout.classList.add('flyout-open');
+    }
+
+    function hideFlyout() {
+        hideTimer = setTimeout(() => {
+            storeFlyout.classList.remove('flyout-open');
+        }, 150);
+    }
+
+    // Store nav item
+    storeItem.addEventListener('mouseenter', showFlyout);
+    storeItem.addEventListener('mouseleave', hideFlyout);
+
+    // Keep flyout open when mouse moves into the panel itself
+    storeFlyout.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+    storeFlyout.addEventListener('mouseleave', hideFlyout);
+
+    // Also close if Escape is pressed
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            storeFlyout.classList.remove('flyout-open');
+        }
+    });
+}
+
+/* ==========================================================================
+   8. Nav Sibling Dimming on Hover
+   ========================================================================== */
+function initNavHoverDim() {
+    const navList  = document.querySelector('.globalnav-list');
+    const navItems = document.querySelectorAll('.globalnav-list > .globalnav-item');
+    if (!navList || navItems.length === 0) return;
+
+    navItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            navList.classList.add('has-active-hover');
+            item.classList.add('hovered');
+        });
+
+        item.addEventListener('mouseleave', () => {
+            item.classList.remove('hovered');
+            // If no other item is hovered, remove the class
+            const anyHovered = navList.querySelector('.globalnav-item.hovered');
+            if (!anyHovered) {
+                navList.classList.remove('has-active-hover');
             }
         });
     });

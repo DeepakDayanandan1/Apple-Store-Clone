@@ -91,6 +91,8 @@ img {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     z-index: 9999;
     border-bottom: 1px solid var(--color-border-light);
+    /* Allow flyout to escape the nav height */
+    overflow: visible;
 }
 
 .globalnav-container {
@@ -156,6 +158,132 @@ img {
     opacity: 1;
     color: #000000;
 }
+
+/* ============================================================
+   Store Mega-Menu Flyout
+   ============================================================ */
+.has-flyout {
+    position: static; /* flyout is relative to header, not the li */
+}
+
+.store-flyout {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background-color: rgba(245, 245, 247, 0.95);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    z-index: 9997;
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+                visibility 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+                transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.store-flyout.flyout-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.store-flyout-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 44px 22px 52px;
+}
+
+.flyout-col {
+    flex: 0 0 auto;
+}
+
+.flyout-col-shop {
+    min-width: 200px;
+    margin-right: 80px;
+}
+
+.flyout-col-quicklinks {
+    min-width: 160px;
+    margin-right: 80px;
+}
+
+.flyout-col-special {
+    min-width: 160px;
+}
+
+.flyout-col-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+    line-height: 1;
+    text-transform: none;
+}
+
+.flyout-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flyout-nav-link {
+    display: block;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.235;
+    letter-spacing: -0.022em;
+    color: var(--color-text-primary);
+    padding: 7px 0;
+    text-decoration: none;
+    transition: color 0.15s ease;
+    white-space: nowrap;
+}
+
+.flyout-link-primary {
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.19;
+    padding: 0 0 12px;
+}
+
+.flyout-nav-link:hover {
+    color: var(--color-text-secondary);
+}
+
+.flyout-link-blue,
+.flyout-link-blue:visited {
+    color: var(--color-blue);
+}
+
+.flyout-link-blue:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+/* Nav item dimming when any item is hovered */
+.globalnav-list.has-active-hover .globalnav-item {
+    opacity: 0.4;
+    transition: opacity 0.2s ease;
+}
+
+.globalnav-list.has-active-hover .globalnav-item.hovered {
+    opacity: 1;
+}
+
 
 .nav-svg-icon {
     display: block;

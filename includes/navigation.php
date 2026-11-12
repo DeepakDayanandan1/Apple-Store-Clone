@@ -20,7 +20,47 @@
                 </li>
 
                 <!-- 2-11. Category Text Links -->
-                <li class="globalnav-item"><a href="#store" class="globalnav-link current">Store</a></li>
+                <li class="globalnav-item globalnav-item-store has-flyout" id="nav-item-store">
+                    <a href="#store" class="globalnav-link globalnav-link-store current">Store</a>
+                    <!-- Store Mega-Menu Flyout -->
+                    <div class="store-flyout" id="store-flyout" role="region" aria-label="Store navigation">
+                        <div class="store-flyout-inner">
+                            <!-- Col 1: Shop -->
+                            <div class="flyout-col flyout-col-shop">
+                                <span class="flyout-col-label">Shop</span>
+                                <ul class="flyout-nav-list">
+                                    <li><a href="#latest" class="flyout-nav-link flyout-link-primary">Shop the Latest</a></li>
+                                    <li><a href="#mac" class="flyout-nav-link">Mac</a></li>
+                                    <li><a href="#ipad" class="flyout-nav-link">iPad</a></li>
+                                    <li><a href="#iphone" class="flyout-nav-link">iPhone</a></li>
+                                    <li><a href="#watch" class="flyout-nav-link">Apple Watch</a></li>
+                                    <li><a href="#airpods" class="flyout-nav-link">AirPods</a></li>
+                                    <li><a href="#home" class="flyout-nav-link">Home</a></li>
+                                    <li><a href="#accessories" class="flyout-nav-link">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <!-- Col 2: Quick Links -->
+                            <div class="flyout-col flyout-col-quicklinks">
+                                <span class="flyout-col-label">Quick Links</span>
+                                <ul class="flyout-nav-list">
+                                    <li><a href="#find-store" class="flyout-nav-link">Find a Store</a></li>
+                                    <li><a href="#order-status" class="flyout-nav-link">Order Status</a></li>
+                                    <li><a href="#trade-in" class="flyout-nav-link">Apple Trade In</a></li>
+                                    <li><a href="#ways-to-buy" class="flyout-nav-link">Ways to Buy</a></li>
+                                    <li><a href="#personal-setup" class="flyout-nav-link">Personal Setup</a></li>
+                                </ul>
+                            </div>
+                            <!-- Col 3: Shop Special Stores -->
+                            <div class="flyout-col flyout-col-special">
+                                <span class="flyout-col-label">Shop Special Stores</span>
+                                <ul class="flyout-nav-list">
+                                    <li><a href="#education" class="flyout-nav-link flyout-link-blue">Education</a></li>
+                                    <li><a href="#business" class="flyout-nav-link flyout-link-blue">Business</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li class="globalnav-item"><a href="#mac" class="globalnav-link">Mac</a></li>
                 <li class="globalnav-item"><a href="#ipad" class="globalnav-link">iPad</a></li>
                 <li class="globalnav-item"><a href="#iphone" class="globalnav-link">iPhone</a></li>

@@ -34,6 +34,11 @@
         display: none !important;
     }
 
+    /* Hide flyout on mobile - it's integrated into mobile drawer instead */
+    .store-flyout {
+        display: none !important;
+    }
+
     .mobile-nav-bar {
         display: flex;
         align-items: center;
