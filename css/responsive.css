@@ -10,31 +10,32 @@
 @media screen and (max-width: 1024px) {
     :root {
         --container-width: 100%;
-        --container-padding: 22px;
+        --container-padding: 40px;
     }
 
     .globalnav-container {
-        padding: 0 16px;
+        padding: 0 20px;
     }
 
     .globalnav-link {
-        padding: 0 5px;
+        padding: 0 4px;
         font-size: 11.5px;
     }
 
     .bag-flyout {
-        right: 20px;
+        right: var(--container-padding);
     }
 
     .section-container,
     .store-hero-container,
-    .quick-links-shelf {
-        padding: 0 22px;
+    .quick-links-shelf,
+    .globalfooter-container {
+        padding: 0 var(--container-padding);
     }
 
     .carousel-track {
-        padding-left: 22px;
-        padding-right: 22px;
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
     }
 
     .carousel-footer-row {
@@ -47,7 +48,7 @@
    ========================================================================== */
 @media screen and (max-width: 834px) {
     :root {
-        --container-padding: 20px;
+        --container-padding: 24px;
     }
 
     /* ---- Navigation ---- */
@@ -147,8 +148,9 @@
 
     .section-container,
     .store-hero-container,
-    .quick-links-shelf {
-        padding: 0 20px;
+    .quick-links-shelf,
+    .globalfooter-container {
+        padding: 0 var(--container-padding);
     }
 
     .section-display-title {
@@ -163,8 +165,8 @@
     /* ---- Carousels ---- */
     .carousel-track {
         gap: 16px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
     }
 
     .carousel-footer-row {
@@ -343,7 +345,8 @@
 
     .section-container,
     .store-hero-container,
-    .quick-links-shelf {
+    .quick-links-shelf,
+    .globalfooter-container {
         padding: 0 16px;
     }
 

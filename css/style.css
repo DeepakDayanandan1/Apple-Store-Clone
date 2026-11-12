@@ -8,8 +8,8 @@
    ========================================================================== */
 :root {
     --apple-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --container-width: 1024px;
-    --container-padding: 24px;
+    --container-width: 100%;
+    --container-padding: 80px;
     --color-bg-page: #f5f5f7;
     --color-bg-white: #ffffff;
     --color-bg-dark: #000000;
@@ -97,10 +97,10 @@ img {
 
 .globalnav-container {
     width: 100%;
-    max-width: 1024px;
+    max-width: 100%;
     height: 100%;
-    margin: 0 auto;
-    padding: 0 22px;
+    margin: 0;
+    padding: 0 var(--container-padding);
 }
 
 .globalnav-nav {
@@ -118,8 +118,8 @@ img {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     padding: 0;
     height: 100%;
     list-style: none;
@@ -199,9 +199,9 @@ img {
     flex-direction: row;
     align-items: flex-start;
     gap: 0;
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 44px 22px 52px;
+    max-width: 100%;
+    margin: 0;
+    padding: 44px var(--container-padding) 52px;
 }
 
 .flyout-col {
@@ -533,7 +533,7 @@ img {
 .bag-flyout {
     position: absolute;
     top: calc(var(--nav-height) + 8px);
-    right: max(20px, calc((100% - 1024px) / 2 + 20px));
+    right: var(--container-padding);
     width: 300px;
     background: #ffffff;
     border-radius: 14px;
@@ -652,13 +652,14 @@ img {
 .ribbon-banner {
     background-color: #ffffff;
     border-bottom: 1px solid var(--color-border-light);
-    padding: 18px 24px;
+    padding: 18px var(--container-padding);
     text-align: center;
 }
 
 .ribbon-container {
-    max-width: var(--container-width);
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
 }
 
 .ribbon-content {
@@ -703,8 +704,9 @@ img {
 }
 
 .store-hero-container {
-    max-width: var(--container-width);
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     padding: 0 var(--container-padding);
 }
 
@@ -714,6 +716,7 @@ img {
     align-items: center;
     min-height: 160px;
     margin-bottom: 32px;
+    width: 100%;
 }
 
 .headline-primary-col {
@@ -786,9 +789,9 @@ img {
 
 .category-shelf-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-end;
-    gap: 8px;
+    gap: clamp(16px, 2.2vw, 32px);
     width: 100%;
     padding: 8px 0 24px;
     margin: 0;
@@ -796,9 +799,10 @@ img {
 }
 
 .category-shelf-item {
-    flex: 1 1 0;
-    min-width: 68px;
-    max-width: 110px;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 72px;
+    max-width: 100px;
     text-align: center;
 }
 
@@ -860,8 +864,8 @@ img {
 
 .section-container {
     width: 100%;
-    max-width: var(--container-width);
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     padding: 0 var(--container-padding);
 }
 
@@ -893,6 +897,8 @@ img {
 /* Carousel Container and Track */
 .carousel-container {
     width: 100%;
+    padding: 0;
+    margin: 0;
     overflow: hidden;
     position: relative;
 }
@@ -904,11 +910,7 @@ img {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /*
-     * Left padding aligns with .section-container headline
-     * Right padding matches container-padding to eliminate the empty dead space at the end of the scroll!
-     */
-    padding-left: max(var(--container-padding), calc((100% - var(--container-width)) / 2 + var(--container-padding)));
+    padding-left: var(--container-padding);
     padding-right: var(--container-padding);
     padding-top: 10px;
     padding-bottom: 24px;
@@ -922,7 +924,7 @@ img {
 /* Carousel Footer Row & Controls (at bottom right of track) */
 .carousel-footer-row {
     width: 100%;
-    margin: 8px auto 0;
+    margin: 8px 0 0;
     display: flex;
     justify-content: flex-end;
 }
@@ -1350,8 +1352,9 @@ img {
 }
 
 .quick-links-shelf {
-    max-width: var(--container-width);
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     padding: 0 var(--container-padding);
 }
 
@@ -1401,9 +1404,10 @@ img {
 }
 
 .globalfooter-container {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 var(--container-padding);
 }
 
 /* Footnotes */
