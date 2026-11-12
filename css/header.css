@@ -113,25 +113,21 @@
     display: block;
     height: 44px;
     pointer-events: none;
-    transform-origin: center center;
 }
 
 .globalnav-link-apple .nav-svg-icon {
-    width: 16px;
+    width: 14px;
     height: 44px;
-    transform: scale(1.15);
 }
 
 .globalnav-link-search .nav-svg-icon {
-    width: 17px;
+    width: 16px;
     height: 44px;
-    transform: scale(1.15);
 }
 
 .globalnav-link-bag .nav-svg-icon {
-    width: 16px;
+    width: 14px;
     height: 44px;
-    transform: scale(1.15);
 }
 
 .nav-bag-count {
