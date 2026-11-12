@@ -158,9 +158,9 @@ class Database {
         $this->dataset = [
             'ribbon' => [
                 'id' => 1,
-                'title' => 'Get up to ₹10000 instant cashback with eligible cards.',
-                'highlight_text' => 'Plus up to 12 months of No Cost EMI.‡',
-                'link_text' => 'Shop',
+                'title' => 'Get up to 6 months of No Cost EMI◊ plus up to ₹15000.00 instant cashbackΔ on selected products with eligible cards.',
+                'highlight_text' => '',
+                'link_text' => 'See offers',
                 'link_url' => '#latest'
             ],
             'categories' => [

@@ -49,18 +49,26 @@
     /* Hero */
     .store-headline-row {
         flex-direction: column;
-        gap: 24px;
+        align-items: flex-start;
+        gap: 20px;
         margin-bottom: 36px;
     }
 
-    .store-hero-headline {
-        font-size: 34px;
+    .store-hero-title {
+        font-size: 38px;
     }
 
     .headline-support-col {
-        flex-direction: row;
-        gap: 28px;
-        flex-wrap: wrap;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .store-hero-subtext {
+        font-size: 20px;
+    }
+
+    .store-hero-actions {
+        align-items: flex-start;
     }
 
     /* Cards */
@@ -184,14 +192,23 @@
         padding-bottom: 16px;
     }
 
-    .store-hero-headline {
-        font-size: 28px;
-        line-height: 1.14;
+    .store-hero-title {
+        font-size: 32px;
+    }
+
+    .store-hero-subtext {
+        font-size: 18px;
     }
 
     .headline-support-col {
         flex-direction: column;
-        gap: 14px;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .store-hero-actions {
+        align-items: flex-start;
+        gap: 8px;
     }
 
     /* Category Navigation */

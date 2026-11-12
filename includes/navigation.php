@@ -27,7 +27,7 @@
                 <li class="globalnav-item"><a href="#iphone" class="globalnav-link">iPhone</a></li>
                 <li class="globalnav-item"><a href="#watch" class="globalnav-link">Watch</a></li>
                 <li class="globalnav-item"><a href="#airpods" class="globalnav-link">AirPods</a></li>
-                <li class="globalnav-item"><a href="#tv-home" class="globalnav-link">TV &amp; Home</a></li>
+                <li class="globalnav-item"><a href="#home" class="globalnav-link">Home</a></li>
                 <li class="globalnav-item"><a href="#entertainment" class="globalnav-link">Entertainment</a></li>
                 <li class="globalnav-item"><a href="#accessories" class="globalnav-link">Accessories</a></li>
                 <li class="globalnav-item"><a href="#support" class="globalnav-link">Support</a></li>
@@ -57,7 +57,7 @@
                 <li class="mobile-menu-item"><a href="#iphone" class="mobile-menu-link">iPhone</a></li>
                 <li class="mobile-menu-item"><a href="#watch" class="mobile-menu-link">Watch</a></li>
                 <li class="mobile-menu-item"><a href="#airpods" class="mobile-menu-link">AirPods</a></li>
-                <li class="mobile-menu-item"><a href="#tv-home" class="mobile-menu-link">TV &amp; Home</a></li>
+                <li class="mobile-menu-item"><a href="#home" class="mobile-menu-link">Home</a></li>
                 <li class="mobile-menu-item"><a href="#entertainment" class="mobile-menu-link">Entertainment</a></li>
                 <li class="mobile-menu-item"><a href="#accessories" class="mobile-menu-link">Accessories</a></li>
                 <li class="mobile-menu-item"><a href="#support" class="mobile-menu-link">Support</a></li>

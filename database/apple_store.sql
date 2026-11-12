@@ -104,7 +104,7 @@ CREATE TABLE `cart_items` (
 -- Seed Data: ribbons
 -- --------------------------------------------------------
 INSERT INTO `ribbons` (`id`, `title`, `highlight_text`, `link_text`, `link_url`, `is_active`) VALUES
-(1, 'Get up to ₹10000 instant cashback with eligible cards.', 'Plus up to 12 months of No Cost EMI.‡', 'Shop', '#latest', 1);
+(1, 'Get up to 6 months of No Cost EMI◊ plus up to ₹15000.00 instant cashbackΔ on selected products with eligible cards.', '', 'See offers', '#latest', 1);
 
 -- --------------------------------------------------------
 -- Seed Data: categories

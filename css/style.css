@@ -483,14 +483,14 @@ img {
    3. Promotional Ribbon Banner
    ========================================================================== */
 .ribbon-banner {
-    background-color: var(--ribbon-bg);
+    background-color: #ffffff;
     border-bottom: 1px solid var(--color-border-light);
     padding: 12px 20px;
     text-align: center;
 }
 
 .ribbon-container {
-    max-width: 1024px;
+    max-width: var(--container-width);
     margin: 0 auto;
 }
 
@@ -509,6 +509,7 @@ img {
 .ribbon-cta {
     display: inline-flex;
     align-items: center;
+    gap: 3px;
     color: var(--color-blue);
     margin-left: 6px;
     font-weight: 400;
@@ -518,8 +519,8 @@ img {
     text-decoration: underline;
 }
 
-.ribbon-chevron {
-    font-size: 16px;
+.ribbon-circle-icon {
+    font-size: 15px;
     line-height: 1;
     margin-left: 2px;
 }
@@ -542,95 +543,60 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 32px;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
 }
 
 .headline-primary-col {
-    flex: 1;
-    max-width: 780px;
+    flex: 0 0 auto;
 }
 
-.store-hero-headline {
+.store-hero-title {
     font-size: 48px;
-    line-height: 1.1;
-    font-weight: 600;
-    letter-spacing: -0.025em;
-}
-
-.headline-brand {
+    font-weight: 700;
+    letter-spacing: -0.03em;
     color: var(--color-text-primary);
-}
-
-.headline-subtext {
-    color: var(--color-text-secondary);
-    display: inline;
-    margin-left: 6px;
+    line-height: 1.05;
 }
 
 .headline-support-col {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding-top: 6px;
-    min-width: 230px;
+    align-items: flex-end;
+    text-align: right;
 }
 
-.support-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+.store-hero-subtext {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-text-primary);
+    letter-spacing: -0.015em;
+    margin-bottom: 12px;
 }
 
-.support-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.support-avatar-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.store-icon-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.support-info {
+.store-hero-actions {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
 }
 
-.support-label {
-    font-size: 12px;
-    color: var(--color-text-secondary);
-    line-height: 1.2;
-}
-
-.support-link {
+.store-hero-action-link {
     font-size: 14px;
     font-weight: 400;
     color: var(--color-blue);
     display: inline-flex;
     align-items: center;
+    gap: 4px;
 }
 
-.support-link:hover {
+.store-hero-action-link:hover {
     text-decoration: underline;
 }
 
-.support-link-arrow {
-    margin-left: 2px;
-    font-size: 15px;
+.action-arrow-diag {
+    font-size: 13px;
+    line-height: 1;
 }
 
 /* Category Horizontal Navigation Shelf */

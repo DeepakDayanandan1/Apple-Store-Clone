@@ -32,10 +32,12 @@ $ribbon = $db->getRibbon();
         <div class="ribbon-container">
             <p class="ribbon-content">
                 <span class="ribbon-title"><?= htmlspecialchars($ribbon['title'] ?? '') ?></span>
-                <span class="ribbon-highlight"><?= htmlspecialchars($ribbon['highlight_text'] ?? '') ?></span>
+                <?php if (!empty($ribbon['highlight_text'])): ?>
+                    <span class="ribbon-highlight"><?= htmlspecialchars($ribbon['highlight_text']) ?></span>
+                <?php endif; ?>
                 <a href="<?= htmlspecialchars($ribbon['link_url'] ?? '#latest') ?>" class="ribbon-cta">
-                    <?= htmlspecialchars($ribbon['link_text'] ?? 'Shop') ?>
-                    <span class="ribbon-chevron" aria-hidden="true">&rsaquo;</span>
+                    <?= htmlspecialchars($ribbon['link_text'] ?? 'See offers') ?>
+                    <span class="ribbon-circle-icon" aria-hidden="true">&#x2295;</span>
                 </a>
             </p>
         </div>
