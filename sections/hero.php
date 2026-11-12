@@ -33,7 +33,7 @@ $categories = $db->getCategories();
                     <li class="category-shelf-item" role="listitem">
                         <a href="<?= htmlspecialchars($cat['url'] ?? '#' . $cat['slug']) ?>" class="category-shelf-link">
                             <div class="category-thumb-wrapper">
-                                <img src="<?= htmlspecialchars($cat['image']) ?>" 
+                                <img src="<?= cleanImageUrl($cat['image']) ?>" 
                                      alt="<?= htmlspecialchars($cat['name']) ?>" 
                                      class="category-thumb-img"
                                      width="120"

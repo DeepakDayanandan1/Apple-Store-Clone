@@ -37,7 +37,7 @@ $endCard = $accessoriesData['end_card'] ?? null;
                         </span>
                     </div>
                     <div class="card-visual-media">
-                        <img src="<?= htmlspecialchars($leadCard['image']) ?>" 
+                        <img src="<?= cleanImageUrl($leadCard['image']) ?>" 
                              alt="<?= htmlspecialchars($leadCard['title']) ?>" 
                              class="card-showcase-img"
                              width="400"
@@ -59,10 +59,10 @@ $endCard = $accessoriesData['end_card'] ?? null;
                          data-product-id="<?= htmlspecialchars($item['id']) ?>"
                          data-product-name="<?= htmlspecialchars($item['name']) ?>"
                          data-product-price="<?= htmlspecialchars($item['price_raw'] ?? 0) ?>"
-                         data-product-image="<?= htmlspecialchars($item['image']) ?>">
+                         data-product-image="<?= cleanImageUrl($item['image']) ?>">
                     
                     <div class="accessory-card-image-wrap">
-                        <img src="<?= htmlspecialchars($item['image']) ?>" 
+                        <img src="<?= cleanImageUrl($item['image']) ?>" 
                              alt="<?= htmlspecialchars($item['name']) ?>" 
                              class="accessory-product-img"
                              width="240"
@@ -118,7 +118,7 @@ $endCard = $accessoriesData['end_card'] ?? null;
                         </span>
                     </div>
                     <div class="card-visual-media">
-                        <img src="<?= htmlspecialchars($endCard['image']) ?>" 
+                        <img src="<?= cleanImageUrl($endCard['image']) ?>" 
                              alt="<?= htmlspecialchars($endCard['title']) ?>" 
                              class="card-showcase-img"
                              width="400"

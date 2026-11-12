@@ -14,11 +14,11 @@ $ribbon = $db->getRibbon();
     <!-- Apple Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/icons/apple-title.svg">
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Stylesheets with Cache Busting -->
+    <link rel="stylesheet" href="css/style.css?v=<?= file_exists(__DIR__ . '/../css/style.css') ? filemtime(__DIR__ . '/../css/style.css') : '2.0' ?>">
+    <link rel="stylesheet" href="css/header.css?v=<?= file_exists(__DIR__ . '/../css/header.css') ? filemtime(__DIR__ . '/../css/header.css') : '2.0' ?>">
+    <link rel="stylesheet" href="css/sections.css?v=<?= file_exists(__DIR__ . '/../css/sections.css') ? filemtime(__DIR__ . '/../css/sections.css') : '2.0' ?>">
+    <link rel="stylesheet" href="css/responsive.css?v=<?= file_exists(__DIR__ . '/../css/responsive.css') ? filemtime(__DIR__ . '/../css/responsive.css') : '2.0' ?>">
 </head>
 <body class="apple-store-page">
 

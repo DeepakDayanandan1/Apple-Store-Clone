@@ -32,7 +32,7 @@ $quickLinks = $db->getQuickLinks();
                     </div>
                     <div class="card-visual-media">
                         <?php if (!empty($exp['image'])): ?>
-                            <img src="<?= htmlspecialchars($exp['image']) ?>" alt="<?= htmlspecialchars($exp['title']) ?>" class="card-showcase-img" loading="lazy">
+                            <img src="<?= cleanImageUrl($exp['image']) ?>" alt="<?= htmlspecialchars($exp['title']) ?>" class="card-showcase-img" loading="lazy">
                         <?php else: ?>
                             <div class="blank-slot-placeholder" aria-hidden="true"></div>
                         <?php endif; ?>
@@ -91,7 +91,7 @@ $quickLinks = $db->getQuickLinks();
                     </div>
                     <div class="card-visual-media">
                         <?php if (!empty($store['image'])): ?>
-                            <img src="<?= htmlspecialchars($store['image']) ?>" alt="<?= htmlspecialchars($store['title']) ?>" class="card-showcase-img" loading="lazy">
+                            <img src="<?= cleanImageUrl($store['image']) ?>" alt="<?= htmlspecialchars($store['title']) ?>" class="card-showcase-img" loading="lazy">
                         <?php else: ?>
                             <div class="blank-slot-placeholder" aria-hidden="true"></div>
                         <?php endif; ?>

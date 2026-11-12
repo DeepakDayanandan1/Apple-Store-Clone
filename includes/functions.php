@@ -42,3 +42,17 @@ if (!function_exists('renderActionChevron')) {
     }
 }
 
+if (!function_exists('cleanImageUrl')) {
+    /**
+     * Sanitizes and properly URL-encodes image paths for Apache/Linux compatibility
+     */
+    function cleanImageUrl(?string $path): string {
+        if (empty($path)) return '';
+        $segments = explode('/', $path);
+        $encoded = array_map(function($segment) {
+            return rawurlencode($segment);
+        }, $segments);
+        return implode('/', $encoded);
+    }
+}
+

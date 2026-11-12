@@ -35,7 +35,7 @@ $latestProducts = $db->getLatestProducts();
                     </div>
 
                     <div class="card-visual-media">
-                        <img src="<?= htmlspecialchars($product['image']) ?>" 
+                        <img src="<?= cleanImageUrl($product['image']) ?>" 
                              alt="<?= htmlspecialchars($product['alt_text'] ?? $product['title']) ?>" 
                              class="card-showcase-img"
                              width="400"

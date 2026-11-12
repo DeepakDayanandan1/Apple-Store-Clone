@@ -42,6 +42,16 @@ function initNavigation() {
 
     menuToggle.addEventListener('click', () => toggleMenu());
 
+    const closeBtn = document.getElementById('mobile-menu-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => toggleMenu(true));
+    }
+
+    const drawerLinks = drawer.querySelectorAll('.mobile-menu-link');
+    drawerLinks.forEach(link => {
+        link.addEventListener('click', () => toggleMenu(true));
+    });
+
     if (backdrop) {
         backdrop.addEventListener('click', () => {
             toggleMenu(true);

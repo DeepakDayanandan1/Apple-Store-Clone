@@ -250,9 +250,9 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/navigation.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/script.js"></script>
+    <!-- Scripts with Cache Busting -->
+    <script src="js/navigation.js?v=<?= file_exists(__DIR__ . '/../js/navigation.js') ? filemtime(__DIR__ . '/../js/navigation.js') : '2.0' ?>"></script>
+    <script src="js/carousel.js?v=<?= file_exists(__DIR__ . '/../js/carousel.js') ? filemtime(__DIR__ . '/../js/carousel.js') : '2.0' ?>"></script>
+    <script src="js/script.js?v=<?= file_exists(__DIR__ . '/../js/script.js') ? filemtime(__DIR__ . '/../js/script.js') : '2.0' ?>"></script>
 </body>
 </html>

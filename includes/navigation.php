@@ -562,9 +562,14 @@
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-menu-drawer" id="mobile-menu-drawer" aria-hidden="true">
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation menu">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                <path d="M2 2L16 16M16 2L2 16" stroke="#1d1d1f" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
         <div class="mobile-menu-inner">
             <ul class="mobile-menu-list">
-                <li class="mobile-menu-item"><a href="#store" class="mobile-menu-link active">Store</a></li>
+                <li class="mobile-menu-item"><a href="#store" class="mobile-menu-link">Store</a></li>
                 <li class="mobile-menu-item"><a href="#mac" class="mobile-menu-link">Mac</a></li>
                 <li class="mobile-menu-item"><a href="#ipad" class="mobile-menu-link">iPad</a></li>
                 <li class="mobile-menu-item"><a href="#iphone" class="mobile-menu-link">iPhone</a></li>
