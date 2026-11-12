@@ -1,8 +1,5 @@
 <?php
-/**
- * Global Header Component
- * Apple Store Clone (India)
- */
+
 $ribbon = $db->getRibbon();
 ?>
 <!DOCTYPE html>
@@ -11,11 +8,11 @@ $ribbon = $db->getRibbon();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Apple (India) - Store - The best way to buy the products you love</title>
+    <title>Apple Store Online - Apple (IN)</title>
     <meta name="description" content="Shop the latest Apple products, accessories, and special offers. Enjoy free delivery, No Cost EMI, instant cashback, and personalized help from Apple Specialists.">
     
     <!-- Apple Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/icons/apple.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/apple-title.svg">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">

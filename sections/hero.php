@@ -1,8 +1,5 @@
 <?php
-/**
- * Hero Section
- * Store Header & Category Navigation Shelf
- */
+
 $categories = $db->getCategories();
 ?>
 <section class="store-hero-section" id="store" aria-labelledby="store-headline">

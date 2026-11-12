@@ -1,8 +1,5 @@
 <?php
-/**
- * Product Highlights Section - The Latest
- * Spotlight Product Carousel
- */
+
 $latestProducts = $db->getLatestProducts();
 ?>
 <section class="store-section latest-products-section" id="latest" aria-labelledby="latest-headline">
@@ -76,3 +73,4 @@ $latestProducts = $db->getLatestProducts();
         </div>
     </div>
 </section>
+

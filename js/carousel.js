@@ -52,3 +52,4 @@ function initCarousels() {
         updateArrows();
     });
 }
+

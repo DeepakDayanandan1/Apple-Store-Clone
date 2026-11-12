@@ -499,33 +499,33 @@ class Database {
             'promotions_cards' => [
                 [
                     'id' => 401,
-                    'eyebrow' => 'APPLE TRADE IN',
-                    'lead_text' => 'Exchange your smartphone,',
-                    'body_text' => ' get ₹4000.00–₹67500.00 in credit.*',
-                    'title' => 'Exchange your smartphone, get ₹4000.00–₹67500.00 in credit.*',
-                    'subtitle' => 'Upgrade and save with Apple Trade In.',
+                    'eyebrow' => 'NO COST EMI',
+                    'lead_text' => 'No Cost EMI.◊ Plus Instant Cashback.Δ',
+                    'body_text' => '',
+                    'title' => 'No Cost EMI.◊ Plus Instant Cashback.Δ',
+                    'subtitle' => '',
                     'accent_color' => '#008000',
-                    'icon' => 'trade-in',
-                    'url' => '#trade-in'
+                    'icon' => 'payment',
+                    'url' => '#financing'
                 ],
                 [
                     'id' => 402,
-                    'eyebrow' => 'FLEXIBLE FINANCING',
-                    'lead_text' => 'Monthly payment options available.',
-                    'body_text' => ' Interest-free EMI with instant cashback‡',
-                    'title' => 'Monthly payment options available. Interest-free EMI with instant cashback‡',
-                    'subtitle' => 'Get up to ₹10000 instant cashback with eligible cards.',
+                    'eyebrow' => 'APPLE TRADE IN',
+                    'lead_text' => 'Exchange your smartphone,',
+                    'body_text' => ' get ₹4000.00–₹92000.00 in credit towards a new one.‡',
+                    'title' => 'Exchange your smartphone, get ₹4000.00–₹92000.00 in credit towards a new one.‡',
+                    'subtitle' => '',
                     'accent_color' => '#0071e3',
-                    'icon' => 'payment',
-                    'url' => '#financing'
+                    'icon' => 'trade-in',
+                    'url' => '#trade-in'
                 ],
                 [
                     'id' => 403,
                     'eyebrow' => 'CUSTOMISE YOUR MAC',
                     'lead_text' => 'Customise your Mac.',
-                    'body_text' => ' Choose your memory, storage, graphics and even keyboard language.',
+                    'body_text' => '',
                     'title' => 'Customise your Mac.',
-                    'subtitle' => 'Choose your memory, storage, graphics and even keyboard language.',
+                    'subtitle' => '',
                     'accent_color' => '#e30000',
                     'icon' => 'mac',
                     'url' => '#customise-mac'
@@ -536,19 +536,19 @@ class Database {
                     'lead_text' => 'Make them yours.',
                     'body_text' => ' Engrave a mix of emoji, names and numbers for free.',
                     'title' => 'Make them yours. Engrave a mix of emoji, names and numbers for free.',
-                    'subtitle' => 'Personalise your AirPods, AirTag, Apple Pencil or iPad.',
-                    'accent_color' => '#b33bf6',
+                    'subtitle' => '',
+                    'accent_color' => '#1d1d1f',
                     'icon' => 'engraving',
                     'url' => '#engraving'
                 ],
                 [
                     'id' => 405,
                     'eyebrow' => 'DELIVERY AND PICKUP',
-                    'lead_text' => 'Free delivery',
-                    'body_text' => ' and free returns on all orders.',
-                    'title' => 'Free delivery and free returns on all orders.',
-                    'subtitle' => 'Contactless free delivery directly to your home.',
-                    'accent_color' => '#009688',
+                    'lead_text' => 'Enjoy free delivery,',
+                    'body_text' => ' or easy pickup at an Apple Store.',
+                    'title' => 'Enjoy free delivery, or easy pickup at an Apple Store.',
+                    'subtitle' => '',
+                    'accent_color' => '#008000',
                     'icon' => 'delivery',
                     'url' => '#delivery'
                 ]
@@ -776,27 +776,17 @@ class Database {
                     'url' => '#free-engraving'
                 ]
             ],
-            // Section 7: Special Stores
+            // Section 7: Savings and offers
             'special_stores_cards' => [
                 [
                     'id' => 701,
                     'eyebrow' => 'EDUCATION',
-                    'title' => 'Save on Mac or iPad with education pricing.',
-                    'subtitle' => 'Available to current and newly accepted university students, parents buying for them, and teachers and staff at all levels.',
-                    'image' => 'assets/images/OffersImg/store-card-40-education-202609 1.png',
+                    'title' => 'Save on a new Mac, iPad and Apple Watch with education pricing.‡',
+                    'subtitle' => '',
+                    'image' => 'assets/images/banners/store-card-40-education-202609 1.png',
                     'theme' => 'light',
-                    'link_text' => 'Shop Education',
+                    'link_text' => '',
                     'url' => '#education'
-                ],
-                [
-                    'id' => 702,
-                    'eyebrow' => 'BUSINESS',
-                    'title' => 'From enterprise to small business, we’ll work with you.',
-                    'subtitle' => 'Specialized pricing, flexible financing options, and expert deployment support.',
-                    'image' => '',
-                    'theme' => 'light',
-                    'link_text' => 'Shop Business',
-                    'url' => '#business-store'
                 ]
             ],
             'quick_links' => [

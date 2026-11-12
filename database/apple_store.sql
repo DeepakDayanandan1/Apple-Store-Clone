@@ -227,8 +227,7 @@ INSERT INTO `products` (`id`, `section_key`, `part_number`, `eyebrow`, `title`, 
 -- Seed Data: products (Special Stores Section)
 -- --------------------------------------------------------
 INSERT INTO `products` (`id`, `section_key`, `part_number`, `eyebrow`, `title`, `description`, `price_label`, `price_raw`, `image_url`, `alt_text`, `theme`, `badge`, `link_url`, `sort_order`, `is_active`) VALUES
-(701, 'special_stores', NULL, 'EDUCATION', 'Save on Mac or iPad with education pricing.', 'Available to current and newly accepted university students, parents buying for them, and teachers and staff at all levels.', 'Shop Education', 0.00, 'assets/images/OffersImg/store-card-40-education-202609 1.png', 'Apple Education Pricing', 'light', NULL, '#education', 1, 1),
-(702, 'special_stores', NULL, 'BUSINESS', 'From enterprise to small business, we’ll work with you.', 'Specialized pricing, flexible financing options, and expert deployment support.', 'Shop Business', 0.00, '', 'Apple for Business', 'light', NULL, '#business-store', 2, 1);
+(701, 'special_stores', NULL, 'EDUCATION', 'Save on a new Mac, iPad and Apple Watch with education pricing.‡', '', '', 0.00, 'assets/images/banners/store-card-40-education-202609 1.png', 'Apple Education Pricing', 'light', NULL, '#education', 1, 1);
 
 -- --------------------------------------------------------
 -- Seed Data: quick_links

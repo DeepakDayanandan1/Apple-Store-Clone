@@ -32,52 +32,77 @@ $helpCards = $db->getSectionItems('help');
                 ?>
                 <article class="store-card difference-feature-card card-theme-light">
                     <div class="diff-icon-wrapper">
-                        <?php if (($diff['icon'] ?? '') === 'trade-in'): ?>
-                            <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-                                <circle cx="20" cy="20" r="18" fill="#e8f5e9"/>
-                                <path d="M12 20a8 8 0 0 1 13.6-5.7L27 13v6h-6l2.7-2.7A6 6 0 0 0 14 20h-2zm16 0a8 8 0 0 1-13.6 5.7L13 27v-6h6l-2.7 2.7A6 6 0 0 0 26 20h2z" fill="#008000"/>
+                        <?php if (($diff['icon'] ?? '') === 'payment'): ?>
+                            <!-- Green Credit Card Outline -->
+                            <svg width="48" height="48" viewBox="0 0 44 44" fill="none" class="diff-svg-icon" aria-hidden="true">
+                                <rect x="4" y="10" width="36" height="24" rx="4" stroke="#008000" stroke-width="2.6"/>
+                                <line x1="4" y1="18" x2="40" y2="18" stroke="#008000" stroke-width="2.6"/>
+                                <rect x="9" y="25" width="8" height="4" rx="1" fill="#008000"/>
                             </svg>
-                        <?php elseif (($diff['icon'] ?? '') === 'payment'): ?>
-                            <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-                                <circle cx="20" cy="20" r="18" fill="#e8f2fc"/>
-                                <rect x="10" y="13" width="20" height="14" rx="3" stroke="#0071e3" stroke-width="2"/>
-                                <line x1="10" y1="18" x2="30" y2="18" stroke="#0071e3" stroke-width="2"/>
-                                <rect x="14" y="21" width="4" height="3" rx="0.5" fill="#0071e3"/>
+                        <?php elseif (($diff['icon'] ?? '') === 'trade-in'): ?>
+                            <!-- Blue Smartphone with Swap Device Outline -->
+                            <svg width="48" height="48" viewBox="0 0 44 44" fill="none" class="diff-svg-icon" aria-hidden="true">
+                                <rect x="12" y="8" width="20" height="28" rx="4" stroke="#0071e3" stroke-width="2.6"/>
+                                <rect x="15" y="12" width="14" height="18" rx="2" stroke="#0071e3" stroke-width="1.8"/>
+                                <circle cx="22" cy="33" r="1.2" fill="#0071e3"/>
+                                <path d="M8 18l-3 3 3 3" stroke="#0071e3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M36 26l3-3-3-3" stroke="#0071e3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         <?php elseif (($diff['icon'] ?? '') === 'mac'): ?>
-                            <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-                                <circle cx="20" cy="20" r="18" fill="#fdebee"/>
-                                <rect x="10" y="12" width="20" height="13" rx="2" stroke="#e30000" stroke-width="2"/>
-                                <path d="M17 25l-2 4h10l-2-4" stroke="#e30000" stroke-width="1.8" stroke-linecap="round"/>
-                                <circle cx="20" cy="18.5" r="2.5" stroke="#e30000" stroke-width="1.8"/>
+                            <!-- Rainbow Gradient Apple Logo -->
+                            <svg width="48" height="48" viewBox="0 0 44 44" fill="none" class="diff-svg-icon" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="apple-rainbow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ff6b00"/>
+                                        <stop offset="35%" stop-color="#e30000"/>
+                                        <stop offset="70%" stop-color="#b33bf6"/>
+                                        <stop offset="100%" stop-color="#0071e3"/>
+                                    </linearGradient>
+                                </defs>
+                                <path fill="url(#apple-rainbow-grad)" d="M28 20.8c-.1-3.6 2.9-5.3 3-5.4-1.7-2.5-4.3-2.8-5.2-2.9-2.2-.2-4.4 1.3-5.5 1.3-1.1 0-2.9-1.3-4.8-1.3-2.4 0-4.7 1.4-6 3.6-2.5 4.3-.6 10.7 1.8 14.2 1.2 1.7 2.6 3.6 4.5 3.5 1.8-.1 2.5-1.1 4.7-1.1 2.1 0 2.8 1.1 4.7 1.1 1.9 0 3.2-1.7 4.4-3.5 1.4-2 2-4 2-4.1-.1 0-3.9-1.5-3.9-5.9zm-4.3-9.5c1-1.2 1.7-2.8 1.5-4.5-1.5.1-3.2 1-4.2 2.2-.9 1-1.7 2.7-1.5 4.3 1.6.1 3.2-.8 4.2-2z"/>
                             </svg>
                         <?php elseif (($diff['icon'] ?? '') === 'engraving'): ?>
-                            <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-                                <circle cx="20" cy="20" r="18" fill="#f4ebfc"/>
-                                <circle cx="20" cy="20" r="8" stroke="#b33bf6" stroke-width="2"/>
-                                <circle cx="17.5" cy="18.5" r="1" fill="#b33bf6"/>
-                                <circle cx="22.5" cy="18.5" r="1" fill="#b33bf6"/>
-                                <path d="M16.5 22.5c.8 1.5 2.2 2 3.5 2s2.7-.5 3.5-2" stroke="#b33bf6" stroke-width="1.8" stroke-linecap="round"/>
+                            <!-- Purple Smiley Face Outline -->
+                            <svg width="48" height="48" viewBox="0 0 44 44" fill="none" class="diff-svg-icon" aria-hidden="true">
+                                <circle cx="22" cy="22" r="18" stroke="#b33bf6" stroke-width="2.6"/>
+                                <circle cx="16" cy="18" r="2.2" fill="#b33bf6"/>
+                                <circle cx="28" cy="18" r="2.2" fill="#b33bf6"/>
+                                <path d="M14 26c2.5 5 13.5 5 16 0" stroke="#b33bf6" stroke-width="2.6" stroke-linecap="round"/>
                             </svg>
                         <?php else: ?>
-                            <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-                                <circle cx="20" cy="20" r="18" fill="#e6f7f6"/>
-                                <path d="M10 15h13v9H10zm13 3h4l3 3v3h-7zm-7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm11 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="#009688" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Green Delivery Truck Outline -->
+                            <svg width="48" height="48" viewBox="0 0 44 44" fill="none" class="diff-svg-icon" aria-hidden="true">
+                                <path d="M6 14h20v15H6z" stroke="#008000" stroke-width="2.6" stroke-linejoin="round"/>
+                                <path d="M26 19h8l4 5v5h-12z" stroke="#008000" stroke-width="2.6" stroke-linejoin="round"/>
+                                <circle cx="13" cy="32" r="3.5" stroke="#008000" stroke-width="2.6"/>
+                                <circle cx="33" cy="32" r="3.5" stroke="#008000" stroke-width="2.6"/>
                             </svg>
                         <?php endif; ?>
                     </div>
 
                     <div class="diff-card-body">
                         <h3 class="diff-card-headline">
-                            <span class="diff-lead-highlight" style="color: <?= htmlspecialchars($accentColor) ?>;"><?= htmlspecialchars($leadText) ?></span>
-                            <span class="diff-body-text"><?= htmlspecialchars($bodyText) ?></span>
+                            <?php if (($diff['icon'] ?? '') === 'payment'): ?>
+                                <span style="color: #1d1d1f;">No Cost EMI.<sup>◊</sup> Plus Instant Cashback.<sup>Δ</sup></span>
+                            <?php elseif (($diff['icon'] ?? '') === 'mac'): ?>
+                                <span class="diff-mac-rainbow">Customise</span> your Mac.
+                            <?php elseif (($diff['icon'] ?? '') === 'engraving'): ?>
+                                <span style="color: #1d1d1f;">Make them yours.</span>
+                                <span style="color: #b33bf6;">Engrave a mix of emoji, names and numbers for free.</span>
+                            <?php elseif (($diff['icon'] ?? '') === 'trade-in'): ?>
+                                <span style="color: #0071e3;">Exchange your smartphone,</span>
+                                <span style="color: #1d1d1f;">get ₹4000.00-₹92000.00 in credit towards a new one.<sup>‡</sup></span>
+                            <?php else: ?>
+                                <span class="diff-lead-highlight" style="color: <?= htmlspecialchars($accentColor) ?>;"><?= htmlspecialchars($leadText) ?></span>
+                                <span class="diff-body-text"><?= htmlspecialchars($bodyText) ?></span>
+                            <?php endif; ?>
                         </h3>
                     </div>
 
-                    <!-- Circular Next Chevron Button -->
+                    <!-- Circular Next (+) Plus Button matching reference Image 3 -->
                     <button type="button" class="card-action-circle diff-action-circle" aria-label="Learn more about <?= htmlspecialchars($leadText) ?>">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                            <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </button>
 
@@ -166,3 +191,4 @@ $helpCards = $db->getSectionItems('help');
         </div>
     </div>
 </section>
+
